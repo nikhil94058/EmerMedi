@@ -1,0 +1,31 @@
+# Security: Ignore ALL .env files in any subdirectory
+**/.env
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python environment & cache
+ML/**/venv/
+ML/**/__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# ML Models and Large Audio Files
+ML/**/*.h5
+ML/**/*.wav
+ML/**/*.mp3
+ML/**/temp_audio.wav
+ML/**/test_set/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Node.js (for your Next.js frontend)
+node_modules/
+.next/
+out/
+build/
