@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_NAME = 'Emotion_Voice_Detection_Model.h5'
 MODEL_PATH = os.path.join(BASE_DIR, MODEL_NAME)
 
-app = Flask(__name__)
+
 
 # Load model
 if os.path.exists(MODEL_PATH):
@@ -74,6 +74,3 @@ def predict():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)

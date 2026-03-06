@@ -9,7 +9,7 @@ from PIL import Image
 from bedrock.llm_analyzer import analyze_with_llm
 
 load_dotenv()
-app = Flask(__name__)
+
 
 # Initialize Rekognition Client
 rekognition = boto3.client(
@@ -87,6 +87,3 @@ def predict_image():
         print(f"!!! SYSTEM ERROR: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
-if __name__ == '__main__':
-    print("--- Multimodal Emergency AI Started ---")
-    app.run(debug=True, host='0.0.0.0', port=5000)
