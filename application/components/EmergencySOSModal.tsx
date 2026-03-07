@@ -1,7 +1,13 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import { X, Upload, Mic, Image as ImageIcon, AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+import {
+  X, Upload, Mic, Image as ImageIcon,
+  AlertCircle, CheckCircle, Loader2,
+  Phone, Flame, Shield, Clock,
+} from 'lucide-react';
+
+// ─── Types ────────────────────────────────────────────────────────────────────
 
 interface EmergencySOSModalProps {
   isOpen: boolean;
@@ -11,16 +17,591 @@ interface EmergencySOSModalProps {
 type UploadType = 'audio' | 'image' | null;
 type Step = 'select' | 'upload' | 'result';
 
+interface ImageTriageResult {
+  emergency_level: 'critical' | 'urgent' | 'moderate' | 'low' | 'none';
+  urgency_score: number;
+  call_ambulance: boolean;
+  call_police: boolean;
+  call_fire_department: boolean;
+  time_critical: boolean;
+  scene_type: string;
+  scene_description: string;
+  patient_status: {
+    estimated_victims: number;
+    consciousness_level: string;
+    breathing_status: string;
+    injury_severity: string;
+  };
+  detected_injuries: Array<{
+    type: string;
+    body_location: string;
+    severity: string;
+    visible_signs: string;
+  }>;
+  medical_flags: Record<string, boolean>;
+  environmental_hazards: Record<string, boolean>;
+  immediate_actions: string[];
+  do_not_actions: string[];
+  first_aid_steps: string[];
+  dispatcher_report: string;
+  hospital_recommendation: string;
+  eta_urgency: string;
+  confidence_score: number;
+  reasoning: string;
+  rekognition: {
+    labels: string[];
+    labels_detail?: Array<{ name: string; confidence: number }>;
+    faces_count: number;
+    moderation_flags: Array<{ name: string; confidence: number }>;
+    detected_text: string[];
+  };
+}
+
 interface DiagnosisResult {
   type: 'audio' | 'image';
   emotion?: string;
   category?: string;
-  status?: string;
-  reason?: string;
-  labels?: string[];
+  triage?: ImageTriageResult;
   isEmergency: boolean;
-  rawData?: any;
+  rawData?: unknown;
 }
+
+// ─── Constants ────────────────────────────────────────────────────────────────
+
+const LEVEL_CFG: Record<string, {
+  bg: string; border: string; bar: string;
+  badge: string; text: string; ringText: string; label: string;
+}> = {
+  critical: {
+    bg: 'bg-red-50 dark:bg-red-950/40',
+    border: 'border-red-500/50',
+    bar: 'bg-red-600',
+    badge: 'bg-red-600 text-white',
+    text: 'text-red-700 dark:text-red-400',
+    ringText: 'text-red-600 dark:text-red-400',
+    label: 'CRITICAL',
+  },
+  urgent: {
+    bg: 'bg-orange-50 dark:bg-orange-950/40',
+    border: 'border-orange-500/50',
+    bar: 'bg-orange-500',
+    badge: 'bg-orange-500 text-white',
+    text: 'text-orange-700 dark:text-orange-400',
+    ringText: 'text-orange-600 dark:text-orange-400',
+    label: 'URGENT',
+  },
+  moderate: {
+    bg: 'bg-yellow-50 dark:bg-yellow-950/40',
+    border: 'border-yellow-500/50',
+    bar: 'bg-yellow-500',
+    badge: 'bg-yellow-500 text-white',
+    text: 'text-yellow-700 dark:text-yellow-500',
+    ringText: 'text-yellow-600 dark:text-yellow-500',
+    label: 'MODERATE',
+  },
+  low: {
+    bg: 'bg-blue-50 dark:bg-blue-950/40',
+    border: 'border-blue-500/50',
+    bar: 'bg-blue-500',
+    badge: 'bg-blue-500 text-white',
+    text: 'text-blue-700 dark:text-blue-400',
+    ringText: 'text-blue-600 dark:text-blue-400',
+    label: 'LOW',
+  },
+  none: {
+    bg: 'bg-green-50 dark:bg-green-950/40',
+    border: 'border-green-500/50',
+    bar: 'bg-green-600',
+    badge: 'bg-green-600 text-white',
+    text: 'text-green-700 dark:text-green-400',
+    ringText: 'text-green-600 dark:text-green-400',
+    label: 'ALL CLEAR',
+  },
+};
+
+const ETA_CFG: Record<string, { label: string; cls: string }> = {
+  immediate_108:  { label: '🚨 Call 108 Immediately', cls: 'bg-red-600 text-white' },
+  within_minutes: { label: '⚡ Urgent — Within Minutes', cls: 'bg-orange-500 text-white' },
+  within_hour:    { label: '⏱️ Within the Hour', cls: 'bg-yellow-500 text-white' },
+  non_urgent:     { label: '✓ Non-Urgent', cls: 'bg-green-600 text-white' },
+};
+
+const EMOTION_INFO: Record<string, { emoji: string; clinical: string; actions: string[] }> = {
+  fearful: {
+    emoji: '😨',
+    clinical: 'Fear response detected — the person may be in danger, experiencing panic, or facing a threatening situation.',
+    actions: [
+      "Ask: 'Are you safe right now?'",
+      'Listen for background sounds — they can provide location clues',
+      'Stay on the line — do NOT hang up',
+      'Contact emergency services if location is known',
+    ],
+  },
+  angry: {
+    emoji: '😡',
+    clinical: 'Agitation detected — possible confrontation, severe pain response, or emotional crisis.',
+    actions: [
+      'Stay calm and speak slowly and clearly',
+      'Ask for their current location',
+      'Contact police if physical violence is suspected',
+    ],
+  },
+  surprised: {
+    emoji: '😲',
+    clinical: 'Shock / surprise response — possible sudden accident, injury, or unexpected trauma.',
+    actions: [
+      'Ask if they need immediate help',
+      'Request current location and a description of the scene',
+      'Dispatch ambulance if physical injury is suspected',
+    ],
+  },
+  sad: {
+    emoji: '😢',
+    clinical: 'Emotional distress detected — possible psychological crisis, pain, or physical injury.',
+    actions: [
+      'Express concern and ask what happened',
+      'Keep them talking — assess for self-harm risk if appropriate',
+      'Stay present; do not rush or dismiss their distress',
+    ],
+  },
+  disgust: {
+    emoji: '😖',
+    clinical: 'Discomfort / aversion in voice — possible physical illness, nausea, or toxic exposure.',
+    actions: [
+      'Ask what is wrong and if they feel sick',
+      'Inquire about any pain, vomiting, or recent ingestion',
+      'Consider toxic or chemical exposure if context warrants',
+    ],
+  },
+  neutral: {
+    emoji: '😐',
+    clinical: 'Neutral vocal pattern — no acute emotional distress detected at this time.',
+    actions: ['Ask if everything is alright', 'Monitor the situation closely'],
+  },
+  calm: {
+    emoji: '😌',
+    clinical: 'Calm vocal pattern — no stress indicators present in the voice.',
+    actions: ['Confirm everything is okay', 'Ask if any assistance is required'],
+  },
+  happy: {
+    emoji: '😊',
+    clinical: 'Positive vocal tone detected — no signs of distress or emergency in this recording.',
+    actions: [],
+  },
+};
+
+const SEVERITY_CLS: Record<string, string> = {
+  critical: 'bg-red-500/20 text-red-700 dark:text-red-400',
+  serious:  'bg-orange-500/20 text-orange-700 dark:text-orange-400',
+  moderate: 'bg-yellow-500/20 text-yellow-700 dark:text-yellow-500',
+  minor:    'bg-blue-500/20 text-blue-700 dark:text-blue-400',
+};
+
+const fmt = (s: string) => (s || '').replace(/_/g, ' ');
+
+// ─── Section header helper ────────────────────────────────────────────────────
+
+function SectionHead({ label }: { label: string }) {
+  return (
+    <div className="text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">
+      {label}
+    </div>
+  );
+}
+
+// ─── Audio Result View ────────────────────────────────────────────────────────
+
+function AudioResultView({ result }: { result: DiagnosisResult }) {
+  const emotion = (result.emotion || 'neutral').toLowerCase();
+  const isEmergency = result.isEmergency;
+  const info = EMOTION_INFO[emotion] ?? EMOTION_INFO.neutral;
+
+  return (
+    <div className="space-y-4">
+      {/* Status banner */}
+      <div className={`p-5 rounded-xl border-2 ${
+        isEmergency
+          ? 'bg-red-50 dark:bg-red-950/40 border-red-500/50'
+          : 'bg-green-50 dark:bg-green-950/40 border-green-500/50'
+      }`}>
+        <div className="flex items-center gap-4">
+          <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-4xl select-none ${
+            isEmergency ? 'bg-red-100 dark:bg-red-900/40' : 'bg-green-100 dark:bg-green-900/40'
+          }`}>
+            {info.emoji}
+          </div>
+          <div className="flex-1 min-w-0">
+            <span className={`inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-1.5 ${
+              isEmergency ? 'bg-red-600 text-white' : 'bg-green-600 text-white'
+            }`}>
+              {result.category ?? (isEmergency ? 'Emergency' : 'Non-Emergency')}
+            </span>
+            <div className={`text-2xl font-bold capitalize ${
+              isEmergency ? 'text-red-700 dark:text-red-400' : 'text-green-700 dark:text-green-400'
+            }`}>
+              {emotion}
+            </div>
+            <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Detected Voice Emotion</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Clinical interpretation */}
+      <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-black/10 dark:border-white/10">
+        <SectionHead label="Clinical Interpretation" />
+        <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{info.clinical}</p>
+      </div>
+
+      {/* Recommended actions */}
+      {info.actions.length > 0 && (
+        <div>
+          <SectionHead label="Recommended Actions" />
+          <div className="space-y-1.5">
+            {info.actions.map((action, i) => (
+              <div key={i} className="flex items-start gap-2.5 p-3 bg-green-500/5 border border-green-500/25 dark:bg-green-500/10 rounded-lg">
+                <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-slate-800 dark:text-slate-200">{action}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Emergency numbers */}
+      {isEmergency && (
+        <div className="flex items-center gap-3 p-4 bg-red-600 dark:bg-red-700 rounded-xl">
+          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+            <Phone className="w-5 h-5 text-white" />
+          </div>
+          <div>
+            <div className="text-white font-bold text-sm">Emergency Services</div>
+            <div className="text-red-100 text-xs mt-0.5">
+              108 (US) · 112 (EU/IN) · 999 (UK) · 102 (Ambulance IN)
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Raw data pills */}
+      <div className="grid grid-cols-2 gap-3">
+        <div className="p-3 bg-black/5 dark:bg-white/5 rounded-xl">
+          <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Emotion Detected</div>
+          <div className="font-bold text-slate-900 dark:text-white capitalize">{emotion}</div>
+        </div>
+        <div className="p-3 bg-black/5 dark:bg-white/5 rounded-xl">
+          <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Emergency Category</div>
+          <div className={`font-bold capitalize ${isEmergency ? 'text-red-600 dark:text-red-400' : 'text-green-600 dark:text-green-400'}`}>
+            {result.category}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Image Triage View ────────────────────────────────────────────────────────
+
+function ImageTriageView({ triage }: { triage: ImageTriageResult }) {
+  const [copied, setCopied] = useState(false);
+
+  const copyReport = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    });
+  };
+
+  const cfg = LEVEL_CFG[triage.emergency_level] ?? LEVEL_CFG.none;
+  const etaCfg = ETA_CFG[triage.eta_urgency] ?? ETA_CFG.non_urgent;
+  const isFallback = (triage.confidence_score ?? 1) < 0.6;
+  const activeFlags = Object.entries(triage.medical_flags ?? {}).filter(([, v]) => v).map(([k]) => fmt(k));
+  const activeHazards = Object.entries(triage.environmental_hazards ?? {}).filter(([, v]) => v).map(([k]) => fmt(k));
+  const hasRealSceneDesc = triage.scene_description && !triage.scene_description.toLowerCase().startsWith('fallback');
+  const needsDispatch = triage.call_ambulance || triage.call_police || triage.call_fire_department;
+
+  return (
+    <div className="space-y-4">
+
+      {/* Fallback warning */}
+      {isFallback && (
+        <div className="flex items-start gap-3 p-3.5 bg-amber-50 dark:bg-amber-950/40 border border-amber-400/50 rounded-xl">
+          <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+          <div className="text-xs text-amber-800 dark:text-amber-300">
+            <span className="font-semibold">Preliminary assessment only</span> — AI enhanced analysis was unavailable. Results are based on keyword detection from image labels.
+          </div>
+        </div>
+      )}
+
+      {/* Level + Score banner */}
+      <div className={`p-5 rounded-xl border-2 ${cfg.bg} ${cfg.border}`}>
+        <div className="flex items-center justify-between mb-4">
+          <span className={`text-sm font-black uppercase tracking-widest px-4 py-1.5 rounded-full ${cfg.badge}`}>
+            {cfg.label}
+          </span>
+          <div className="flex items-center gap-2">
+            {triage.time_critical && (
+              <span className="text-xs font-semibold text-red-600 dark:text-red-400 flex items-center gap-1 bg-red-100 dark:bg-red-900/40 px-2.5 py-1 rounded-full">
+                <AlertCircle className="w-3 h-3" /> TIME CRITICAL
+              </span>
+            )}
+            <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${etaCfg.cls}`}>
+              {etaCfg.label}
+            </span>
+          </div>
+        </div>
+
+        {/* Urgency bar */}
+        <div className="mb-4">
+          <div className="flex justify-between items-center mb-1.5">
+            <span className="text-xs font-semibold text-slate-600 dark:text-slate-400">Urgency Score</span>
+            <span className={`text-2xl font-black tabular-nums ${cfg.ringText}`}>{triage.urgency_score}<span className="text-sm font-semibold text-slate-400">/100</span></span>
+          </div>
+          <div className="w-full bg-black/10 dark:bg-white/10 rounded-full h-3 overflow-hidden">
+            <div
+              className={`h-3 rounded-full ${cfg.bar} transition-all duration-700`}
+              style={{ width: `${triage.urgency_score}%` }}
+            />
+          </div>
+        </div>
+
+        <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{triage.reasoning}</p>
+      </div>
+
+      {/* Dispatch */}
+      {needsDispatch && (
+        <div>
+          <SectionHead label="Dispatch Required" />
+          <div className={`grid gap-2 ${[triage.call_ambulance, triage.call_police, triage.call_fire_department].filter(Boolean).length === 1 ? 'grid-cols-1' : 'grid-cols-3'}`}>
+            {triage.call_ambulance && (
+              <div className="flex items-center gap-3 p-4 bg-red-600 dark:bg-red-700 rounded-xl">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-bold text-sm">Ambulance</div>
+                  <div className="text-red-100 text-xs">108 · 102</div>
+                </div>
+              </div>
+            )}
+            {triage.call_police && (
+              <div className="flex items-center gap-3 p-4 bg-blue-600 dark:bg-blue-700 rounded-xl">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-bold text-sm">Police</div>
+                  <div className="text-blue-100 text-xs">108 · 100</div>
+                </div>
+              </div>
+            )}
+            {triage.call_fire_department && (
+              <div className="flex items-center gap-3 p-4 bg-orange-500 dark:bg-orange-600 rounded-xl">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Flame className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-bold text-sm">Fire Dept</div>
+                  <div className="text-orange-100 text-xs">108 · 101</div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Scene & Patient */}
+      <div className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-black/10 dark:border-white/10 space-y-3">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <SectionHead label="Scene Type" />
+            <div className="font-semibold text-slate-900 dark:text-white capitalize">{fmt(triage.scene_type)}</div>
+          </div>
+          <div className="text-right">
+            <SectionHead label="Hospital" />
+            <div className="font-semibold text-slate-900 dark:text-white capitalize">{fmt(triage.hospital_recommendation)}</div>
+          </div>
+        </div>
+
+        {hasRealSceneDesc && (
+          <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed border-t border-black/10 dark:border-white/10 pt-3">
+            {triage.scene_description}
+          </p>
+        )}
+
+        {triage.patient_status && (
+          <div className="grid grid-cols-2 gap-x-6 gap-y-2 border-t border-black/10 dark:border-white/10 pt-3">
+            {[
+              ['Victims', String(triage.patient_status.estimated_victims)],
+              ['Injury Severity', fmt(triage.patient_status.injury_severity)],
+              ['Consciousness', fmt(triage.patient_status.consciousness_level)],
+              ['Breathing', fmt(triage.patient_status.breathing_status)],
+            ].map(([label, val]) => (
+              <div key={label}>
+                <span className="text-xs text-slate-500 dark:text-slate-400">{label}: </span>
+                <span className="text-sm font-medium text-slate-900 dark:text-white capitalize">{val}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Medical flags + hazards */}
+      {(activeFlags.length > 0 || activeHazards.length > 0) && (
+        <div className="space-y-3">
+          {activeFlags.length > 0 && (
+            <div>
+              <SectionHead label="Active Medical Flags" />
+              <div className="flex flex-wrap gap-1.5">
+                {activeFlags.map((f, i) => (
+                  <span key={i} className="px-2.5 py-1 bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-400 rounded-full text-xs font-semibold capitalize">{f}</span>
+                ))}
+              </div>
+            </div>
+          )}
+          {activeHazards.length > 0 && (
+            <div>
+              <SectionHead label="Environmental Hazards" />
+              <div className="flex flex-wrap gap-1.5">
+                {activeHazards.map((h, i) => (
+                  <span key={i} className="px-2.5 py-1 bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-400 rounded-full text-xs font-semibold capitalize">{h}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Detected Injuries */}
+      {triage.detected_injuries?.length > 0 && (
+        <div>
+          <SectionHead label={`Detected Injuries (${triage.detected_injuries.length})`} />
+          <div className="space-y-2">
+            {triage.detected_injuries.map((inj, i) => (
+              <div key={i} className="p-3.5 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800/50 rounded-xl">
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="font-semibold text-slate-900 dark:text-white text-sm capitalize">{inj.type}</span>
+                  <span className={`text-xs px-2.5 py-0.5 rounded-full font-semibold capitalize ${SEVERITY_CLS[inj.severity] ?? SEVERITY_CLS.minor}`}>
+                    {inj.severity}
+                  </span>
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <span className="font-medium capitalize">{inj.body_location}</span>
+                  {inj.visible_signs ? ` — ${inj.visible_signs}` : ''}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Immediate Actions */}
+      {triage.immediate_actions?.length > 0 && (
+        <div>
+          <SectionHead label="Immediate Actions" />
+          <div className="space-y-1.5">
+            {triage.immediate_actions.map((action, i) => (
+              <div key={i} className="flex items-start gap-2.5 p-3 bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800/50 rounded-lg">
+                <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-slate-800 dark:text-slate-200">{action}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Do NOT */}
+      {triage.do_not_actions?.length > 0 && (
+        <div>
+          <SectionHead label="Do NOT" />
+          <div className="space-y-1.5">
+            {triage.do_not_actions.map((action, i) => (
+              <div key={i} className="flex items-start gap-2.5 p-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800/50 rounded-lg">
+                <AlertCircle className="w-4 h-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-slate-800 dark:text-slate-200">{action}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* First Aid Steps */}
+      {triage.first_aid_steps?.length > 0 && (
+        <div>
+          <SectionHead label="First Aid Steps" />
+          <div className="space-y-1.5">
+            {triage.first_aid_steps.map((s, i) => (
+              <div key={i} className="flex items-start gap-3 p-3 bg-slate-50 dark:bg-slate-800/60 border border-black/10 dark:border-white/10 rounded-lg">
+                <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed">{s}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Dispatcher Script */}
+      {triage.dispatcher_report && !triage.dispatcher_report.toLowerCase().startsWith('critical keyword') && !triage.dispatcher_report.toLowerCase().startsWith('urgent keyword') && (
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <SectionHead label="108 Dispatcher Script" />
+            <button
+              onClick={() => copyReport(triage.dispatcher_report)}
+              className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+            >
+              {copied ? '✓ Copied!' : 'Copy'}
+            </button>
+          </div>
+          <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-xl text-sm text-slate-800 dark:text-slate-200 font-mono leading-relaxed border border-black/10 dark:border-white/10 whitespace-pre-wrap">
+            {triage.dispatcher_report}
+          </div>
+        </div>
+      )}
+
+      {/* Rekognition labels */}
+      {triage.rekognition?.labels?.length > 0 && (
+        <div>
+          <SectionHead label={`Scene Labels${triage.rekognition.faces_count > 0 ? ` · ${triage.rekognition.faces_count} face(s) detected` : ''}`} />
+          <div className="flex flex-wrap gap-1.5 mb-2">
+            {triage.rekognition.labels_detail
+              ? triage.rekognition.labels_detail.map((l, i) => (
+                  <span key={i} className="px-2.5 py-1 bg-slate-200/80 dark:bg-white/10 text-slate-700 dark:text-slate-300 rounded-full text-xs">
+                    {l.name} <span className="opacity-60">{l.confidence.toFixed(0)}%</span>
+                  </span>
+                ))
+              : triage.rekognition.labels.map((label, i) => (
+                  <span key={i} className="px-2.5 py-1 bg-slate-200/80 dark:bg-white/10 text-slate-700 dark:text-slate-300 rounded-full text-xs">
+                    {label}
+                  </span>
+                ))
+            }
+          </div>
+          {triage.rekognition.detected_text?.length > 0 && (
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              <span className="font-medium">Text detected:</span> {triage.rekognition.detected_text.slice(0, 6).join(' · ')}
+              {triage.rekognition.detected_text.length > 6 && ` +${triage.rekognition.detected_text.length - 6} more`}
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* Footer */}
+      <div className="flex items-center justify-between pt-1 border-t border-black/10 dark:border-white/10">
+        <div className="flex items-center gap-1.5 text-xs text-slate-400 dark:text-slate-500">
+          <Clock className="w-3.5 h-3.5" />
+          <span>ETA: <span className="font-medium capitalize">{fmt(triage.eta_urgency)}</span></span>
+        </div>
+        <div className="text-xs text-slate-400 dark:text-slate-500">
+          Confidence: <span className="font-semibold">{Math.round((triage.confidence_score ?? 0) * 100)}%</span>
+          {isFallback && <span className="ml-1 text-amber-500">· Fallback mode</span>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Main Modal ───────────────────────────────────────────────────────────────
 
 export default function EmergencySOSModal({ isOpen, onClose }: EmergencySOSModalProps) {
   const [step, setStep] = useState<Step>('select');
@@ -29,71 +610,60 @@ export default function EmergencySOSModal({ isOpen, onClose }: EmergencySOSModal
   const [isUploading, setIsUploading] = useState(false);
   const [diagnosisResult, setDiagnosisResult] = useState<DiagnosisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [resultKey, setResultKey] = useState(0);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleClose = () => {
+  const resetState = () => {
     setStep('select');
     setUploadType(null);
     setSelectedFile(null);
     setDiagnosisResult(null);
     setError(null);
     setIsUploading(false);
-    onClose();
+    if (fileInputRef.current) fileInputRef.current.value = '';
   };
+
+  useEffect(() => {
+    if (!isOpen) {
+      const t = setTimeout(resetState, 200);
+      return () => clearTimeout(t);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
 
   const handleTypeSelect = (type: 'audio' | 'image') => {
     setUploadType(type);
     setStep('upload');
     setError(null);
+    setSelectedFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-
-    // Validate file type
-    if (uploadType === 'audio') {
-      if (!file.type.startsWith('audio/')) {
-        setError('Please select a valid audio file');
-        return;
-      }
-    } else if (uploadType === 'image') {
-      if (!file.type.startsWith('image/')) {
-        setError('Please select a valid image file');
-        return;
-      }
-    }
-
+    if (uploadType === 'audio' && !file.type.startsWith('audio/')) { setError('Please select a valid audio file'); return; }
+    if (uploadType === 'image' && !file.type.startsWith('image/')) { setError('Please select a valid image file'); return; }
     setSelectedFile(file);
     setError(null);
   };
 
   const handleUpload = async () => {
     if (!selectedFile || !uploadType) return;
-
     setIsUploading(true);
     setError(null);
-
     try {
       const formData = new FormData();
       formData.append('file', selectedFile);
       formData.append('type', uploadType);
-
-      const response = await fetch('/api/emergency/diagnose', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to process diagnosis');
-      }
-
+      const res = await fetch('/api/emergency/diagnose', { method: 'POST', body: formData });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to process diagnosis');
       setDiagnosisResult(data);
+      setResultKey(k => k + 1);
       setStep('result');
-    } catch (err: any) {
-      setError(err.message || 'An error occurred during diagnosis');
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setIsUploading(false);
     }
@@ -101,14 +671,16 @@ export default function EmergencySOSModal({ isOpen, onClose }: EmergencySOSModal
 
   const handleBack = () => {
     if (step === 'upload') {
-      setStep('select');
-      setUploadType(null);
-      setSelectedFile(null);
-      setError(null);
+      setStep('select'); setUploadType(null); setSelectedFile(null); setError(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
     } else if (step === 'result') {
-      setStep('upload');
-      setDiagnosisResult(null);
+      setStep('upload'); setDiagnosisResult(null); setError(null);
     }
+  };
+
+  const handleNewDiagnosis = () => {
+    resetState();
+    setResultKey(k => k + 1);
   };
 
   if (!isOpen) return null;
@@ -116,228 +688,126 @@ export default function EmergencySOSModal({ isOpen, onClose }: EmergencySOSModal
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
       <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-black/10 dark:border-white/10">
+
         {/* Header */}
-        <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-black/10 dark:border-white/10 p-6 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-black/10 dark:border-white/10 px-6 py-4 flex items-center justify-between z-10">
           <div className="flex items-center gap-3">
-            {step !== 'select' && (
-              <button
-                onClick={handleBack}
-                className="p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-            )}
+            <button onClick={handleBack} className={`p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors ${step === 'select' ? 'invisible' : ''}`}>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Emergency SOS Diagnosis</h2>
-              <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white">Emergency SOS Diagnosis</h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                 {step === 'select' && 'Choose diagnosis method'}
-                {step === 'upload' && `Upload ${uploadType} file`}
-                {step === 'result' && 'Diagnosis Results'}
+                {step === 'upload' && `Upload ${uploadType} file for analysis`}
+                {step === 'result' && (diagnosisResult?.type === 'image' ? 'Visual Triage Report' : 'Voice Emergency Assessment')}
               </p>
             </div>
           </div>
-          <button
-            onClick={handleClose}
-            className="p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
-          >
-            <X className="w-6 h-6" />
+          <button onClick={onClose} className="p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors">
+            <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Content */}
         <div className="p-6">
-          {/* Step 1: Select Type */}
-          {step === 'select' && (
+
+          {/* Step 1 — Select type (CSS hidden instead of unmount to prevent removeChild errors) */}
+          <div className={step !== 'select' ? 'hidden' : ''}>
             <div className="grid md:grid-cols-2 gap-4">
-              <button
-                onClick={() => handleTypeSelect('audio')}
-                className="group p-8 bg-gradient-to-br from-blue-500/10 to-blue-600/10 dark:from-blue-500/20 dark:to-blue-600/20 border-2 border-blue-500/30 dark:border-blue-500/40 rounded-xl hover:border-blue-500/60 dark:hover:border-blue-500/70 transition-all hover:scale-[1.02]"
-              >
-                <div className="w-16 h-16 bg-blue-500/20 dark:bg-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <button onClick={() => handleTypeSelect('audio')}
+                className="group p-8 bg-gradient-to-br from-blue-500/10 to-blue-600/10 dark:from-blue-500/20 dark:to-blue-600/20 border-2 border-blue-500/30 dark:border-blue-500/40 rounded-xl hover:border-blue-500/70 transition-all hover:scale-[1.02] text-left">
+                <div className="w-16 h-16 bg-blue-500/20 dark:bg-blue-500/30 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Mic className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Audio Diagnosis</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Upload voice recording for emotion and emergency detection
-                </p>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">Audio Diagnosis</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Voice emotion analysis for emergency detection</p>
               </button>
 
-              <button
-                onClick={() => handleTypeSelect('image')}
-                className="group p-8 bg-gradient-to-br from-purple-500/10 to-purple-600/10 dark:from-purple-500/20 dark:to-purple-600/20 border-2 border-purple-500/30 dark:border-purple-500/40 rounded-xl hover:border-purple-500/60 dark:hover:border-purple-500/70 transition-all hover:scale-[1.02]"
-              >
-                <div className="w-16 h-16 bg-purple-500/20 dark:bg-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <button onClick={() => handleTypeSelect('image')}
+                className="group p-8 bg-gradient-to-br from-purple-500/10 to-purple-600/10 dark:from-purple-500/20 dark:to-purple-600/20 border-2 border-purple-500/30 dark:border-purple-500/40 rounded-xl hover:border-purple-500/70 transition-all hover:scale-[1.02] text-left">
+                <div className="w-16 h-16 bg-purple-500/20 dark:bg-purple-500/30 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <ImageIcon className="w-8 h-8 text-purple-600 dark:text-purple-400" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Image Diagnosis</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Upload image for visual emergency assessment
-                </p>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">Image Diagnosis</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Visual scene triage with AI + Rekognition</p>
               </button>
             </div>
-          )}
+          </div>
 
-          {/* Step 2: Upload File */}
-          {step === 'upload' && (
-            <div className="space-y-6">
-              <div
-                onClick={() => fileInputRef.current?.click()}
-                className="border-2 border-dashed border-black/20 dark:border-white/20 rounded-xl p-12 text-center hover:border-black/40 dark:hover:border-white/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all cursor-pointer"
-              >
-                <div className="w-20 h-20 bg-black/5 dark:bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Upload className="w-10 h-10 text-slate-600 dark:text-slate-400" />
+          {/* Step 2 — Upload (CSS hidden instead of unmount) */}
+          <div className={step !== 'upload' ? 'hidden' : ''}>
+            <div className="space-y-5">
+              <div onClick={() => fileInputRef.current?.click()}
+                className="border-2 border-dashed border-black/20 dark:border-white/20 rounded-xl p-12 text-center hover:border-black/40 dark:hover:border-white/40 hover:bg-black/3 dark:hover:bg-white/3 transition-all cursor-pointer">
+                <div className="w-20 h-20 bg-black/5 dark:bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Upload className="w-10 h-10 text-slate-500 dark:text-slate-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+                <p className="text-lg font-semibold text-slate-800 dark:text-white mb-1">
                   {selectedFile ? selectedFile.name : `Click to upload ${uploadType} file`}
-                </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  {uploadType === 'audio' ? 'Supported: MP3, WAV, M4A' : 'Supported: JPG, PNG, WEBP'}
+                </p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">
+                  {uploadType === 'audio' ? 'Supported: MP3, WAV, M4A, OGG' : 'Supported: JPG, PNG, WEBP, GIF'}
                 </p>
               </div>
 
-              <input
-                ref={fileInputRef}
-                type="file"
+              <input ref={fileInputRef} type="file"
                 accept={uploadType === 'audio' ? 'audio/*' : 'image/*'}
                 capture={uploadType === 'image' ? 'environment' : undefined}
-                onChange={handleFileSelect}
-                className="hidden"
-              />
+                onChange={handleFileSelect} className="hidden" />
 
               {error && (
-                <div className="flex items-center gap-3 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                <div className="flex items-center gap-3 p-4 bg-red-50 dark:bg-red-950/40 border border-red-300 dark:border-red-700 rounded-xl">
                   <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0" />
-                  <p className="text-sm text-red-700 dark:text-red-400">{error}</p>
+                  <p className="text-sm text-red-700 dark:text-red-300">{error}</p>
                 </div>
               )}
 
               {selectedFile && (
-                <button
-                  onClick={handleUpload}
-                  disabled={isUploading}
-                  className="w-full py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 disabled:from-red-400 disabled:to-red-500 rounded-xl font-semibold transition-all text-white flex items-center justify-center gap-3 disabled:cursor-not-allowed"
-                >
+                <button onClick={handleUpload} disabled={isUploading}
+                  className="w-full py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 disabled:opacity-60 rounded-xl font-bold tracking-wide transition-all text-white flex items-center justify-center gap-3 disabled:cursor-not-allowed text-sm uppercase">
                   {isUploading ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>Processing...</span>
+                      <span>Analyzing...</span>
                     </>
                   ) : (
                     <>
                       <AlertCircle className="w-5 h-5" />
-                      <span>Analyze Emergency</span>
+                      <span>Run Emergency Analysis</span>
                     </>
                   )}
                 </button>
               )}
             </div>
-          )}
+          </div>
 
-          {/* Step 3: Results */}
-          {step === 'result' && diagnosisResult && (
-            <div className="space-y-6">
-              {/* Emergency Status */}
-              <div className={`p-6 rounded-xl border-2 ${
-                diagnosisResult.isEmergency
-                  ? 'bg-red-500/10 border-red-500/30 dark:bg-red-500/20 dark:border-red-500/40'
-                  : 'bg-green-500/10 border-green-500/30 dark:bg-green-500/20 dark:border-green-500/40'
-              }`}>
-                <div className="flex items-center gap-4">
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${
-                    diagnosisResult.isEmergency
-                      ? 'bg-red-500/20 dark:bg-red-500/30'
-                      : 'bg-green-500/20 dark:bg-green-500/30'
-                  }`}>
-                    {diagnosisResult.isEmergency ? (
-                      <AlertCircle className="w-8 h-8 text-red-600 dark:text-red-400" />
-                    ) : (
-                      <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
-                    )}
-                  </div>
-                  <div>
-                    <h3 className={`text-2xl font-bold ${
-                      diagnosisResult.isEmergency
-                        ? 'text-red-700 dark:text-red-400'
-                        : 'text-green-700 dark:text-green-400'
-                    }`}>
-                      {diagnosisResult.isEmergency ? 'Emergency Detected' : 'No Emergency Detected'}
-                    </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                      Analysis completed successfully
-                    </p>
-                  </div>
+          {/* Step 3 — Results (CSS hidden instead of unmount) */}
+          <div className={step !== 'result' ? 'hidden' : ''}>
+            {diagnosisResult && (
+              <div className="space-y-4">
+                {diagnosisResult.type === 'audio' && (
+                  <AudioResultView key={resultKey} result={diagnosisResult} />
+                )}
+                {diagnosisResult.type === 'image' && diagnosisResult.triage && (
+                  <ImageTriageView key={resultKey} triage={diagnosisResult.triage} />
+                )}
+
+                <div className="flex gap-3 pt-2 border-t border-black/10 dark:border-white/10">
+                  <button onClick={handleNewDiagnosis}
+                    className="flex-1 py-3 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 rounded-xl font-semibold transition-all text-slate-800 dark:text-white text-sm">
+                    New Diagnosis
+                  </button>
+                  <button onClick={onClose}
+                    className="flex-1 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-semibold transition-all text-white text-sm">
+                    Done
+                  </button>
                 </div>
               </div>
+            )}
+          </div>
 
-              {/* Audio Results */}
-              {diagnosisResult.type === 'audio' && (
-                <div className="space-y-4">
-                  <div className="p-4 bg-black/5 dark:bg-white/5 rounded-lg">
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">Detected Emotion</div>
-                    <div className="text-xl font-bold text-slate-900 dark:text-white">{diagnosisResult.emotion}</div>
-                  </div>
-                  <div className="p-4 bg-black/5 dark:bg-white/5 rounded-lg">
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">Emergency Category</div>
-                    <div className="text-xl font-bold text-slate-900 dark:text-white">{diagnosisResult.category}</div>
-                  </div>
-                </div>
-              )}
-
-              {/* Image Results */}
-              {diagnosisResult.type === 'image' && (
-                <div className="space-y-4">
-                  <div className="p-4 bg-black/5 dark:bg-white/5 rounded-lg">
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">Status</div>
-                    <div className="text-xl font-bold text-slate-900 dark:text-white capitalize">{diagnosisResult.status}</div>
-                  </div>
-                  {diagnosisResult.reason && (
-                    <div className="p-4 bg-black/5 dark:bg-white/5 rounded-lg">
-                      <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">Reason</div>
-                      <div className="text-base text-slate-900 dark:text-white">{diagnosisResult.reason}</div>
-                    </div>
-                  )}
-                  {diagnosisResult.labels && diagnosisResult.labels.length > 0 && (
-                    <div className="p-4 bg-black/5 dark:bg-white/5 rounded-lg">
-                      <div className="text-sm text-slate-600 dark:text-slate-400 mb-2">Detected Labels</div>
-                      <div className="flex flex-wrap gap-2">
-                        {diagnosisResult.labels.map((label, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-blue-500/20 text-blue-700 dark:text-blue-400 rounded-full text-sm font-medium"
-                          >
-                            {label}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Action Buttons */}
-              <div className="flex gap-3">
-                <button
-                  onClick={() => {
-                    setStep('select');
-                    setUploadType(null);
-                    setSelectedFile(null);
-                    setDiagnosisResult(null);
-                  }}
-                  className="flex-1 py-3 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 rounded-lg font-medium transition-all text-slate-800 dark:text-white"
-                >
-                  New Diagnosis
-                </button>
-                <button
-                  onClick={handleClose}
-                  className="flex-1 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-all text-white"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

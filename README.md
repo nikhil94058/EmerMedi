@@ -2,7 +2,7 @@
 
 **Bridging the Gap Between Rural Distress and Rapid Medical Response**
 
-ResQ.ai is a voice-first, multilingual, AI-powered emergency response platform designed specifically for India's unique healthcare challenges. Unlike traditional 911/112 systems, LifeLink uses Generative AI to understand local dialects, Computer Vision to assess injuries, and real-time logistics to navigate chaotic traffic—all while functioning in low-bandwidth environments.
+ResQ.ai is a voice-first, multilingual, AI-powered emergency response platform designed specifically for India's unique healthcare challenges. Unlike traditional 108/112 systems, LifeLink uses Generative AI to understand local dialects, Computer Vision to assess injuries, and real-time logistics to navigate chaotic traffic—all while functioning in low-bandwidth environments.
 
 ## 🚨 The Problem
 
@@ -165,7 +165,7 @@ Score = Min(Travel_Time + Wait_Time)
 
 ## 🌟 What Makes Us Different
 
-| Feature | Traditional 911/112 | ResQ.ai |
+| Feature | Traditional 108/112 | ResQ.ai |
 |---------|-------------------|-------------|
 | **Input** | Voice call only | Voice + Image + SOS + SMS |
 | **Language** | Limited languages | 100+ Indian dialects |
