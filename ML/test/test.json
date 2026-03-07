@@ -1,0 +1,3998 @@
+{
+  "places": [
+    {
+      "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw",
+      "id": "ChIJNc-mjtmpkjkRXBcSzWMlSUw",
+      "types": [
+        "hospital",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "092969 74105",
+      "internationalPhoneNumber": "+91 92969 74105",
+      "formattedAddress": "Unnamed Road maudhai bandh chauraha near new nit campus bihta, Modahi, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "Unnamed Road maudhai bandh chauraha near new nit campus bihta",
+          "languageCode": "en"
+        },
+        {
+          "longText": "Modahi",
+          "shortText": "Modahi",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "plusCode": {
+        "globalCode": "7MQ6HRGG+QQ",
+        "compoundCode": "HRGG+QQ Modahi, Bihar, India"
+      },
+      "location": {
+        "latitude": 25.576981600000003,
+        "longitude": 84.826990999999992
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.575667119708502,
+          "longitude": 84.8255403197085
+        },
+        "high": {
+          "latitude": 25.578365080291508,
+          "longitude": 84.8282382802915
+        }
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=5496965930754905948&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "regularOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 0,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "Unnamed Road maudhai bandh chauraha near new nit campus bihta, \u003cspan class=\"locality\"\u003eModahi\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 9,
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "Santosh Medical Hall Maudhai (Bihta)",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      },
+      "currentOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 6,
+              "hour": 0,
+              "minute": 0,
+              "truncated": true,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 7
+              }
+            },
+            "close": {
+              "day": 5,
+              "hour": 23,
+              "minute": 59,
+              "truncated": true,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 13
+              }
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "primaryType": "hospital",
+      "shortFormattedAddress": "Unnamed Road maudhai bandh chauraha near new nit campus bihta, Modahi",
+      "reviews": [
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xrME4zUlhSRFl0WXpSVlJHVTFOVFJIWlZkaE5FRRAB",
+          "relativePublishTimeDescription": "3 months ago",
+          "rating": 5,
+          "text": {
+            "text": "best clinic for primary health services",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "best clinic for primary health services",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Rahmu Din",
+            "uri": "https://www.google.com/maps/contrib/101000497630118566471/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWg_U5vLTzd24xitqqwgkz7l8DbJCdGsV3uAsn_MPYn4TeA2Iou=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2025-12-06T06:23:43.769595763Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2xrME4zUlhSRFl0WXpSVlJHVTFOVFJIWlZkaE5FRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xrME4zUlhSRFl0WXpSVlJHVTFOVFJIWlZkaE5FRRAB!2m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/reviews/ChZDSUhNMG9nS0VJQ0FnSUNINUpxNUVnEAE",
+          "relativePublishTimeDescription": "a year ago",
+          "rating": 5,
+          "text": {
+            "text": "Best hospital in moudahi",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Best hospital in moudahi",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Nitesh kr Nitesh Kumar",
+            "uri": "https://www.google.com/maps/contrib/111548165194506687394/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLa0qfGRx0sE1LCk1UTwOj-UbvtbNDUxyzLqOLVtY4cCcw_1g=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2024-09-01T12:09:20.920371Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUNINUpxNUVnEAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNINUpxNUVnEAE!2m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/reviews/ChdDSUhNMG9nS0VJQ0FnSUNIMzY3bnlRRRAB",
+          "relativePublishTimeDescription": "a year ago",
+          "rating": 5,
+          "text": {
+            "text": "Best medical hall in maudahi",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Best medical hall in maudahi",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "VICKY YADAV",
+            "uri": "https://www.google.com/maps/contrib/102674651335136242279/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWej02-8Sx3K8YP8z6kArkSX_5PLvx17spMX1KJx_21Zs_PLIrj=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2024-09-10T17:28:32.269046Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSUNIMzY3bnlRRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUNIMzY3bnlRRRAB!2m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/reviews/ChdDSUhNMG9nS0VJQ0FnSUNIMzZtd19BRRAB",
+          "relativePublishTimeDescription": "a year ago",
+          "rating": 5,
+          "text": {
+            "text": "Best hospital near nit patna",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Best hospital near nit patna",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Pawan Kumar",
+            "uri": "https://www.google.com/maps/contrib/110447342728477545178/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXC_hmOHp3xt7TVvfWFTbXpvRq1zbtGpkDePzg8JZ0W2_a6ldHY=s128-c0x00000000-cc-rp-mo-ba3"
+          },
+          "publishTime": "2024-09-10T17:44:44.084339Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSUNIMzZtd19BRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUNIMzZtd19BRRAB!2m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/reviews/ChZDSUhNMG9nS0VJQ0FnSUNDaWRQcVZBEAE",
+          "relativePublishTimeDescription": "5 years ago",
+          "rating": 5,
+          "text": {
+            "text": "Nice",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Nice",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Santosh Kumar",
+            "uri": "https://www.google.com/maps/contrib/104045054774708929145/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWpKZReI1XcorqotDYO_6HqcGz9aFZOAtUoifh503Rc2aIpijj-=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2020-08-27T11:40:06.175981Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUNDaWRQcVZBEAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNDaWRQcVZBEAE!2m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        }
+      ],
+      "photos": [
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfWf3q3cIQJhwMjlfHOvOHXqsDS5LL-pS0T-vDzaygGRJUh3OdSHg09U2JYc5JrWEO5fA8xOZwyB65ZDVFeJYfiISTyC8m-HPZa1ENUJBNqidNf6h8BWMOEAsJ7UIOgbEcEMKH4L3uF0Fk3syQCNbVEGLpVI8visv0POQ-UgqP5Mq-seWpGD2kFXKEX7QmDQQMo_TPJX1qarubZyytS-pNHyyRzo0H9q6JbnfZO4sd-Gwur4kAW4HRbKPecjOC0KGPjuMp9eXsdF0M54AhV1GwjJYsYqyRv6_CbdcQCjkbOKqw",
+          "widthPx": 3264,
+          "heightPx": 1836,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPd7QgOGhytKOEJJRRANL5ZwiQ2bAW4Dmn86Wg-&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPd7QgOGhytKOEJJRRANL5ZwiQ2bAW4Dmn86Wg-!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfUSW8IJRy1peyWBLVaQUPdQI4FRo68VhmjKkIcsDe__NRGJmbiiUd_oChdVto94j2Wqp5IzAXzslt6kqAYe6XtqF4QmjkxOGJgklsoARjHiI02Hv2bdHYxVM7MBvvr-h272NTMhFoWlRLUI8OjL7BWQ23jMT5RgqaSmcemIEy97Ond0kUOhZEJuT93adnFFC0C1kffW4LewmVklD-j_biGy3ILYf--9LfnqZkJGe_nWAbV31HI2ip6fNGJRI7njk2DWWDSLa0w3ZJRgAJL-BMUswTR1nNZ64ksmsbCcl1nZ-IxigNW4yUTylDYaKJVOulZfoHLu9k7wZxkdlU8KvJIGt3Ef2pzTP9oNYre-itBP2Y1AEy_ElK_X7Z726B_di-IVApBkB-TK8Ug-Z0cFfRcfiW_qh1X7PqIhToEMFpY",
+          "widthPx": 3600,
+          "heightPx": 4800,
+          "authorAttributions": [
+            {
+              "displayName": "SANTOSH KUMAR",
+              "uri": "https://maps.google.com/maps/contrib/110709461202709322045",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW9CsoE-rJimGepXEW8rjUTJh4YoDVzf5LGDt_I_dhxRF82-50b=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDWkL2CIA&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDWkL2CIA!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfVFGltCovfVDD-HFLlYg5K6CITL_HlktABJg4JQQUhMY95ePOydimJZVNAjZUtZU4PE9ZrX9ZQ_YlHOmF_4-P1JjVg2lwGYxqzF1_4Vc1O4nYHJFEEACRXPFKpelMqLKi-en7ahh9yR-andn154VlrnOLIpdU0EdUbgr02RRoCijri38hPgvCycquTlhcOg2VnW74RMdYAgEI1SYF_B3LLdmPcYWPAILW9ivINMZsT_sPiLlkZvnm_dJuvH4nxBSNZn1rOc3WCbEJV8ZFfILXZ0dw4uisTsLU825Dl5zBtI_A",
+          "widthPx": 4032,
+          "heightPx": 1816,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipO_UE9onWpmFk9CG28rtxWTTBfZxz_IKyyo9v1o&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipO_UE9onWpmFk9CG28rtxWTTBfZxz_IKyyo9v1o!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfV3kFKhb45Jf0UipdzHEbSTKNwItM9RQ42ABl9NAH-sqJfO_CxiczbKMbMXiAUDXgkNfvaZhr3FHIZ8y2lGJszqmDEUlU1jclApyh1fwvYvNdKgvUkQF4kbo2T7y-oIoUrPAt1r_B3oSl36TolBVzhHEmEVvigrSTAA-HcvEPvDz6WXwzxMrquz8JQzGBgwLwGdPLrc0Fc6qXmpf08BKjAPbeIn5F5CKrzHHU70kwfYnlA14FA3DAEi4T9cgqak7ImmDQUtzMjtYxGwJJ0QFGyJ1p2WYrvbTvBI_sg8saxZdg",
+          "widthPx": 4000,
+          "heightPx": 1800,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMEAurGWmBHPMIc2L7JuyhoyQ9srSe77KMI_Clt&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMEAurGWmBHPMIc2L7JuyhoyQ9srSe77KMI_Clt!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfXk8XhrfyCNQJ_mR6sO8AmU6Mwp2u4dSOd4Q1OEmmk3WR9p3buRXcAheuI1N5YlVZrh-XeItcS2TihiGuEDSVAoDC3S_zk--kHsS3tBMBseQquKrre43vWP4Gjj71EKiJm1I6Vs4B89rIy9LcC0ubcytBYjaTaGRYpEUr5SM18eaoz5KNJQaxjz70Ncp-nPwmmzbyP5mIiQn5M8W86gTZPqPPrCtgISYF-P5vkKKZanuWLeDO-ylCfbpHemtwoA4zKmaw79JTQos2AEyGGDO_Ho43AndIceQRWhVFNd_Gn8cQ",
+          "widthPx": 4800,
+          "heightPx": 3600,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipPqbEwaEoLtK5CehiC8mR5yi2JG1xMv-6rGAedn&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipPqbEwaEoLtK5CehiC8mR5yi2JG1xMv-6rGAedn!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfV3WKOgBzawMEQb184uviViPE1Pwx69CaHzDHuBDHKXHoc0mGcKeLgP9SXEp7gRib15YGK-iBBKesBXOcdK_ltWkSl5rppDVHOVNfozDvPokaaNowV7-lMDubgyI0cIwUVip-cmXcoy6-ijwq4XVXScrKc4Oo6G28SES3jI5QD3xt9vCKs4FL5jDn44NjnX7Wj--qpMUdGquqgFTzwWDcyN_O9T28zDv7Xi6zsNQE75REl-n5EcO5giXvXkqh5ea63PgluGy-cg4jKXjwzLcYu8Ib_om5v5crI2qWtt-fz01A",
+          "widthPx": 1472,
+          "heightPx": 3264,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipN6PY56f0TwB-Z3R6GVkZ2jtcWxwBqCpwayuX_E&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipN6PY56f0TwB-Z3R6GVkZ2jtcWxwBqCpwayuX_E!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfUPMa1j1zQ-t0aevTwJbvuFrHPcnHwXL6gJxWKL_aCPaASVge3QjEDgULFC0Wk29MoyKXYrxA5CVGDNbPsFWjCC1wCHLSbxfFP1ccVvY8NWYxVYWqjNEVb3D1Wfw_7O86AxhzHMnd7OwMjmLspxVgcTE2jpk95ZZWumCiFJ55Sfn4Pf9kUTWVCFOIoK5eKeyUo4QIntFDsFYyvWPY1lsUJ1m_E0pRLSiZFIOJHFmKsY9tY8cRBJkPU6NueJSK6RHJHX5_qUMhTKrBzAg2tW7Viv0U9P99ml91deT5TPCJcx3A",
+          "widthPx": 4800,
+          "heightPx": 3179,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipM-NYVTdbn3dAeLUUV3f_vI7SmWRmOqNWLSlVQx&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipM-NYVTdbn3dAeLUUV3f_vI7SmWRmOqNWLSlVQx!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfUMKT_vo7EDX3vON01jfw9gtH15MY7Fsd20_WaezDLwVDVGyknQ4EUu9Qzes1V8e5obruN_fDx4__KFwiAk7D2P42n0ojwchUUjCAF-923oUk2HLhy7pXfeuMqeuozFNKMi6QuEf9lSJLY-MbxEYFtgm3iyauuhR_QydBlmsLWuNUNayYORNZ1sp5y9OgI2u0hCdAa_diiG0hSZ88xpk_FS-u_oxRJF9VrzMKZHm8zC8pJs6NiIVxy14z-A0oVTzqWrMzxEdK8RSnGJaACb-3qHFANpN-haa458YlXvPmC7Tw",
+          "widthPx": 1472,
+          "heightPx": 3264,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNJm51y0m4HXbJGG80qoAFE1JLtXfLeTKmH5y5h&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNJm51y0m4HXbJGG80qoAFE1JLtXfLeTKmH5y5h!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfVrQKMHzq1wnqwJP-xQKXkOh3SYmr5qjJi12RU64VQPN8f1U8DpUqRwFR8_LBV_iRe8WpxesOm5ERrMefzbhfqo3qaFoAqTJoZssZKzwURca4Qp4NASplBHeqgGODjduKatYvV_esNmsAPxkH-JbZMSxbzD-cXSCFyHxRZmlyDNvWSF-TcrLMgXkmpjIdgZh0Lw5Ky3AJTP8CMoYDXOrdSHtPGIb-hD57FrnQD-E7szIKbd1poeb46ralMUlhxT8WQaMgyNjl9TVLLPAbGe1QFZ8NvsQriocPJMX3-Yo6BPHg",
+          "widthPx": 4800,
+          "heightPx": 3179,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipOBcD_FPt5Xv_MR7-IJMgvYclm4SGHFelEdlcMa&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipOBcD_FPt5Xv_MR7-IJMgvYclm4SGHFelEdlcMa!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        },
+        {
+          "name": "places/ChIJNc-mjtmpkjkRXBcSzWMlSUw/photos/ATCDNfU0s8KBIpAfh3tl8H0ENv3wp6dvSNqbqvvsKfOAxnB4YwObuKjXjp8UB0xb0ea93NLZx6CngELoYCIvX8aoZ6OX7ZP_FyCpZXHSgM2Qwc7r0WtZWC7s0w0U5rxiSSx_-MqjklkF7YcO0MAzoMX-r1w0ZqVVKrGUTVameiOOCN0-hV8TkzJK5N4qYQFo1q7rsjdswNSHvY-b8vBcadWyTun2-2CDuneygxkZKAtqETzPX180fstwtPUsLYOpdRHUiyMxhT4Qsc4i8LaSgolD0zaVX9PEkrHWEP_0QJ9p1rrtbA",
+          "widthPx": 4608,
+          "heightPx": 3456,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Medical Hall Maudhai (Bihta)",
+              "uri": "https://maps.google.com/maps/contrib/114177092799347268960",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVfo8qb6Uu161iBEVwdhXf_6nz2YMa4lkCt48Zypmfy-AN2KCrd=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMxvg342tQtu57CN5W5WDB99b4T_4UcQLHE226k&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMxvg342tQtu57CN5W5WDB99b4T_4UcQLHE226k!2e10!4m2!3m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c"
+        }
+      ],
+      "parkingOptions": {
+        "freeParkingLot": true
+      },
+      "accessibilityOptions": {
+        "wheelchairAccessibleParking": true,
+        "wheelchairAccessibleEntrance": true
+      },
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJq6raINepkjkR1666tw3SF1I",
+            "placeId": "ChIJq6raINepkjkR1666tw3SF1I",
+            "displayName": {
+              "text": "Maudahi Upgraded Middle School",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "school"
+            ],
+            "straightLineDistanceMeters": 393.03433,
+            "travelDistanceMeters": 405.5738
+          },
+          {
+            "name": "places/ChIJ4YTDm1qpkjkRTqObZe_ZqX8",
+            "placeId": "ChIJ4YTDm1qpkjkRTqObZe_ZqX8",
+            "displayName": {
+              "text": "Pappu Prasad",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "food",
+              "point_of_interest",
+              "store"
+            ],
+            "spatialRelationship": "AROUND_THE_CORNER",
+            "straightLineDistanceMeters": 238.84799,
+            "travelDistanceMeters": 283.6228
+          },
+          {
+            "name": "places/ChIJOQHMc7SpkjkRInc-vh00Xlk",
+            "placeId": "ChIJOQHMc7SpkjkRInc-vh00Xlk",
+            "displayName": {
+              "text": "Prakash Kirana Dukan",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "food",
+              "point_of_interest",
+              "store"
+            ],
+            "spatialRelationship": "AROUND_THE_CORNER",
+            "straightLineDistanceMeters": 227.18643,
+            "travelDistanceMeters": 270.12097
+          },
+          {
+            "name": "places/ChIJ78nFe_upkjkRc8CRL5uo0LE",
+            "placeId": "ChIJ78nFe_upkjkRc8CRL5uo0LE",
+            "displayName": {
+              "text": "Raja Nighty Store",
+              "languageCode": "en"
+            },
+            "types": [
+              "clothing_store",
+              "establishment",
+              "point_of_interest",
+              "store"
+            ],
+            "straightLineDistanceMeters": 296.95132,
+            "travelDistanceMeters": 362.23212
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x3992a9d98ea6cf35:0x4c492563cd12175c!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=5496965930754905948&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x3992a9d98ea6cf35:0x4c492563cd12175c!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x3992a9d98ea6cf35:0x4c492563cd12175c!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x3992a9d98ea6cf35:0x4c492563cd12175c!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Modahi",
+        "addressLines": [
+          "Unnamed Road maudhai bandh chauraha near new nit campus bihta"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJZ_WJJQCpkjkRIIDY2sTDWrU",
+      "id": "ChIJZ_WJJQCpkjkRIIDY2sTDWrU",
+      "types": [
+        "hospital",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "HRGW+9C6, Kateshar, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "HRGW+9C6",
+          "shortText": "HRGW+9C6",
+          "types": [
+            "plus_code"
+          ],
+          "languageCode": "en-US"
+        },
+        {
+          "longText": "Kateshar",
+          "shortText": "Kateshar",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "location": {
+        "latitude": 25.5759153,
+        "longitude": 84.8460115
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.574636619708496,
+          "longitude": 84.8446770197085
+        },
+        "high": {
+          "latitude": 25.5773345802915,
+          "longitude": 84.8473749802915
+        }
+      },
+      "googleMapsUri": "https://maps.google.com/?cid=13067972519021543456&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "HRGW+9C6, \u003cspan class=\"locality\"\u003eKateshar\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "SHAKUNTALA AYUSH & ACCU CLINIC",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      },
+      "primaryType": "hospital",
+      "shortFormattedAddress": "HRGW+9C6, Kateshar",
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJoYuAEACpkjkRlYUU2zQEyrA",
+            "placeId": "ChIJoYuAEACpkjkRlYUU2zQEyrA",
+            "displayName": {
+              "text": "Amnabad ( Balmiki Ray)",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "hindu_temple",
+              "place_of_worship",
+              "point_of_interest"
+            ],
+            "spatialRelationship": "BESIDE",
+            "straightLineDistanceMeters": 8.900623,
+            "travelDistanceMeters": 0.001039505
+          },
+          {
+            "name": "places/ChIJw_wPOHypkjkR1BjaSFm1Y7U",
+            "placeId": "ChIJw_wPOHypkjkR1BjaSFm1Y7U",
+            "displayName": {
+              "text": "Satish sikandrapur",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "school"
+            ],
+            "straightLineDistanceMeters": 169.41872,
+            "travelDistanceMeters": 290.7417
+          },
+          {
+            "name": "places/ChIJO801dwCpkjkRKtSiqHpmNVg",
+            "placeId": "ChIJO801dwCpkjkRKtSiqHpmNVg",
+            "displayName": {
+              "text": "Kanya Ps katesar",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "primary_school",
+              "school"
+            ],
+            "spatialRelationship": "BESIDE",
+            "straightLineDistanceMeters": 8.900623,
+            "travelDistanceMeters": 0.001039505
+          },
+          {
+            "name": "places/ChIJ34cDZwqpkjkRAAqt_ertTAk",
+            "placeId": "ChIJ34cDZwqpkjkRAAqt_ertTAk",
+            "displayName": {
+              "text": "Manish House",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest"
+            ],
+            "spatialRelationship": "AROUND_THE_CORNER",
+            "straightLineDistanceMeters": 131.85991,
+            "travelDistanceMeters": 172.40211
+          },
+          {
+            "name": "places/ChIJr1SEVwCpkjkRl7qYVSZPUNk",
+            "placeId": "ChIJr1SEVwCpkjkRl7qYVSZPUNk",
+            "displayName": {
+              "text": "Sewing machine sell or reparing centre",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "store"
+            ],
+            "spatialRelationship": "BESIDE",
+            "straightLineDistanceMeters": 8.900623,
+            "travelDistanceMeters": 0.001039505
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x3992a9002589f567:0xb55ac3c4dad88020!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=13067972519021543456&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x3992a9002589f567:0xb55ac3c4dad88020!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x3992a9002589f567:0xb55ac3c4dad88020!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x3992a9002589f567:0xb55ac3c4dad88020!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Kateshar",
+        "addressLines": [
+          "HRGW+9C6"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJlbAf7tZXjTkRHPR_06ALXVU",
+      "id": "ChIJlbAf7tZXjTkRHPR_06ALXVU",
+      "types": [
+        "hospital",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "HRCW+56Q, Ara Rd, khedalpura, Bihta, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "HRCW+56Q",
+          "shortText": "HRCW+56Q",
+          "types": [
+            "plus_code"
+          ],
+          "languageCode": "en-US"
+        },
+        {
+          "longText": "Ara Road",
+          "shortText": "Ara Rd",
+          "types": [
+            "route"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "khedalpura",
+          "shortText": "khedalpura",
+          "types": [
+            "sublocality_level_1",
+            "sublocality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihta",
+          "shortText": "Bihta",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "location": {
+        "latitude": 25.570466699999997,
+        "longitude": 84.84561
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.569079569708496,
+          "longitude": 84.8442572697085
+        },
+        "high": {
+          "latitude": 25.5717775302915,
+          "longitude": 84.846955230291513
+        }
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=6151085451429016604&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "HRCW+56Q, \u003cspan class=\"street-address\"\u003eAra Rd\u003c/span\u003e, \u003cspan class=\"extended-address\"\u003ekhedalpura\u003c/span\u003e, \u003cspan class=\"locality\"\u003eBihta\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 1,
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "Bihta care nursing home",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      },
+      "primaryType": "hospital",
+      "shortFormattedAddress": "HRCW+56Q, Ara Rd, khedalpura, Bihta",
+      "reviews": [
+        {
+          "name": "places/ChIJlbAf7tZXjTkRHPR_06ALXVU/reviews/ChdDSUhNMG9nS0VJQ0FnSUQyMy1HandRRRAB",
+          "relativePublishTimeDescription": "3 years ago",
+          "rating": 5,
+          "text": {
+            "text": "Osm",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Osm",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "RAVI RANJAN KUMAR",
+            "uri": "https://www.google.com/maps/contrib/109576052763171196930/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJJUn12kFvoFA1LHbhJEu5Bqw2gSNOwpmJ6HHBc6dzXLbbJ-n-W=s128-c0x00000000-cc-rp-mo-ba4"
+          },
+          "publishTime": "2022-05-29T12:58:31.122963Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSUQyMy1HandRRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUQyMy1HandRRRAB!2m1!1s0x398d57d6ee1fb095:0x555d0ba0d37ff41c"
+        }
+      ],
+      "accessibilityOptions": {
+        "wheelchairAccessibleParking": true,
+        "wheelchairAccessibleEntrance": true
+      },
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJHaBm-AVXjTkRX45wsr_WaRM",
+            "placeId": "ChIJHaBm-AVXjTkRX45wsr_WaRM",
+            "displayName": {
+              "text": "MOHRAMPUR SHIV MANDIR Bihta",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "hindu_temple",
+              "place_of_worship",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 58.571083,
+            "travelDistanceMeters": 58.323307
+          },
+          {
+            "name": "places/ChIJi7aTT_2pkjkRWhNt5WO1COo",
+            "placeId": "ChIJi7aTT_2pkjkRWhNt5WO1COo",
+            "displayName": {
+              "text": "RAJ DIGITAL PRESS",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "store"
+            ],
+            "straightLineDistanceMeters": 312.9345,
+            "travelDistanceMeters": 499.10278
+          },
+          {
+            "name": "places/ChIJReZGKwNWjTkRNh8N49BA8Gk",
+            "placeId": "ChIJReZGKwNWjTkRNh8N49BA8Gk",
+            "displayName": {
+              "text": "Shiv Mandir Kishunpur",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "hindu_temple",
+              "place_of_worship",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 161.71399,
+            "travelDistanceMeters": 204.96638
+          },
+          {
+            "name": "places/ChIJAQAAAPCpkjkRwdueCRU0KrA",
+            "placeId": "ChIJAQAAAPCpkjkRwdueCRU0KrA",
+            "displayName": {
+              "text": "Yogipur Bihta Patna",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 206.16093,
+            "travelDistanceMeters": 341.67117
+          },
+          {
+            "name": "places/ChIJbcDSHXBXjTkR0gJZjtDRfyM",
+            "placeId": "ChIJbcDSHXBXjTkR0gJZjtDRfyM",
+            "displayName": {
+              "text": "Kishunpur",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 309.4897,
+            "travelDistanceMeters": 379.81366
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x398d57d6ee1fb095:0x555d0ba0d37ff41c!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=6151085451429016604&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x398d57d6ee1fb095:0x555d0ba0d37ff41c!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x398d57d6ee1fb095:0x555d0ba0d37ff41c!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x398d57d6ee1fb095:0x555d0ba0d37ff41c!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Bihta",
+        "addressLines": [
+          "HRCW+56Q",
+          "Ara Rd",
+          "khedalpura"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJja8hZwBXjTkRFWvK1nDxAvQ",
+      "id": "ChIJja8hZwBXjTkRFWvK1nDxAvQ",
+      "types": [
+        "medical_center",
+        "hospital",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "HR6W+Q2P, Bedauli, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "HR6W+Q2P",
+          "shortText": "HR6W+Q2P",
+          "types": [
+            "plus_code"
+          ],
+          "languageCode": "en-US"
+        },
+        {
+          "longText": "Bedauli",
+          "shortText": "Bedauli",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "mohrampur",
+          "shortText": "mohrampur",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "location": {
+        "latitude": 25.561968099999998,
+        "longitude": 84.8450639
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.5606469197085,
+          "longitude": 84.8439581697085
+        },
+        "high": {
+          "latitude": 25.563344880291503,
+          "longitude": 84.8466561302915
+        }
+      },
+      "googleMapsUri": "https://maps.google.com/?cid=17582881362150058773&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "HR6W+Q2P, \u003cspan class=\"locality\"\u003eBedauli\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "Dr Sachin Kumar",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Medical Center",
+        "languageCode": "en-US"
+      },
+      "primaryType": "medical_center",
+      "shortFormattedAddress": "HR6W+Q2P, Bedauli",
+      "accessibilityOptions": {
+        "wheelchairAccessibleEntrance": true
+      },
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJDe8p1FZXjTkRxvfAv855ac4",
+            "placeId": "ChIJDe8p1FZXjTkRxvfAv855ac4",
+            "displayName": {
+              "text": "Dumri Village",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "hindu_temple",
+              "place_of_worship",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 289.1164,
+            "travelDistanceMeters": 410.1959
+          },
+          {
+            "name": "places/ChIJ7_4WH3lXjTkR19igcTxtE84",
+            "placeId": "ChIJ7_4WH3lXjTkR19igcTxtE84",
+            "displayName": {
+              "text": "Smt international school",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "school"
+            ],
+            "spatialRelationship": "BESIDE",
+            "straightLineDistanceMeters": 42.33833,
+            "travelDistanceMeters": 0.00032424927
+          },
+          {
+            "name": "places/ChIJ0WygL89XjTkRoPG3DsNk8gQ",
+            "placeId": "ChIJ0WygL89XjTkRoPG3DsNk8gQ",
+            "displayName": {
+              "text": "Subodh c s c",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "university"
+            ],
+            "spatialRelationship": "BESIDE",
+            "straightLineDistanceMeters": 42.33833,
+            "travelDistanceMeters": 0.00032424927
+          },
+          {
+            "name": "places/ChIJ87oXIgBXjTkRvIfQZ4lcHPA",
+            "placeId": "ChIJ87oXIgBXjTkRvIfQZ4lcHPA",
+            "displayName": {
+              "text": "M.d.h.s.bedauli baniyapur saran",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "primary_school",
+              "school"
+            ],
+            "spatialRelationship": "BESIDE",
+            "straightLineDistanceMeters": 42.33833,
+            "travelDistanceMeters": 0.00032424927
+          },
+          {
+            "name": "places/ChIJ-8AAFQBXjTkRScGTv-R0l3k",
+            "placeId": "ChIJ-8AAFQBXjTkRScGTv-R0l3k",
+            "displayName": {
+              "text": "Dumri Bihta",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 258.39722,
+            "travelDistanceMeters": 293.77606
+          }
+        ],
+        "areas": [
+          {
+            "name": "places/ChIJ05oZuRpWjTkR1S6tetyd3Ls",
+            "placeId": "ChIJ05oZuRpWjTkR1S6tetyd3Ls",
+            "displayName": {
+              "text": "Dumri Primary School",
+              "languageCode": "en"
+            },
+            "containment": "NEAR"
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x398d57006721af8d:0xf402f170d6ca6b15!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=17582881362150058773&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x398d57006721af8d:0xf402f170d6ca6b15!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x398d57006721af8d:0xf402f170d6ca6b15!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x398d57006721af8d:0xf402f170d6ca6b15!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Bedauli",
+        "addressLines": [
+          "HR6W+Q2P"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Medical Center",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJzX07HABXjTkRwyVcntbKsVs",
+      "id": "ChIJzX07HABXjTkRwyVcntbKsVs",
+      "types": [
+        "hospital",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "HVF4+3HQ, Bihta Rd, Ramnagar, Bihta, Kateshar, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "HVF4+3HQ",
+          "shortText": "HVF4+3HQ",
+          "types": [
+            "plus_code"
+          ],
+          "languageCode": "en-US"
+        },
+        {
+          "longText": "Bihta Rd",
+          "shortText": "Bihta Rd",
+          "types": [
+            "route"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Ramnagar",
+          "shortText": "Ramnagar",
+          "types": [
+            "sublocality_level_2",
+            "sublocality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihta",
+          "shortText": "Bihta",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Kateshar",
+          "shortText": "Kateshar",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "location": {
+        "latitude": 25.572698199999998,
+        "longitude": 84.8564401
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.571316219708496,
+          "longitude": 84.8551754197085
+        },
+        "high": {
+          "latitude": 25.574014180291503,
+          "longitude": 84.857873380291508
+        }
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=6607285151457879491&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "regularOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 0,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "HVF4+3HQ, \u003cspan class=\"street-address\"\u003eBihta Rd\u003c/span\u003e, \u003cspan class=\"extended-address\"\u003eRamnagar\u003c/span\u003e, \u003cspan class=\"locality\"\u003eBihta, Kateshar\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 2,
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "Hospital Building ESIC",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      },
+      "currentOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 6,
+              "hour": 0,
+              "minute": 0,
+              "truncated": true,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 7
+              }
+            },
+            "close": {
+              "day": 5,
+              "hour": 23,
+              "minute": 59,
+              "truncated": true,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 13
+              }
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "primaryType": "hospital",
+      "shortFormattedAddress": "HVF4+3HQ, Bihta Rd, Ramnagar, Bihta, Kateshar",
+      "reviews": [
+        {
+          "name": "places/ChIJzX07HABXjTkRwyVcntbKsVs/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tSbGJXeGFXalZpU0VKMVJrcDZlamhaU0UxYWFIYxAB",
+          "relativePublishTimeDescription": "3 months ago",
+          "rating": 5,
+          "text": {
+            "text": "ESIC Hospital, Bihta – A Reliable Center for Quality Healthcare\n\nESIC Hospital, Bihta, located in Bihar, is one of the most important government hospitals run under the Employees’ State Insurance Corporation (ESIC). It provides affordable and quality healthcare services to employees and their families. The hospital has a clean and well-maintained campus with all the basic and modern medical facilities.\n\nDifferent departments such as General Medicine, Surgery, Orthopedics, Gynecology, Pediatrics, and Emergency Services are available here. The doctors and nursing staff are skilled, polite, and always ready to help patients. The hospital management also focuses on cleanliness, safety, and patient comfort, which makes it a trusted healthcare center in the region.\n\nFor people living in and around Bihta, this hospital is a great support, offering affordable treatment without compromising quality. Over the years, ESIC Hospital, Bihta has earned people’s trust through its dedicated service and patient-friendly approach. It continues to play a vital role in improving healthcare facilities in this growing town.\n\nOPD Opening hours: Monday to Friday 9 am to 4 pm, Saturday 9 am to 1 pm\nOPD registration: Monday to Friday 9 am to 2:30 pm , Emergency 24×7 hours",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "ESIC Hospital, Bihta – A Reliable Center for Quality Healthcare\n\nESIC Hospital, Bihta, located in Bihar, is one of the most important government hospitals run under the Employees’ State Insurance Corporation (ESIC). It provides affordable and quality healthcare services to employees and their families. The hospital has a clean and well-maintained campus with all the basic and modern medical facilities.\n\nDifferent departments such as General Medicine, Surgery, Orthopedics, Gynecology, Pediatrics, and Emergency Services are available here. The doctors and nursing staff are skilled, polite, and always ready to help patients. The hospital management also focuses on cleanliness, safety, and patient comfort, which makes it a trusted healthcare center in the region.\n\nFor people living in and around Bihta, this hospital is a great support, offering affordable treatment without compromising quality. Over the years, ESIC Hospital, Bihta has earned people’s trust through its dedicated service and patient-friendly approach. It continues to play a vital role in improving healthcare facilities in this growing town.\n\nOPD Opening hours: Monday to Friday 9 am to 4 pm, Saturday 9 am to 1 pm\nOPD registration: Monday to Friday 9 am to 2:30 pm , Emergency 24×7 hours",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Shivam Karn",
+            "uri": "https://www.google.com/maps/contrib/103376727869639082366/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUfOIcDc-_hq518_Jpxz8-Zgx_HYQV_hSjSE8ZdC2k3moeFEaXTXQ=s128-c0x00000000-cc-rp-mo-ba4"
+          },
+          "publishTime": "2025-11-13T15:04:07.009422866Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2tSbGJXeGFXalZpU0VKMVJrcDZlamhaU0UxYWFIYxAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tSbGJXeGFXalZpU0VKMVJrcDZlamhaU0UxYWFIYxAB!2m1!1s0x398d57001c3b7dcd:0x5bb1cad69e5c25c3"
+        },
+        {
+          "name": "places/ChIJzX07HABXjTkRwyVcntbKsVs/reviews/Ci9DQUlRQUNvZENodHljRjlvT20xb2JYZEdSbFIyVEY5UVowYzRkVTlLUkRKSGNsRRAB",
+          "relativePublishTimeDescription": "2 months ago",
+          "rating": 5,
+          "authorAttribution": {
+            "displayName": "Priyaranjan Kumar",
+            "uri": "https://www.google.com/maps/contrib/104607564393839381318/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUeKEw1NRu_ENYbhnpbpowoA5OMUIWON03uHEcoHLli5XogaESkVQ=s128-c0x00000000-cc-rp-mo-ba3"
+          },
+          "publishTime": "2025-12-28T12:55:02.162117112Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT20xb2JYZEdSbFIyVEY5UVowYzRkVTlLUkRKSGNsRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20xb2JYZEdSbFIyVEY5UVowYzRkVTlLUkRKSGNsRRAB!2m1!1s0x398d57001c3b7dcd:0x5bb1cad69e5c25c3"
+        }
+      ],
+      "photos": [
+        {
+          "name": "places/ChIJzX07HABXjTkRwyVcntbKsVs/photos/ATCDNfU8INqXiRyrEVo-dumOqHIJbSC7eosqfDo_2VGyOEkdoMf1uHzF-eUfr7rfDvxRbAZOLoldRH2OtvYHyjMgq8eq32wPKed_zm1hY8exhHUVbmJT1kkds6tyczsZekSl7aRmjgOUJN7Zfwt3vqPtRj8DY6ghgh3jcTrmk1xf907D-ks-9Ge_r6zu_m_79f7fOocJu-oX4wF5je5PoRQNyJA0rFDGtNFEPHkiQ8Mtt9HiGCh_vzkxK-ltuxYdnHsC-MFF_RDe1lNDF-bUgM9dRHUH--vk_-A8-GhM94kbTnJWlTvPGdwoLbwSGC_1YGhOODQoZ57oJA-CBtpdCMueYuF2q4cUU4slAMKH1Dt0tesq1RDlTWgRsV6s8PP3tao6Hj1dZSBHnoFcgFWFvjcuDpFQmcilIxH0KBf-nToK-8E9PfFIbEZuNYvvNwYj_-PC",
+          "widthPx": 2250,
+          "heightPx": 4000,
+          "authorAttributions": [
+            {
+              "displayName": "Bihari Vikrant",
+              "uri": "https://maps.google.com/maps/contrib/103068124157110944850",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUw9q34UJnUxpdubEamtYz8ure4xd4fqRb1D6nTDSt0qmjWeQjF=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhA_zNS16ANi-4nI9IGi6cjd&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhA_zNS16ANi-4nI9IGi6cjd!2e10!4m2!3m1!1s0x398d57001c3b7dcd:0x5bb1cad69e5c25c3"
+        }
+      ],
+      "accessibilityOptions": {
+        "wheelchairAccessibleParking": true
+      },
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs",
+            "placeId": "ChIJVcJfGrarkjkRwQ3DGHZaQLs",
+            "displayName": {
+              "text": "ESIC Medical College and Hospital, Bihta, Patna",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "hospital",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 118.134026,
+            "travelDistanceMeters": 27.869535
+          },
+          {
+            "name": "places/ChIJR2VwgwCqkjkRi3RlTW_a_ug",
+            "placeId": "ChIJR2VwgwCqkjkRi3RlTW_a_ug",
+            "displayName": {
+              "text": "IndianOil",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "gas_station",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 339.2858,
+            "travelDistanceMeters": 395.1381
+          },
+          {
+            "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg",
+            "placeId": "ChIJEY1x8KKpkjkRL588M8dPTFg",
+            "displayName": {
+              "text": "Emergency,ESIC MCH Bihta",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "hospital",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 73.182106,
+            "travelDistanceMeters": 69.286545
+          },
+          {
+            "name": "places/ChIJmyAjaidXjTkRu12EK54rTg8",
+            "placeId": "ChIJmyAjaidXjTkRu12EK54rTg8",
+            "displayName": {
+              "text": "Moral Development Public School",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "school"
+            ],
+            "spatialRelationship": "AROUND_THE_CORNER",
+            "straightLineDistanceMeters": 238.59409,
+            "travelDistanceMeters": 261.2092
+          },
+          {
+            "name": "places/ChIJz3V8FJmrkjkR0cj6Ru2WLak",
+            "placeId": "ChIJz3V8FJmrkjkR0cj6Ru2WLak",
+            "displayName": {
+              "text": "OPD Registration,ESIC MCH Bihta",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 140.785,
+            "travelDistanceMeters": 140.31561
+          }
+        ],
+        "areas": [
+          {
+            "name": "places/ChIJHaqj5wGqkjkRAm8R404iios",
+            "placeId": "ChIJHaqj5wGqkjkRAm8R404iios",
+            "displayName": {
+              "text": "Disaster Management Centre",
+              "languageCode": "en"
+            },
+            "containment": "OUTSKIRTS"
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x398d57001c3b7dcd:0x5bb1cad69e5c25c3!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=6607285151457879491&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x398d57001c3b7dcd:0x5bb1cad69e5c25c3!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x398d57001c3b7dcd:0x5bb1cad69e5c25c3!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x398d57001c3b7dcd:0x5bb1cad69e5c25c3!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Bihta, Kateshar",
+        "addressLines": [
+          "HVF4+3HQ",
+          "Bihta Rd",
+          "Ramnagar"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg",
+      "id": "ChIJEY1x8KKpkjkRL588M8dPTFg",
+      "types": [
+        "hospital",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "HVF4+3HQ, Rd, Ramnagar, Bihta, Kateshar, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "HVF4+3HQ",
+          "shortText": "HVF4+3HQ",
+          "types": [
+            "plus_code"
+          ],
+          "languageCode": "en-US"
+        },
+        {
+          "longText": "Rd",
+          "shortText": "Rd",
+          "types": [
+            "route"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Ramnagar",
+          "shortText": "Ramnagar",
+          "types": [
+            "neighborhood",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihta",
+          "shortText": "Bihta",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "location": {
+        "latitude": 25.5733033,
+        "longitude": 84.8566841
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.571897369708502,
+          "longitude": 84.8554513197085
+        },
+        "high": {
+          "latitude": 25.574595330291505,
+          "longitude": 84.8581492802915
+        }
+      },
+      "rating": 2.5,
+      "googleMapsUri": "https://maps.google.com/?cid=6362548090544365359&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "regularOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 0,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "HVF4+3HQ, \u003cspan class=\"street-address\"\u003eRd\u003c/span\u003e, \u003cspan class=\"extended-address\"\u003eRamnagar\u003c/span\u003e, \u003cspan class=\"locality\"\u003eBihta, Kateshar\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 2,
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "Emergency,ESIC MCH Bihta",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      },
+      "currentOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 6,
+              "hour": 0,
+              "minute": 0,
+              "truncated": true,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 7
+              }
+            },
+            "close": {
+              "day": 5,
+              "hour": 23,
+              "minute": 59,
+              "truncated": true,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 13
+              }
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "primaryType": "hospital",
+      "shortFormattedAddress": "HVF4+3HQ, Rd, Ramnagar, Bihta, Kateshar",
+      "reviews": [
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/reviews/Ci9DQUlRQUNvZENodHljRjlvT201M2VYRm9ZbEZWY1VRMFVUUjBibkpsVG5kNmQwRRAB",
+          "relativePublishTimeDescription": "4 months ago",
+          "rating": 2,
+          "text": {
+            "text": "It's very cool",
+            "languageCode": "en-US"
+          },
+          "originalText": {
+            "text": "Bahut mast hai",
+            "languageCode": "hi"
+          },
+          "authorAttribution": {
+            "displayName": "Raj Kumar",
+            "uri": "https://www.google.com/maps/contrib/111246404622844619894/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXjA1ZJzW9DEE5HobpR85EEqm24qdiGqZzXgESk-m0WVk0CHcY=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2025-10-09T08:03:08.352486857Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT201M2VYRm9ZbEZWY1VRMFVUUjBibkpsVG5kNmQwRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT201M2VYRm9ZbEZWY1VRMFVUUjBibkpsVG5kNmQwRRAB!2m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tWb2NFVTRjWGRhYTFRelpVWnliV1EzVVdGUmNVRRAB",
+          "relativePublishTimeDescription": "9 months ago",
+          "rating": 3,
+          "authorAttribution": {
+            "displayName": "Navin kumar Nirala",
+            "uri": "https://www.google.com/maps/contrib/118429044703961515075/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVWGoerxj2LvnHDSRN3Z3_D8HL-Hs735oBnZh5FoMiDv_Lht4PG=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2025-06-06T07:18:57.000223833Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2tWb2NFVTRjWGRhYTFRelpVWnliV1EzVVdGUmNVRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tWb2NFVTRjWGRhYTFRelpVWnliV1EzVVdGUmNVRRAB!2m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        }
+      ],
+      "photos": [
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfWv23gzF6A87mSMBQ-88zWpus5MAATtCFBQdz0v4gWODYsddYNsA19nctqMwdgRQ_WvVKmuBPWCohiazm00JdSfmVBuW00NoAyf5iW8khXZHnjgDBU-XwABsltmlwF0pcWc8cno4X2Zqy6A8UKZovAOmAP7m6mjrKX97Qa0FGoLQhxU_nGSMZepxnTfG7DbJOU8fR-y2HEq8IXKbjHaKCNB3HySlagGPMIu0bSjdoCZR_iftcx20m-f9Win4Eg9vFiOFkwHPPHPPuAYtp4he-1lB7-Y_q2FUnrLzkpfkwXeb5KjCnngwxHu-ziP_JmKO0oXoWNsgRKnqcLuL5Sg3wvKNJu9sKAghWAkEZc9ZLoqT-FfhstQ96JTh1vc0-LeiqOQ7QdEik7CpymD5tz4uE2gXXeta2r0l0IVA9G1xJ24FGWU",
+          "widthPx": 1920,
+          "heightPx": 1080,
+          "authorAttributions": [
+            {
+              "displayName": "Anup Kumar Sinha",
+              "uri": "https://maps.google.com/maps/contrib/116290837320245996922",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVM3cfw2kzrjePexiLGrkBB_O5FYPDMjn4k_4lZpJfOlPea84Q=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDLpoP0pQE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDLpoP0pQE!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfWpkuRymUJFrj8Dhe6R6UHWTIcMMq2iN_4ovrl45_w1SaDZsJ58VnVfMCBqht3vpdVlZnNCsW8Z8lSpce-n6gz22_EGMEMieqMUkxeE6Q8hvARFodtPSB58BbU2ta6Q1CV1niCxI9FowpHIAZe4xvXmKWVbHN6u1ygc7Tvzmb2Uvtz2iNxSaP3aDqPykAbqUXOXK8LHHayZb2PEEzgad4fgcCUGruSCyYCJOBI82nJPDCJ-ug3xOdBQ6HiuS3sK7t_H7pbJkIHcXuv1pb8wHIDfaaEjaqz3zfBxIL4IpyzUpUikIt1KomC5055RHGmADrWWWGfGVCcXVLEo3x2jsi2_IcWL545L3wB30fIcI2qifLafTD8dpqx1NaLDDTuGsq-_l5vqtBmOdTsQ3GfVvIa4CChfrrArgGcjxZFCC4aPnw",
+          "widthPx": 4160,
+          "heightPx": 1872,
+          "authorAttributions": [
+            {
+              "displayName": "Anup Kumar Sinha",
+              "uri": "https://maps.google.com/maps/contrib/116290837320245996922",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVM3cfw2kzrjePexiLGrkBB_O5FYPDMjn4k_4lZpJfOlPea84Q=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDLpoOCBA&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDLpoOCBA!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfXBD8l_W4C4cIfMt2EMP-h2KBZiCPgLQMgqFjmUkUZgb4zxc6m6r72TPd4fBn1rSaNoBtCbf-Mjt9JaqNBYj3_ItWijMaH_xgPYwJ48Q9xB0BqZTO5c_cV99ZcWxsdsc9MbFHftyV_ripGrwlVbCFvIG9lCNo_Kn78jMNibPM3mE7tvfBkyCvJUAvXEW0IHb1_zt2P84dl4sVykswyADvuLKQMVHDU0HrnUaafYTXbLWBM1DhZAgFdn6P9CrRaG8nZoRS2AGI6siFDyb7cG8XjmeZyBy89KB5vDWPn0PafK_5D6fZauFb0xhBpX2uLbvVV8QWs7tm_09uSEkTlAKRmj0pDmlsnzGsW6LnAdNqAgYDoqGPRWLDGvvUmiUvr74wvkCzR4Ncjj1i_1d9Fs7toFVMbk5wC5l_cVnBuzBQc4wE0n",
+          "widthPx": 1920,
+          "heightPx": 1080,
+          "authorAttributions": [
+            {
+              "displayName": "Anup Kumar Sinha",
+              "uri": "https://maps.google.com/maps/contrib/116290837320245996922",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVM3cfw2kzrjePexiLGrkBB_O5FYPDMjn4k_4lZpJfOlPea84Q=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDLpoP06wE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDLpoP06wE!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfWrlMyLFZsaA1ec9WJkr1iAUpHaeznxowPaB1M-L0bLWdmWitzgpCcZweGJg23QZKydXQE8CxvamAG4Njxtoy76h5wb4yMGkiuLBlgue3FNaU7L0A2FzsXzR6jYJwkOJZ1SNWEHVspyJJ0GvM8FCJgnuWTmgdRuG2Og5U5AZhNVp39blUY9Y3qRNZOgCbeczSe72JYQhGYwNZ9mqgTKtHAmR3RChpUAHOI_WvEgrsBFECd0dwzuVZswHqGvaZwrhwdvo3B5eKw9We9PSuY96CZew-oxVhFVH1Kh7b9bXSwwiHrilPA0BLK8iMvAS0HB0v6sli-U0tcoeD620ZDWhkdOZdWzsqREVUmxPB3rX1JqV6NswtG4gALpfYxRm6DIwy34XfdkmZW1wyyt2nxBCEA5APkNEm1UtuzEV8n2tUPOZmg-",
+          "widthPx": 4096,
+          "heightPx": 2304,
+          "authorAttributions": [
+            {
+              "displayName": "Akshay Prasad",
+              "uri": "https://maps.google.com/maps/contrib/115014199380942341017",
+              "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLfl_wzlWDWvefQY3HdDkdQYbK66H-a9ekjN5Ek74DykytoIg=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDZoL_zgwE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDZoL_zgwE!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfUkY5Sz01wrO75FrmcFORUe8HEydduzXIl8WPC_kmbq9Caetn4Hbhz7XfAndcaW5oveNY47xjIhpRd-Pja7mz6s095bZmewfuX38XsScBOIZA2-W8Ed_vZPqnu_3JMSWa4qC3p2P84jl_HwpH-g33CbQzuiIcFJBQJ6tSHb-007IuWoL7SkTN3BqkS86KSpFaZ_HaFJLJuQi7d-qQ7Lzy_QifSMeGT23ggVr2kq8XIWiN_BrZEv5vcN6Z93voSjT4SN843aaALy_HAEXWE53IfoTe75yiTFMyTPtqfyIKnt2rjJFZJEnDxakI4MySLe0D_s-scO_QtyJgOWArCU5yT-4Xq7NZvOq44oWB7zDV3Sd6Bx9fYO4gvqHZB-ZSTu8NnK2U2RuUhxa8SwfVTX4cfrsPS7UNJ_J8t5zSPhekE",
+          "widthPx": 4096,
+          "heightPx": 2304,
+          "authorAttributions": [
+            {
+              "displayName": "Akshay Prasad",
+              "uri": "https://maps.google.com/maps/contrib/115014199380942341017",
+              "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLfl_wzlWDWvefQY3HdDkdQYbK66H-a9ekjN5Ek74DykytoIg=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDZoL_zQw&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDZoL_zQw!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfVTT1WvVzWIGZNeYAPyQ_HmhgzjlC-Ne1FTvNsNUpZ6-o0gRvk4_DLi_j9js0jAkDV6CwMK7mdNxFG4I7L8-1LDRLGyoArAFXT-SkrR6zSyyvlp7LlxB3gPxX00LSLO7j1pA-uN6JHJO-lwDV0gj5Ex2HxDCsPm4Fyp3tn2xaFiZc_71FSdDz6MgeqdEA75OzuOleuKLYnmLtKU3o1CMK54V0iaUbyEUdYxzFyuRc0-g2HIeO1iKeNCJbeUDCG2VumkvQuEmfzpbSbn8DcwCU_4BumWOzNRa-P8g-F6OHZAZzzum02rfMW5GhRHuu4fCvqblcbbM8RTlZAiT47zHgUfVBaqHEM_qhWhdJTTUwH9tD2dWCijxivnYVk3F1cw9FsRAWCY-jwqkwOjRoiFXOnCBWlqlx_sg-ta_29VOj4VjR9JPJQntrnqvm1xkP8O",
+          "widthPx": 3060,
+          "heightPx": 4080,
+          "authorAttributions": [
+            {
+              "displayName": "Raj Kumar",
+              "uri": "https://maps.google.com/maps/contrib/111246404622844619894",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXjA1ZJzW9DEE5HobpR85EEqm24qdiGqZzXgESk-m0WVk0CHcY=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhAA2hw2omQ0OJ3G4G0-TBFE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAA2hw2omQ0OJ3G4G0-TBFE!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfW03DrCDW-3i3ggm_ao1D-y8yRHQfy3VRHOmA7vctiaBUMA8lHoohD3hoFl3TkYeBK7x4-5Q3yMRMskLiQlKviAQqawzZznnQwb4TTgfJOunOyd1a_SuNAs4jvTvLtA6humiuknB0ni4dy4B4SpdctAGH7GlzVpLFsRmdMmVP8O9vGem84zF-Hw74v4-KCbVDudKpI0lpJZ2RMGQ6wh_n_Te3MsDeX4hSQX5Ie2kcPvJn63NZdoEn5BkWs53lpsxw5REjnEihJxPvOSMIyGK1poodsY_oSWIgKd0PxpwXFDtnOOV5CXAp0prM5mAPnzS85qSV7rgoGX9T53JLqQH7A1ftifQXy-jw-0V1OVmDSGnJXXe2GrI1UjKxzx2-IqnvbS8izwNzdLuYe6JyCYjWV1FmNRf4pWwYDd5HfJBWNUtQ",
+          "widthPx": 4032,
+          "heightPx": 2268,
+          "authorAttributions": [
+            {
+              "displayName": "Saurabh Pandey",
+              "uri": "https://maps.google.com/maps/contrib/115367296500632118534",
+              "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJv1jpGD1WlmMOWalP3MHoxkWDD3xPUM84CSM92O9lcaoVvSxg=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgID7lYD9Kw&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID7lYD9Kw!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfUurF5w-TAHOt3zcNawUsExKYl17CxvWM-WgnYtnbmsjDRdHaFGnPL-I4OkEgl1xCbaFzhY6D2_JXB1QAGt0Yqm4Pq9O2yhusCN-4eLXOB8v29iScADFD7BK9HqFNM-KurzoBKihFxfMy0DW3HRRqmz17emjcbAMQJwm8SrUdTYaEXTNT3oqsbhfZwTnuoz-OdgdGvJcRz-1yO18r2JS4cNYv1H7kWWo2CeTzGaOP0QX4lu_Gk9XIj0zErL3jjNg4L_6KqBzKIacOc3_raKYkiX90NVB3-ixsT5b14kq26DA-LOvPQGx8IjMZP73TjIzh5Zn8NFWb3yGgzIKDilGH48X98W-vNU_3SrNuvJ2JcUlzqIvW4PYSP7qeOEYCPeq-DPQhs9dRRkKOFduPcfkeWY8ua2PO1k0tGYn49tkHiuRA",
+          "widthPx": 4096,
+          "heightPx": 2304,
+          "authorAttributions": [
+            {
+              "displayName": "Akshay Prasad",
+              "uri": "https://maps.google.com/maps/contrib/115014199380942341017",
+              "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLfl_wzlWDWvefQY3HdDkdQYbK66H-a9ekjN5Ek74DykytoIg=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDZoL_zfQ&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDZoL_zfQ!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfX_PKVZ8GDpoJSyDq2brfx6xaIt-QaaSAKPdxdgxdQvlYrElHgLRjrE2QApSxd31ZJAX-Bg-lc4kTnpELYKvJRwbSW7GnABLYP55UaQho0FIJjLXNBuAVKdAhTkg-R-5b2j9TQUA9H_wFP4Aja-J2x-mTDxz8YBL7zTxlz2h2x_Z-t4bV4lDZ6RhEE5zT18O5kOM3PLb-vwPjeX9kLIcXyAOFXvCwtmJKUteExoSISKBQvo1beCQo9i-AWmTKeC6LU0hmAjcU_EOKwSI155n5Lude7w5G44C66Lx09y7TudqTJHc71fSmGa3fILjsGs7pSQ8BRgRCNDR_Lj1rwE-U6EGure8aU4PMl4G83-KQ1gpYfnqkGqtsrvtu5rY5_VY78U6QXZeQNvZkdgtbhyfscmBwiBijLMhArs1AY6wJ6Pnw",
+          "widthPx": 4096,
+          "heightPx": 2304,
+          "authorAttributions": [
+            {
+              "displayName": "Akshay Prasad",
+              "uri": "https://maps.google.com/maps/contrib/115014199380942341017",
+              "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLfl_wzlWDWvefQY3HdDkdQYbK66H-a9ekjN5Ek74DykytoIg=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDZoL_zAw&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDZoL_zAw!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        },
+        {
+          "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg/photos/ATCDNfU-ah4to_jfe_3TPC14dRiQT0Op6DdErUKt2yVLMwlPmicrWl84XwTGRPFIjWxJw_JfKTyV-h0hLqXvanjFkXI5T_1sN2UUf_OWAd_jaemIMjOCC5BIP-OGPt_Nv3J-8Mz5nWxY1HzRk4zXmat04UDG9SWiCd2GkB_wunXoa2255vgN7uqliVxUDxqwBw9pbzKrd9LD_Mubh1DRFWxYVsQ5u1wJLxfUReUqVRQSCVwNLlXEPiNO_lH-SkNjvG0CM6ep71QvZg6ORtSTx6cHOGmqAulLsifuh0LmY6np64me6nq6SLPHo5fH7VkMV5tedJUKHObrsopSToHSL8OQEtIuD3DnGoxAwmJdROYtdu9fLygPtKMJ-YegN_VQRX6bxgD6JMEjL9z1xGsNc6XsiGqPyTjDTrZodVtXnqOlJ-VQ3LFnHGY-rjmF290GsxE1",
+          "widthPx": 2250,
+          "heightPx": 4000,
+          "authorAttributions": [
+            {
+              "displayName": "Bihari Vikrant",
+              "uri": "https://maps.google.com/maps/contrib/103068124157110944850",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUw9q34UJnUxpdubEamtYz8ure4xd4fqRb1D6nTDSt0qmjWeQjF=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhAk7KOk5Uv6yRYz7hCBtq5B&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAk7KOk5Uv6yRYz7hCBtq5B!2e10!4m2!3m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f"
+        }
+      ],
+      "restroom": true,
+      "accessibilityOptions": {
+        "wheelchairAccessibleParking": true,
+        "wheelchairAccessibleEntrance": true
+      },
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs",
+            "placeId": "ChIJVcJfGrarkjkRwQ3DGHZaQLs",
+            "displayName": {
+              "text": "ESIC Medical College and Hospital, Bihta, Patna",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "hospital",
+              "point_of_interest"
+            ],
+            "spatialRelationship": "DOWN_THE_ROAD",
+            "straightLineDistanceMeters": 50.413807,
+            "travelDistanceMeters": 41.418285
+          },
+          {
+            "name": "places/ChIJR2VwgwCqkjkRi3RlTW_a_ug",
+            "placeId": "ChIJR2VwgwCqkjkRi3RlTW_a_ug",
+            "displayName": {
+              "text": "IndianOil",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "gas_station",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 305.17947,
+            "travelDistanceMeters": 457.36298
+          },
+          {
+            "name": "places/ChIJz3V8FJmrkjkR0cj6Ru2WLak",
+            "placeId": "ChIJz3V8FJmrkjkR0cj6Ru2WLak",
+            "displayName": {
+              "text": "OPD Registration,ESIC MCH Bihta",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 72.98057,
+            "travelDistanceMeters": 71.02779
+          },
+          {
+            "name": "places/ChIJmyAjaidXjTkRu12EK54rTg8",
+            "placeId": "ChIJmyAjaidXjTkRu12EK54rTg8",
+            "displayName": {
+              "text": "Moral Development Public School",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "school"
+            ],
+            "straightLineDistanceMeters": 284.8374,
+            "travelDistanceMeters": 330.49704
+          },
+          {
+            "name": "places/ChIJzX07HABXjTkRwyVcntbKsVs",
+            "placeId": "ChIJzX07HABXjTkRwyVcntbKsVs",
+            "displayName": {
+              "text": "Hospital Building ESIC",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "hospital",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 71.36334,
+            "travelDistanceMeters": 69.28981
+          }
+        ],
+        "areas": [
+          {
+            "name": "places/ChIJHaqj5wGqkjkRAm8R404iios",
+            "placeId": "ChIJHaqj5wGqkjkRAm8R404iios",
+            "displayName": {
+              "text": "Disaster Management Centre",
+              "languageCode": "en"
+            },
+            "containment": "WITHIN"
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=6362548090544365359&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x3992a9a2f0718d11:0x584c4fc7333c9f2f!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Bihta",
+        "addressLines": [
+          "HVF4+3HQ",
+          "Rd",
+          "Ramnagar"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Government Hospital",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs",
+      "id": "ChIJVcJfGrarkjkRwQ3DGHZaQLs",
+      "types": [
+        "hospital",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "1800 11 2526",
+      "internationalPhoneNumber": "+91 1800 11 2526",
+      "formattedAddress": "HVF4+FQ6, Kateshar, Bihta, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "HVF4+FQ6",
+          "shortText": "HVF4+FQ6",
+          "types": [
+            "plus_code"
+          ],
+          "languageCode": "en-US"
+        },
+        {
+          "longText": "Kateshar",
+          "shortText": "Kateshar",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihta",
+          "shortText": "Bihta",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "location": {
+        "latitude": 25.5736714,
+        "longitude": 84.8568957
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.571917769708495,
+          "longitude": 84.855427869708492
+        },
+        "high": {
+          "latitude": 25.574615730291498,
+          "longitude": 84.8581258302915
+        }
+      },
+      "rating": 3.7,
+      "googleMapsUri": "https://maps.google.com/?cid=13492883946870083009&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "websiteUri": "https://mcpatna.esic.gov.in/",
+      "regularOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 0,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "HVF4+FQ6, \u003cspan class=\"locality\"\u003eKateshar, Bihta\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 303,
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "ESIC Medical College and Hospital, Bihta, Patna",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      },
+      "currentOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 6,
+              "hour": 0,
+              "minute": 0,
+              "truncated": true,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 7
+              }
+            },
+            "close": {
+              "day": 5,
+              "hour": 23,
+              "minute": 59,
+              "truncated": true,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 13
+              }
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: Open 24 hours",
+          "Tuesday: Open 24 hours",
+          "Wednesday: Open 24 hours",
+          "Thursday: Open 24 hours",
+          "Friday: Open 24 hours",
+          "Saturday: Open 24 hours",
+          "Sunday: Open 24 hours"
+        ]
+      },
+      "primaryType": "hospital",
+      "shortFormattedAddress": "HVF4+FQ6, Kateshar, Bihta",
+      "reviews": [
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pjME5YbEhSbEV3V0ZwTlprZGhZVTVPTkZsRE5GRRAB",
+          "relativePublishTimeDescription": "3 months ago",
+          "rating": 3,
+          "text": {
+            "text": "Need improvement\n1. Staff behaviour\n2. Security guard discipline\n3. Medicine counter issue\n4. Medicine shortage\n5. Blood reports collect time 11:00 am but always given blood reports after 12:00 pm",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Need improvement\n1. Staff behaviour\n2. Security guard discipline\n3. Medicine counter issue\n4. Medicine shortage\n5. Blood reports collect time 11:00 am but always given blood reports after 12:00 pm",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Muskan Jha",
+            "uri": "https://www.google.com/maps/contrib/105497448202341163814/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLGRsQuRfssSPGaWdYh5aHKzZzavDk8T81jla2vrkFsyZieng=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2025-12-01T08:53:10.766031949Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2pjME5YbEhSbEV3V0ZwTlprZGhZVTVPTkZsRE5GRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pjME5YbEhSbEV3V0ZwTlprZGhZVTVPTkZsRE5GRRAB!2m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/reviews/ChZDSUhNMG9nS0VJQ0FnSUNDMWRUMk53EAE",
+          "relativePublishTimeDescription": "5 years ago",
+          "rating": 5,
+          "text": {
+            "text": "Luxurious hospital and all facilities available here. Converted covid care hospital recently due to covid 19. Centrally airconditioner and laboratory and dispensary facility available here",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Luxurious hospital and all facilities available here. Converted covid care hospital recently due to covid 19. Centrally airconditioner and laboratory and dispensary facility available here",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Mukesh Sigar",
+            "uri": "https://www.google.com/maps/contrib/114791790804396703698/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUTGysSe6pFJpLc2toBFNR7c7dEozSvRCXjXlmQ95fMGt6TDjVn=s128-c0x00000000-cc-rp-mo-ba5"
+          },
+          "publishTime": "2020-08-31T05:16:04.595426Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUNDMWRUMk53EAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNDMWRUMk53EAE!2m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xaTlZYZDVPR05ZY1VwdU1FMVhaVko2UXpCeVVtYxAB",
+          "relativePublishTimeDescription": "3 months ago",
+          "rating": 1,
+          "text": {
+            "text": "The behaviour and way of talking of the parchi cutting  staf is very bad and improper there is no value of the person who visits there for treatment at government hospital.",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "The behaviour and way of talking of the parchi cutting  staf is very bad and improper there is no value of the person who visits there for treatment at government hospital.",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Anuj Akash",
+            "uri": "https://www.google.com/maps/contrib/108983947814250227970/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKZ5yXLcKMxeVG8ZgbFiRFHVdFS8MPpaSJ1PKhMpIjdih-quA=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2025-12-04T09:39:13.361297656Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2xaTlZYZDVPR05ZY1VwdU1FMVhaVko2UXpCeVVtYxAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xaTlZYZDVPR05ZY1VwdU1FMVhaVko2UXpCeVVtYxAB!2m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/reviews/ChdDSUhNMG9nS0VJQ0FnSUNYcU1XMDR3RRAB",
+          "relativePublishTimeDescription": "a year ago",
+          "rating": 5,
+          "text": {
+            "text": "Since I am pursuing mbbs there, I swear this central institute is best in academics after AIIMS in Bihar. Other than that, you will be provided government medical services at zero cost. All doctors are cooperative and supportive.",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Since I am pursuing mbbs there, I swear this central institute is best in academics after AIIMS in Bihar. Other than that, you will be provided government medical services at zero cost. All doctors are cooperative and supportive.",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Dr Rudra Mohan Srivastava",
+            "uri": "https://www.google.com/maps/contrib/104402360308228376604/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWn8ivLjWPU3HWL-VEmmUFpd_iq5uNNeFxlxQEu3s7Dx2idOzpJ=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2024-10-12T19:48:57.966529Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSUNYcU1XMDR3RRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUNYcU1XMDR3RRAB!2m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/reviews/ChZDSUhNMG9nS0VJQ0FnSUNmNTZTQ0l3EAE",
+          "relativePublishTimeDescription": "a year ago",
+          "rating": 1,
+          "text": {
+            "text": "Horrible emergency facilities. Had traumatic experience there. We were taking our mother, who had suffered heart attack, from Arrah to Patna on 19th Dec, 2024 in ambulance. However, due to road jam, caused by sand carrying trucks, the ambulance could reach only till Bihta in 2 hours. Considering the deteriorating condition of our mother, we took her to ESIC hospital at around 3am but to our horror, there was no doctor in emergency ward except for two technicians. They asked us to take her to Patna but due to terrible man made traffic jam, my mother breathed her last on the way itself. The whole episode speaks volume of the pathetic medical facilities in Group B & C towns and corrupt district administration.",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Horrible emergency facilities. Had traumatic experience there. We were taking our mother, who had suffered heart attack, from Arrah to Patna on 19th Dec, 2024 in ambulance. However, due to road jam, caused by sand carrying trucks, the ambulance could reach only till Bihta in 2 hours. Considering the deteriorating condition of our mother, we took her to ESIC hospital at around 3am but to our horror, there was no doctor in emergency ward except for two technicians. They asked us to take her to Patna but due to terrible man made traffic jam, my mother breathed her last on the way itself. The whole episode speaks volume of the pathetic medical facilities in Group B & C towns and corrupt district administration.",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Sanjay Kumar",
+            "uri": "https://www.google.com/maps/contrib/103945829637199702005/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKHRzwa-wNCWD1rGKtwCTcKpJm-abgnJsdpFFQG8gUMz8nnkM9J=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2025-01-02T08:29:27.850995Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUNmNTZTQ0l3EAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNmNTZTQ0l3EAE!2m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        }
+      ],
+      "photos": [
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfUpnvX9VIBpFyMgi8nNQW65WRLnd70VhIRI7jVM0GBdml5h_5d36wynHUIYxBnyMw2XW465oBuwlCobH3TH9GeF5x55UMFoN1AqtQ-kPG0yCYB8rKJ6K1A6VGT061vigvGzLaS9SmROCcpVZEtGfw1KUkNVqzEd9S33x4NXrnE8x-DYxqzwFHlGZS1qQJFL0QFJDSvp2CNBbuOQ40buVnYF0uiTRfXXBCfqN4x_IP1HvCAOSfaTx7Iea_HbEY-ElPkiZdxE9EUnSizsHtsv3TFjvVbQ_nQ9nIqpXPNmQyJc5Z5Qj8u97UqpPdrLj-rETtZ5OfzgDroqZpSCQL7qruVg7z8WqfiX34joL8PIJ8ZPdk9yV707sPQRxTSjmC0FgIW182d4hy7fDwlaMwJG90MB8BQSyNmqveG6g4w13oKWykvJ",
+          "widthPx": 1440,
+          "heightPx": 977,
+          "authorAttributions": [
+            {
+              "displayName": "Dr Raman Kishor",
+              "uri": "https://maps.google.com/maps/contrib/108918903014543178163",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXc0Dwk6bfu81Xtcmz3cPdsPPzlo9frY49pbkONG86tGwyc1EQP=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICJ58OY0QE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICJ58OY0QE!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfXs-UrFzxwSn590BHuEbFaVn1AhOzlHIkhJ7aeP2qZ91WU33WRJ04ew8xDc56GQiJfYCRPF6Uh3LExJK8GlYhph3NCSbdTuazSDuoHMRKz9mm8Gqtn9mnRzVlmkokyAETqJeLjDYbrpeljLG_gYJKKeGfcGAGzfQtcqajkQc8nfqJxy-NBYxKRa2KVhF_BSoVOPTvgelbJPdEaIQ6kIXWwAzueXcaK-42wqoRLXl6bwXcM-ygIBTh6ylkDj5OJJbsS-tkWQQCOxZeFyz5zywrl5xeqxLyRQUzkJjHkL7TC-ee0-T6mnxP5A1whqDmbcqSi8zi19WxD0FjsAXytCuxT2dZdNXlS7O9Rboxwabp1ty2Cr1yZODB8SwDdvVf4CJ2o7rMAJ57VttiyAPTQWmuDn6EXajynYaExP4rYVa5CoIP17",
+          "widthPx": 4624,
+          "heightPx": 3468,
+          "authorAttributions": [
+            {
+              "displayName": "Rishi Kant",
+              "uri": "https://maps.google.com/maps/contrib/112732812756382968755",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXsOafPZQk56HWHY3MhvYEGGhM0zEadMUPHnWsVWVVnzNpwK7DlWA=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDyvo7ElgE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDyvo7ElgE!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfWBnCNWn2AzlOhcbgw3ij8qnzMb1OBtrgS27SiwjDexz166uA93Xo-YkhU9HiXbmcwtC6LPHYGReDfzIPwYOc6mW5UKgi4tUC5qCHyvgwKE7yNogOS_R8J2K0km1IWVhXtumiDpCHBxqivfkp-4KKr39fCcS6xwm8Ew1-4fyHm2T5zZPheRfrblR6CLruv5xLolTFXoIyiQ8uOTxhzj9gCHnfgcGnD3fDo8XihP1FC9fCGJzkFWQyfdbdwKbomjBZ_ERuPCdYHJXtgTKLDMrYcJKCDQrE3utc478V_Yc22Qf_Hkso0Q_obo44AHOFNCAhkAjyvTHztLJ_ehhq4FZoTO7FDl_m9ZSYLpTeYs1rtFxn3SIyIvPeA262x3s3jhl7E0IRPdCAQz-Gvz0J_QCn-dubMleeY9zDIFQZlmf9-CmITD",
+          "widthPx": 4000,
+          "heightPx": 3000,
+          "authorAttributions": [
+            {
+              "displayName": "ashok kumar",
+              "uri": "https://maps.google.com/maps/contrib/114467319736987180923",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVz6a1haUe-oD7VOdgIxB1FqUclwEEmXbuYLTt0q7IaOqkGM0o=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgMDgrc2phAE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgMDgrc2phAE!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfVt7QyBT_SUCL2riZgZMIjAhPKXzaMM84IhVW2tWP2o_ac-WXDpF8lq4Y147ycfJMbskKKK4RkN1KOG_e2TNKBBW7IVzjoaQPgJLp5ix7vaMBnDPSGiU3Dy_8B3iwfMg326dd7ZaOtyMIo4J_cmUSXcbkg8vNgBfQSwEbOSRI2spoD5xFgCgtoT90TJCxHmE8xtGc5mxKf3fLumpevNsuDrS7gOPAkD4DpqpJZhudN8e6xdjcsZnfcOSf5At9-_VFXkILtKfq_a0WvotIcNspOr5Mb_IahgOqoGugxDWh2wtAAcBdoMjzFG5X8OvBg0p2mEagNTxLX1wbqxZNcAOgIYH1ri0DGe7WRD4cI_FKx1N8QT-IczbK8DSk58UvfKGhVAaIwKBKhLubY-gEvNROWS3luwTggr9KUKSUI4ZPittQrD",
+          "widthPx": 3000,
+          "heightPx": 4000,
+          "authorAttributions": [
+            {
+              "displayName": "Anurag Kumar Chaturvedi",
+              "uri": "https://maps.google.com/maps/contrib/105885693438698011747",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXQvd4Z7K2y2skRk-fbLy55KPiq7fRaHUFfj9z3uz1rSoRWmSBm=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDxrOTLpAE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDxrOTLpAE!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfUEWcgixx3MQLKMBxmQwDp4MZq0i9MHhJvVO96iZehAnzyaAgpEiH-At-vHOdhFK0u9SbD1iRniIcw-B9ZgU1TbXCvVNSoG8VhwNtpBiFsdrmcGPYMJbfhUlpyIcBfCkZZ3lYiyHli_s7mozIjU0iEhvWdqf3rFQC4P_3gHlApzPxFTbS_zQhULrYduWWg1LPm7UjBOWBmbeIJeynyf29ntwSctmHMlcuBjrz_sa7HTmkyCU669pAUnc5237dHDdeCCja4ZBmX3iA5QJEQgCysmtMnNc2nLWR1NcQ_Fz_oXwvV1gum1P1zY2gO1P8yfh_HhZENxcsYjTnnrI3Gt-vi91uQB1IMMl5kFsySZUqUZU2eDqnZUHzl6HZv9hDeMjdzndxjQvxVWeSkiDIEWrT7ra6MgaC3XB2Q_xfCdcrKcEPk",
+          "widthPx": 4000,
+          "heightPx": 2250,
+          "authorAttributions": [
+            {
+              "displayName": "Mukesh Sigar",
+              "uri": "https://maps.google.com/maps/contrib/114791790804396703698",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUTGysSe6pFJpLc2toBFNR7c7dEozSvRCXjXlmQ95fMGt6TDjVn=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICC1dT3swE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICC1dT3swE!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfWxM1rlrdKi_g4ODzLvrjeU-MMVVwuvppcCnE5rjHK31QChbsOALhdQezSv6f0ZB25gLDYSm30sWsZBM8hlAwOuG6pc78kp9lFbKrcp0cXmoGTYP62axcK6yDMemRIYAb_rLoAMV8r1D0Wn_4gKyW1hT3JhDLXJ7BjpqOBba7kZ0VvfSOc-lei2EKxaVSPDK_s1HeygRekj9VMLBFrecM9hTPmajG1MA9QBvaNdpLE5LzKSaMUonyxZLrBbau67WDyLQyVvzYmz2XNNLbVPUnhxsqptowVgziIlp0ALGKYX3dLeTd5Q6r0tQJDF5uQ3eUlMlU4jJW80U8etAxEerLSe-Hmzf5ns5A_Rj2VLL1nhQAVqdOFzD86gNO08GJTGyT9LUhGsmR5j4kUwQz59YqsLZemcZSJu2m24E5PFdmdqSppI",
+          "widthPx": 4000,
+          "heightPx": 3000,
+          "authorAttributions": [
+            {
+              "displayName": "Badal Kumar",
+              "uri": "https://maps.google.com/maps/contrib/111317680353506657931",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXDmELInYKWuN_aRjT64onEcPBCD9gHXW6qT6uGLu_TOybfv1D3=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDx0M2TlgE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDx0M2TlgE!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfXGGfKkl75QV3F_X1DaE8gOd0doH_lGtJHubLi2rMaeKvBCFpwYK28UPyzt05znF3UYllnUBYFacyE5wPHS1jrYr5fnHg6-_Hinjj8rHMMvPD0qW6rbGvZ15kv6j51gpEj9BG8MhUknJQR4ZnYISuor_q87jOygfDzAu5yqfvrkyS9RDnVGQH0DkIwnCXTyaT6di-rTzsqskYaJxIYQjLzRSJHTBzGq-PQ9Gq2ecQ1Z1QqNTMoUikCNBaEOmwe0IDixNqoyK3--4BeVEWlSiY6FpX1Yygtxa9oKzrFi5ay5tG2RuctSJDpeHj042q44ZGzlkLlbxJs1eEPqwfPh41aJkBRY3bwjgBvDclMxTT0El2gjG6P_S_14w4atXPJyV2_9JwL64HLEemk1qZ_lGeGSI0240ptgmXWoC1fVO0oQu4AN3s2ukR25558WAQ",
+          "widthPx": 4080,
+          "heightPx": 3060,
+          "authorAttributions": [
+            {
+              "displayName": "Vidyasagar Singh",
+              "uri": "https://maps.google.com/maps/contrib/102047778222169802013",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXCPFvxj20nKn0hQzXgzzxzgw1VbYjvRmiJc_iLJsqOld3tnJ2HAw=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhAJd06KZ0rDi8OSxRujOhUa&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhAJd06KZ0rDi8OSxRujOhUa!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfURH1B2ew75BQGNwHbOp_uqQonzPsfCakrW3Fv_kF42KO1M8w4TZmOgavhJgGlKB5vZwdl9eWy-74sD5TJk7eDB-94QVdAD4j9KaBTGR-unEGPZtM-tVpRxyD_Gn57SVAKmwiTGm7dwE92ah6AOHFbQcoknUQubqFDkEfi8fWVatd0Cc2bOD4LNB5T6J9tWGQnuqj9rN2-aDd_EJSilD7LGxkSbzfrhdzTRfXu2mmudwDG_GF6hCg1IakjLHCR6rIn4Ltgo3B_vvkjnCbpui8WucsM20bWOVl6Pcf7YUEuQkgXrGy8ey2pqKB59f24pJLCyJmwvP3NUq89cMy0PT_UN-60SqCUogSwRWWPoA4ocNwFx4EvkrN9AE4Z6sAfS_k33zyoD0lnlbo1jnmKXTzgWKPZOLjY1xzRXG9m7Nns6Dv7yhnxbBUAopA1XlwAp",
+          "widthPx": 2514,
+          "heightPx": 3100,
+          "authorAttributions": [
+            {
+              "displayName": "Nitish raj Nitish raj",
+              "uri": "https://maps.google.com/maps/contrib/114303883689520875257",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUiod9M8C0WuZ7pUs7OeP7_iMHwy58fnDWETrrMoLKnO8HuegNA=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIABIhCVk1bOFRgCO-9SH7lAj2Wh&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIABIhCVk1bOFRgCO-9SH7lAj2Wh!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfUyZYtmaCxtPmXo76Ky8MyIVW22FFi0fdfe3kmwnAoBfLHqMrsPhiUn5l8sMjtLoTj7N04QqTO1gQ6lZZW3nV0Dte08eMRwfTrf5EF50XXlVrPzoYGbs9tWz-sIiKrwAX6HcvIqJeARpAahDB5VdQY_asqscPmZ8abDKEKUpMf0Ev-FIBoYnhUn-ECi0B809FuXo_j4QlaWqfWdQ3J-jTwwN9p22ysKZ5xoEMNFewRynb30oOp6Vf4Ad3Z7f4rO_MSGSl4tAKPhv_snl514xnxe-sGTbpc0Aoz-KSqVCnkYQtRTCR0gIJMWTgl3tJCk877b-Qrtu2VSgM1hpzU8kPlIbONdoLqZyK9ekQQ8rBf5nmCqfn30zVoU8WxnbLFb2dNpYk5WlaNbQSyeXNm0AGsC0VLIt8kK3cCgr16-WbGUAEI",
+          "widthPx": 4000,
+          "heightPx": 3000,
+          "authorAttributions": [
+            {
+              "displayName": "Sanjay Kumar Ranjan",
+              "uri": "https://maps.google.com/maps/contrib/113513533506373280641",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWQIou9hF5uykEbCPCeLo6IQSMNaLSzEK6Z9Tp_g7lpA4o-om0=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC0kLzW8gE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC0kLzW8gE!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        },
+        {
+          "name": "places/ChIJVcJfGrarkjkRwQ3DGHZaQLs/photos/ATCDNfVScrPQ2wmOtXlElE5E5GI9pRAvTEAVwvq3-ozo1XO2E9FKO7lh-UZi84GdIYso0KqWuTwsV1tIpoCIRZQt-NxX4KBD3hxa8KyqKNnVSu9ZCMnQMwhgY9U18XYqRK8dT1WA51xjAGNwRnPeaBvkONK_VnTxxAbV8aBldihGVQS6WNirQFK0TupSRgDpQtBxQki3haFgiz7BjZkDepfwjOIIYjXRCrC9Fe-MXW-gPGDAhxc60l0APItreOMgROCWXnzZMgsHDT9wj3aT6bJ2f5DlfCj1Awd5beX6cwQ16d06M1Y9M1GdXyBTVduPUdV_Wz7nfeyGamxIYP9uzOenR8TLOa4w1tM-r4r8maeqPNtkKPAG_-6py2K18gFKrSFX9kyQGLXFeerCbEYqXikQr1szY4BGqJlS5YbztMrMmwqDGA",
+          "widthPx": 3000,
+          "heightPx": 4000,
+          "authorAttributions": [
+            {
+              "displayName": "Santosh Pandey",
+              "uri": "https://maps.google.com/maps/contrib/108095461748680422638",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWoZ8eI-ASi87n_XogrkLGwRf78H6R7ONrcibqjM8MoUPXCFeVK=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC-tsCJZg&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC-tsCJZg!2e10!4m2!3m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1"
+        }
+      ],
+      "paymentOptions": {
+        "acceptsCreditCards": true,
+        "acceptsDebitCards": true,
+        "acceptsCashOnly": false,
+        "acceptsNfc": true
+      },
+      "parkingOptions": {
+        "freeParkingLot": true,
+        "paidParkingLot": true
+      },
+      "accessibilityOptions": {
+        "wheelchairAccessibleParking": true,
+        "wheelchairAccessibleEntrance": true
+      },
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJR2VwgwCqkjkRi3RlTW_a_ug",
+            "placeId": "ChIJR2VwgwCqkjkRi3RlTW_a_ug",
+            "displayName": {
+              "text": "IndianOil",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "gas_station",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 325.2772,
+            "travelDistanceMeters": 415.94598
+          },
+          {
+            "name": "places/ChIJEY1x8KKpkjkRL588M8dPTFg",
+            "placeId": "ChIJEY1x8KKpkjkRL588M8dPTFg",
+            "displayName": {
+              "text": "Emergency,ESIC MCH Bihta",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "hospital",
+              "point_of_interest"
+            ],
+            "spatialRelationship": "DOWN_THE_ROAD",
+            "straightLineDistanceMeters": 45.787205,
+            "travelDistanceMeters": 41.41572
+          },
+          {
+            "name": "places/ChIJmyAjaidXjTkRu12EK54rTg8",
+            "placeId": "ChIJmyAjaidXjTkRu12EK54rTg8",
+            "displayName": {
+              "text": "Moral Development Public School",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "school"
+            ],
+            "straightLineDistanceMeters": 255.03314,
+            "travelDistanceMeters": 289.08002
+          },
+          {
+            "name": "places/ChIJzX07HABXjTkRwyVcntbKsVs",
+            "placeId": "ChIJzX07HABXjTkRwyVcntbKsVs",
+            "displayName": {
+              "text": "Hospital Building ESIC",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "hospital",
+              "point_of_interest"
+            ],
+            "spatialRelationship": "DOWN_THE_ROAD",
+            "straightLineDistanceMeters": 30.708672,
+            "travelDistanceMeters": 27.872808
+          },
+          {
+            "name": "places/ChIJz3V8FJmrkjkR0cj6Ru2WLak",
+            "placeId": "ChIJz3V8FJmrkjkR0cj6Ru2WLak",
+            "displayName": {
+              "text": "OPD Registration,ESIC MCH Bihta",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "health",
+              "point_of_interest"
+            ],
+            "straightLineDistanceMeters": 112.55881,
+            "travelDistanceMeters": 112.44479
+          }
+        ],
+        "areas": [
+          {
+            "name": "places/ChIJHaqj5wGqkjkRAm8R404iios",
+            "placeId": "ChIJHaqj5wGqkjkRAm8R404iios",
+            "displayName": {
+              "text": "Disaster Management Centre",
+              "languageCode": "en"
+            },
+            "containment": "OUTSKIRTS"
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x3992abb61a5fc255:0xbb405a7618c30dc1!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=13492883946870083009&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x3992abb61a5fc255:0xbb405a7618c30dc1!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x3992abb61a5fc255:0xbb405a7618c30dc1!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x3992abb61a5fc255:0xbb405a7618c30dc1!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Kateshar, Bihta",
+        "addressLines": [
+          "HVF4+FQ6"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJl_Eu81NVjTkRXnivvLhYKbM",
+      "id": "ChIJl_Eu81NVjTkRXnivvLhYKbM",
+      "types": [
+        "hospital",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "HVC4+XXV, Nasriganj - Chandi - Bihta - Piro Rd, Bihta, Kateshar, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "HVC4+XXV",
+          "shortText": "HVC4+XXV",
+          "types": [
+            "plus_code"
+          ],
+          "languageCode": "en-US"
+        },
+        {
+          "longText": "Nasriganj - Chandi - Bihta - Piro Road",
+          "shortText": "Nasriganj - Chandi - Bihta - Piro Rd",
+          "types": [
+            "route"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihta",
+          "shortText": "Bihta",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "location": {
+        "latitude": 25.572485999999998,
+        "longitude": 84.857430999999991
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.571145119708497,
+          "longitude": 84.856080819708509
+        },
+        "high": {
+          "latitude": 25.5738430802915,
+          "longitude": 84.858778780291516
+        }
+      },
+      "googleMapsUri": "https://maps.google.com/?cid=12909947357297080414&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "HVC4+XXV, \u003cspan class=\"street-address\"\u003eNasriganj - Chandi - Bihta - Piro Rd\u003c/span\u003e, \u003cspan class=\"locality\"\u003eBihta, Kateshar\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "GARIB HOSPITAL",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      },
+      "primaryType": "hospital",
+      "shortFormattedAddress": "HVC4+XXV, Nasriganj - Chandi - Bihta - Piro Rd, Bihta, Kateshar",
+      "accessibilityOptions": {
+        "wheelchairAccessibleParking": true,
+        "wheelchairAccessibleEntrance": true
+      },
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJx__Gi_9VjTkRG8PX5XfAJ6k",
+            "placeId": "ChIJx__Gi_9VjTkRG8PX5XfAJ6k",
+            "displayName": {
+              "text": "Maurya Motors Private Limited",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "store"
+            ],
+            "spatialRelationship": "DOWN_THE_ROAD",
+            "straightLineDistanceMeters": 92.870094,
+            "travelDistanceMeters": 92.01483
+          },
+          {
+            "name": "places/ChIJPzzG8AeqkjkR3tw5IhW239E",
+            "placeId": "ChIJPzzG8AeqkjkR3tw5IhW239E",
+            "displayName": {
+              "text": "Maner Sweets",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "food",
+              "point_of_interest",
+              "store"
+            ],
+            "spatialRelationship": "ACROSS_THE_ROAD",
+            "straightLineDistanceMeters": 39.87435,
+            "travelDistanceMeters": 1.7560711
+          },
+          {
+            "name": "places/ChIJQ7HOiP9VjTkRpyXmQa18krA",
+            "placeId": "ChIJQ7HOiP9VjTkRpyXmQa18krA",
+            "displayName": {
+              "text": "Rimjhim Dhaba",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "food",
+              "point_of_interest",
+              "restaurant"
+            ],
+            "spatialRelationship": "DOWN_THE_ROAD",
+            "straightLineDistanceMeters": 113.576485,
+            "travelDistanceMeters": 111.7579
+          },
+          {
+            "name": "places/ChIJtUNPRhyrkjkRplzMtfBvQ9c",
+            "placeId": "ChIJtUNPRhyrkjkRplzMtfBvQ9c",
+            "displayName": {
+              "text": "IndianOil",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "gas_station",
+              "point_of_interest"
+            ],
+            "spatialRelationship": "DOWN_THE_ROAD",
+            "straightLineDistanceMeters": 164.59578,
+            "travelDistanceMeters": 156.29378
+          },
+          {
+            "name": "places/ChIJ1yr0DHNVjTkR3VETTRS9JoA",
+            "placeId": "ChIJ1yr0DHNVjTkR3VETTRS9JoA",
+            "displayName": {
+              "text": "Tata Motors Cars Showroom - Shankar Motors, Bihta",
+              "languageCode": "en"
+            },
+            "types": [
+              "car_dealer",
+              "establishment",
+              "point_of_interest",
+              "store"
+            ],
+            "spatialRelationship": "DOWN_THE_ROAD",
+            "straightLineDistanceMeters": 80.77484,
+            "travelDistanceMeters": 71.11075
+          }
+        ],
+        "areas": [
+          {
+            "name": "places/ChIJHaqj5wGqkjkRAm8R404iios",
+            "placeId": "ChIJHaqj5wGqkjkRAm8R404iios",
+            "displayName": {
+              "text": "Disaster Management Centre",
+              "languageCode": "en"
+            },
+            "containment": "OUTSKIRTS"
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x398d5553f32ef197:0xb32958b8bcaf785e!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=12909947357297080414&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x398d5553f32ef197:0xb32958b8bcaf785e!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x398d5553f32ef197:0xb32958b8bcaf785e!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x398d5553f32ef197:0xb32958b8bcaf785e!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Bihta",
+        "addressLines": [
+          "HVC4+XXV",
+          "Nasriganj - Chandi - Bihta - Piro Rd"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Hospital",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJ3yq5FWN-DRQRTWtbHPM0s68",
+      "id": "ChIJ3yq5FWN-DRQRTWtbHPM0s68",
+      "types": [
+        "medical_center",
+        "pharmacy",
+        "hospital",
+        "store",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "088098 30278",
+      "internationalPhoneNumber": "+91 88098 30278",
+      "formattedAddress": "Ravi chowk, North Patel Nagar, keshari market, Patna, Suwarmarwah, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "Ravi chowk",
+          "languageCode": "en"
+        },
+        {
+          "longText": "North Patel Nagar",
+          "shortText": "North Patel Nagar",
+          "types": [
+            "neighborhood",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "keshari market",
+          "shortText": "keshari market",
+          "types": [
+            "sublocality_level_1",
+            "sublocality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "plusCode": {
+        "globalCode": "7MQ6JR3M+VG",
+        "compoundCode": "JR3M+VG Patna, Bihar, India"
+      },
+      "location": {
+        "latitude": 25.6046415,
+        "longitude": 84.8338421
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.6031579697085,
+          "longitude": 84.8321112197085
+        },
+        "high": {
+          "latitude": 25.605855930291504,
+          "longitude": 84.834809180291515
+        }
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=12660521196226046797&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "regularOpeningHours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 8,
+              "minute": 30
+            },
+            "close": {
+              "day": 0,
+              "hour": 10,
+              "minute": 30
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 8,
+              "minute": 30
+            },
+            "close": {
+              "day": 1,
+              "hour": 10,
+              "minute": 30
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 8,
+              "minute": 30
+            },
+            "close": {
+              "day": 2,
+              "hour": 10,
+              "minute": 30
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 8,
+              "minute": 30
+            },
+            "close": {
+              "day": 3,
+              "hour": 10,
+              "minute": 30
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 8,
+              "minute": 30
+            },
+            "close": {
+              "day": 4,
+              "hour": 10,
+              "minute": 30
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 8,
+              "minute": 30
+            },
+            "close": {
+              "day": 5,
+              "hour": 10,
+              "minute": 30
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 8,
+              "minute": 30
+            },
+            "close": {
+              "day": 6,
+              "hour": 10,
+              "minute": 30
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 8:30 – 10:30 AM",
+          "Tuesday: 8:30 – 10:30 AM",
+          "Wednesday: 8:30 – 10:30 AM",
+          "Thursday: 8:30 – 10:30 AM",
+          "Friday: 8:30 – 10:30 AM",
+          "Saturday: 8:30 – 10:30 AM",
+          "Sunday: 8:30 – 10:30 AM"
+        ],
+        "nextOpenTime": "2026-03-08T03:00:00Z"
+      },
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "Ravi chowk, \u003cspan class=\"extended-address\"\u003eNorth Patel Nagar, keshari market\u003c/span\u003e, \u003cspan class=\"locality\"\u003ePatna, Suwarmarwah\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 4,
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hospital-H_pinlet",
+      "iconBackgroundColor": "#F88181",
+      "displayName": {
+        "text": "Chauhan Medical Hall",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Medical Center",
+        "languageCode": "en-US"
+      },
+      "currentOpeningHours": {
+        "openNow": false,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 8,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 8
+              }
+            },
+            "close": {
+              "day": 0,
+              "hour": 10,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 8
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 8,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 9
+              }
+            },
+            "close": {
+              "day": 1,
+              "hour": 10,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 9
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 8,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 10
+              }
+            },
+            "close": {
+              "day": 2,
+              "hour": 10,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 10
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 8,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 11
+              }
+            },
+            "close": {
+              "day": 3,
+              "hour": 10,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 11
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 8,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 12
+              }
+            },
+            "close": {
+              "day": 4,
+              "hour": 10,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 12
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 8,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 13
+              }
+            },
+            "close": {
+              "day": 5,
+              "hour": 10,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 13
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 8,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 7
+              }
+            },
+            "close": {
+              "day": 6,
+              "hour": 10,
+              "minute": 30,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 7
+              }
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 8:30 – 10:30 AM",
+          "Tuesday: 8:30 – 10:30 AM",
+          "Wednesday: 8:30 – 10:30 AM",
+          "Thursday: 8:30 – 10:30 AM",
+          "Friday: 8:30 – 10:30 AM",
+          "Saturday: 8:30 – 10:30 AM",
+          "Sunday: 8:30 – 10:30 AM"
+        ],
+        "nextOpenTime": "2026-03-08T03:00:00Z"
+      },
+      "primaryType": "medical_center",
+      "shortFormattedAddress": "Ravi chowk, North Patel Nagar, keshari market, Patna",
+      "reviews": [
+        {
+          "name": "places/ChIJ3yq5FWN-DRQRTWtbHPM0s68/reviews/ChZDSUhNMG9nS0VJQ0FnSUNCalotX1pBEAE",
+          "relativePublishTimeDescription": "3 years ago",
+          "rating": 5,
+          "text": {
+            "text": "Very nice superb ❤️👍🏻, all Medicines is available here,",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Very nice superb ❤️👍🏻, all Medicines is available here,",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Prem Singh",
+            "uri": "https://www.google.com/maps/contrib/110599200340895777678/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUAFpXcKMjKBIde7cp8jEeqmGAgZA9o0RnVPKeyEuYIoD-L514=s128-c0x00000000-cc-rp-mo-ba3"
+          },
+          "publishTime": "2023-01-01T08:33:49.929116Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUNCalotX1pBEAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNCalotX1pBEAE!2m1!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d"
+        },
+        {
+          "name": "places/ChIJ3yq5FWN-DRQRTWtbHPM0s68/reviews/ChdDSUhNMG9nS0VJQ0FnSUR3c096YmxRRRAB",
+          "relativePublishTimeDescription": "7 years ago",
+          "rating": 5,
+          "text": {
+            "text": "Chatham medical hall is stock for all medicine here.",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Chatham medical hall is stock for all medicine here.",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "MD IMTEYAZ",
+            "uri": "https://www.google.com/maps/contrib/100826852364560516880/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX23U89cCInw3tKOldPkTusX_5cIE8QtWEMuP-30S_GZHdpW_M9=s128-c0x00000000-cc-rp-mo-ba4"
+          },
+          "publishTime": "2018-10-21T04:57:51.089346867Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSUR3c096YmxRRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUR3c096YmxRRRAB!2m1!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d"
+        },
+        {
+          "name": "places/ChIJ3yq5FWN-DRQRTWtbHPM0s68/reviews/ChZDSUhNMG9nS0VJQ0FnSUN3bVpiYmNREAE",
+          "relativePublishTimeDescription": "7 years ago",
+          "rating": 4,
+          "text": {
+            "text": "Well maintained pharma shop",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Well maintained pharma shop",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Anubhav Kumar",
+            "uri": "https://www.google.com/maps/contrib/112064618486625580100/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVpNLIB7zjIYskQf0EAxjvjpIzM1MB2hHkKj_IMLINqE1EQ2XO-4A=s128-c0x00000000-cc-rp-mo-ba5"
+          },
+          "publishTime": "2018-09-01T16:18:40.061873Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUN3bVpiYmNREAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUN3bVpiYmNREAE!2m1!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d"
+        },
+        {
+          "name": "places/ChIJ3yq5FWN-DRQRTWtbHPM0s68/reviews/ChdDSUhNMG9nS0VJQ0FnSURDMDZxWWpRRRAB",
+          "relativePublishTimeDescription": "5 years ago",
+          "rating": 5,
+          "authorAttribution": {
+            "displayName": "RADHA KUMARI",
+            "uri": "https://www.google.com/maps/contrib/107215737081603716069/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWHh-txlMT2Okku9wtfp76WiW02K0SKzo1gnF5_zssEnK4wPNFD=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2020-10-10T15:17:42.108420Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSURDMDZxWWpRRRAB&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURDMDZxWWpRRRAB!2m1!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d"
+        }
+      ],
+      "photos": [
+        {
+          "name": "places/ChIJ3yq5FWN-DRQRTWtbHPM0s68/photos/ATCDNfWKPvCGaR2RXxE8GJEHgAlRVULMp2870Hi1wxXoqS6ZBkgpsvHageY3IMBVap-kQieqPDq2gTPQurXANL0m6OFr56__M8yk7acwfLEfq4qbdjqaxbnJmNYGVToNo5RcLThvtRYnzO9zzcBlN0jP1jgcJ2oOiL5JR4Uq6UPEbg03mj12THAINF2uaz3oKj_nv3FKZHRu7GH-JKgIm1e0UVWY8-TnFehhLlNH1aC487YAsTbd67CSlqesALpuY4-rtUFQMS06x5TWmJrqkYa6fRvH69boTzqmrzJ-8t1DAKlqRw",
+          "widthPx": 853,
+          "heightPx": 478,
+          "authorAttributions": [
+            {
+              "displayName": "Chauhan Medical Hall",
+              "uri": "https://maps.google.com/maps/contrib/113143933599722081495",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV6K5znMCXQnVciHvuRHCxpwwp4qt0VYSf1-ox3Tx7_LFdDOS4=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNdCU0nVhtuy1-2WlR0XhkA0xCpeL5mx94mokMt&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNdCU0nVhtuy1-2WlR0XhkA0xCpeL5mx94mokMt!2e10!4m2!3m1!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d"
+        }
+      ],
+      "accessibilityOptions": {
+        "wheelchairAccessibleParking": true
+      },
+      "addressDescriptor": {},
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=12660521196226046797&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x140d7e6315b92adf:0xafb334f31c5b6b4d!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Patna",
+        "addressLines": [
+          "Ravi chowk",
+          "North Patel Nagar, keshari market"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Medical Center",
+        "languageCode": "en-US"
+      }
+    },
+    {
+      "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY",
+      "id": "ChIJI8Y6-3RY7TkRkUnjexu_gPY",
+      "types": [
+        "hospital",
+        "medical_clinic",
+        "health",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "093346 29502",
+      "internationalPhoneNumber": "+91 93346 29502",
+      "formattedAddress": "jai prakash nagar ram, Ram Suraj Complex, Guru Gobind Path, Patna, Parev, Bihar 801103, India",
+      "addressComponents": [
+        {
+          "longText": "jai prakash nagar ram",
+          "languageCode": "en"
+        },
+        {
+          "longText": "Ram Suraj Complex",
+          "shortText": "Ram Suraj Complex",
+          "types": [
+            "premise"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Guru Gobind Path",
+          "shortText": "Guru Gobind Path",
+          "types": [
+            "route"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "locality",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna",
+          "shortText": "Patna",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Patna Division",
+          "shortText": "Patna Division",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "Bihar",
+          "shortText": "BR",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "India",
+          "shortText": "IN",
+          "types": [
+            "country",
+            "political"
+          ],
+          "languageCode": "en"
+        },
+        {
+          "longText": "801103",
+          "shortText": "801103",
+          "types": [
+            "postal_code"
+          ],
+          "languageCode": "en-US"
+        }
+      ],
+      "plusCode": {
+        "globalCode": "7MQ6HR67+MJ",
+        "compoundCode": "HR67+MJ Parev, Bihar, India"
+      },
+      "location": {
+        "latitude": 25.5617433,
+        "longitude": 84.814069199999992
+      },
+      "viewport": {
+        "low": {
+          "latitude": 25.5602936197085,
+          "longitude": 84.8131305697085
+        },
+        "high": {
+          "latitude": 25.562991580291502,
+          "longitude": 84.815828530291512
+        }
+      },
+      "rating": 4,
+      "googleMapsUri": "https://maps.google.com/?cid=17762407055112751505&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+      "regularOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 0,
+              "hour": 14,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 1,
+              "hour": 20,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 2,
+              "hour": 20,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 3,
+              "hour": 20,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 4,
+              "hour": 20,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 5,
+              "hour": 20,
+              "minute": 0
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 8,
+              "minute": 0
+            },
+            "close": {
+              "day": 6,
+              "hour": 20,
+              "minute": 0
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 8:00 AM – 8:00 PM",
+          "Tuesday: 8:00 AM – 8:00 PM",
+          "Wednesday: 8:00 AM – 8:00 PM",
+          "Thursday: 8:00 AM – 8:00 PM",
+          "Friday: 8:00 AM – 8:00 PM",
+          "Saturday: 8:00 AM – 8:00 PM",
+          "Sunday: 8:00 AM – 2:00 PM"
+        ],
+        "nextCloseTime": "2026-03-07T14:30:00Z"
+      },
+      "utcOffsetMinutes": 330,
+      "adrFormatAddress": "jai prakash nagar ram, Ram Suraj Complex, \u003cspan class=\"street-address\"\u003eGuru Gobind Path\u003c/span\u003e, \u003cspan class=\"locality\"\u003ePatna, Parev\u003c/span\u003e, \u003cspan class=\"region\"\u003eBihar\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e801103\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eIndia\u003c/span\u003e",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 4,
+      "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "iconBackgroundColor": "#7B9EB0",
+      "displayName": {
+        "text": "Scientific Diagnostic Centre",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Medical Clinic",
+        "languageCode": "en-US"
+      },
+      "currentOpeningHours": {
+        "openNow": true,
+        "periods": [
+          {
+            "open": {
+              "day": 0,
+              "hour": 8,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 8
+              }
+            },
+            "close": {
+              "day": 0,
+              "hour": 14,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 8
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 1,
+              "hour": 8,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 9
+              }
+            },
+            "close": {
+              "day": 1,
+              "hour": 20,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 9
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 2,
+              "hour": 8,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 10
+              }
+            },
+            "close": {
+              "day": 2,
+              "hour": 20,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 10
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 3,
+              "hour": 8,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 11
+              }
+            },
+            "close": {
+              "day": 3,
+              "hour": 20,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 11
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 4,
+              "hour": 8,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 12
+              }
+            },
+            "close": {
+              "day": 4,
+              "hour": 20,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 12
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 5,
+              "hour": 8,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 13
+              }
+            },
+            "close": {
+              "day": 5,
+              "hour": 20,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 13
+              }
+            }
+          },
+          {
+            "open": {
+              "day": 6,
+              "hour": 8,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 7
+              }
+            },
+            "close": {
+              "day": 6,
+              "hour": 20,
+              "minute": 0,
+              "date": {
+                "year": 2026,
+                "month": 3,
+                "day": 7
+              }
+            }
+          }
+        ],
+        "weekdayDescriptions": [
+          "Monday: 8:00 AM – 8:00 PM",
+          "Tuesday: 8:00 AM – 8:00 PM",
+          "Wednesday: 8:00 AM – 8:00 PM",
+          "Thursday: 8:00 AM – 8:00 PM",
+          "Friday: 8:00 AM – 8:00 PM",
+          "Saturday: 8:00 AM – 8:00 PM",
+          "Sunday: 8:00 AM – 2:00 PM"
+        ],
+        "nextCloseTime": "2026-03-07T14:30:00Z"
+      },
+      "primaryType": "medical_clinic",
+      "shortFormattedAddress": "Ram Suraj Complex, jai prakash nagar ram, Guru Gobind Path, Patna",
+      "reviews": [
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/reviews/ChZDSUhNMG9nS0VJQ0FnSUN3NmNHeEFREAE",
+          "relativePublishTimeDescription": "8 years ago",
+          "rating": 5,
+          "text": {
+            "text": "An ISO certified diagnostic center which provides ultrasound, digital x-ray, dental x-ray, ecg, pathology. Home collection services available here.",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "An ISO certified diagnostic center which provides ultrasound, digital x-ray, dental x-ray, ecg, pathology. Home collection services available here.",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "manish kumar",
+            "uri": "https://www.google.com/maps/contrib/110373935012414339564/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUWbph-twYS-Bon1hVPkF4D0flURQSjv71hQzrcPYVUjz-9-Zxl=s128-c0x00000000-cc-rp-mo-ba3"
+          },
+          "publishTime": "2017-03-11T08:24:50.134Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUN3NmNHeEFREAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUN3NmNHeEFREAE!2m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/reviews/ChZDSUhNMG9nS0VJQ0FnSUNTOEpUaUxREAE",
+          "relativePublishTimeDescription": "5 years ago",
+          "rating": 1,
+          "authorAttribution": {
+            "displayName": "Nishant Kumar",
+            "uri": "https://www.google.com/maps/contrib/115462822237095292797/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWTn157dNX9akhSIpBQ2NxITUTSs3es2XbIUEeGDghyJ8AvHjfy=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2020-12-13T07:06:45.244832Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUNTOEpUaUxREAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNTOEpUaUxREAE!2m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/reviews/ChZDSUhNMG9nS0VJQ0FnSUNjaWNmQU1nEAE",
+          "relativePublishTimeDescription": "5 years ago",
+          "rating": 5,
+          "authorAttribution": {
+            "displayName": "Juhi Kumari",
+            "uri": "https://www.google.com/maps/contrib/105132580218078537656/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKkWZXE9qE-q5X8_vEycGkiGA89l7sa0KX8j-9Q242grI3UAQ=s128-c0x00000000-cc-rp-mo"
+          },
+          "publishTime": "2020-03-14T14:50:31.192906Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUNjaWNmQU1nEAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNjaWNmQU1nEAE!2m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/reviews/ChZDSUhNMG9nS0VJQ0FnSUNrOGZLZ0ZREAE",
+          "relativePublishTimeDescription": "6 years ago",
+          "rating": 5,
+          "authorAttribution": {
+            "displayName": "Ranjit Kumar Suryavanshi",
+            "uri": "https://www.google.com/maps/contrib/114976854281241332764/reviews",
+            "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJkOJNIiNRN0XiFMw6Bc_hnBN0j9sA4Jy0tEgPzKNPlGJAZJNk=s128-c0x00000000-cc-rp-mo-ba2"
+          },
+          "publishTime": "2019-06-22T11:45:40.671767Z",
+          "flagContentUri": "https://www.google.com/local/content/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnSUNrOGZLZ0ZREAE&d=17924085&t=1",
+          "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNrOGZLZ0ZREAE!2m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        }
+      ],
+      "photos": [
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/photos/ATCDNfVacn9NqBSt1k2N4D_uCh4gVZUz5WbdlRdNab-8H5TbDLYYg4GUIaJk4C6rLOvERngJqfhmZx8UT2Gl8CQxYbehmIV_KhQTZ-4am-X0BDtf1lMLipnRobL8-CDxP7hjUIcdFPOpvFVQBxmDcwONro0QUhU9T374FuSh7_yvc1VNxmDpmA5j3RhF6Axgqyv9ollwv4OKyTRPq_MzEiA91i39oT-ASBd1xydpDPZGWXC9UlBKneJZTsIek3iiWd-36eiPGHdHGjqDAuZsT9YL4U1HkxwdRv87WJPP53JOtNAo6w",
+          "widthPx": 1200,
+          "heightPx": 673,
+          "authorAttributions": [
+            {
+              "displayName": "Scientific Diagnostic Center",
+              "uri": "https://maps.google.com/maps/contrib/114430729699611562303",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWr-i-Okhubr--huM7mHGDpLj5XGgR53vmVc6ZuLDOvd5HZK04=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNzQnV1ZEWh-84hKgJJdwbWyqkIF9qzH5KtOKr0&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNzQnV1ZEWh-84hKgJJdwbWyqkIF9qzH5KtOKr0!2e10!4m2!3m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/photos/ATCDNfUX1FaJvdjujZHebaDjEmlccIxyZIrVJGC4XdcBNEFNfSJvFANYNrU5QbKr3uZBdHsVGeVM880Zf9JiIYGUOrTR41gT7z4fk7cSCcDI0GPW1eWsIZdUglxQZDKNOvf-7L1frR9hFo3Y4xe5VOLb-RQ_xB2hOUnIoz_W1M441MY4topXvlQmJ4zdQ-APU3hhPoU9vlzBU8LKO9DC0d3ppA-yWBlNTt8MKKfORre4dyElvdjyYcDF1vcROjV_AXDwPB1_u5bNXEWouGoQmYva22-YrxlKsjAtbKftHhXM6sXdC0ug7HD3u1D_ftbO1kfnWNQeIMiIdiCzsKtXbwwRSBoTM7p0QxecAHT75RYtrkfosenFBz0zmkcbl5t-sYpnCSPAd6H3bCZArCNPwRK0ZQFo4DmYnEkIuIuW7eDfg9Y",
+          "widthPx": 1440,
+          "heightPx": 2560,
+          "authorAttributions": [
+            {
+              "displayName": "manish kumar",
+              "uri": "https://maps.google.com/maps/contrib/110373935012414339564",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUWbph-twYS-Bon1hVPkF4D0flURQSjv71hQzrcPYVUjz-9-Zxl=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC4t-ygYg&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC4t-ygYg!2e10!4m2!3m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/photos/ATCDNfXQL71V5KuwT4a0HdyhAosfOCwaP5FTWwcnEeTUNapPknbw4N_p1BcukUsILHPcvP8vuEjYu334SksL8nYRqMfvWmz9t1h3bc0SftoPv_Tyas3AdQnc9kgfvPxGIauRtfWNfqLBTMtw-EyO-Y_D1oC9UthXAY8oHnsA68GSC7lkWRG-D6c2HB2V-PMFHyjYu_gPosuLVSvOxLns9ahr_EpXAOMkrB6E_xfiKG_Wj9s2XkFZWJPQWW4tsjYlfJXSmDe4n2SvtPcFDBUt17WTjLWoTuPBvKdHAA1bJFI2XS_vaQfIC416KvoMQglg02SOQzJ283XTVJSuu_ODNG_-H0bRy4nUpuHhegXV3tybiYlx4Umm2hyNWt7zUVeVUVu86s3tr34C-rG4-pPqoippGIed9RwIEOY07Tf9lRfv50PqTA",
+          "widthPx": 2560,
+          "heightPx": 1440,
+          "authorAttributions": [
+            {
+              "displayName": "manish kumar",
+              "uri": "https://maps.google.com/maps/contrib/110373935012414339564",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUWbph-twYS-Bon1hVPkF4D0flURQSjv71hQzrcPYVUjz-9-Zxl=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC4t-ygLA&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC4t-ygLA!2e10!4m2!3m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/photos/ATCDNfWMvoY_tHbO-qFGLN5RGK1_bpxUZdiCZyRsmuLQjM-RRTqvHGjB8LMB6vPBEoYhIArb9qD8Ncb_xh9_In2X3yYlieFTIElR45HHqxvuoD0KjAXc6GVIDrZ6TP0bOqGEb5vsE8Zd7lp67l710rYBuL8tMw0WpuapiL4FHBf5-L8n5-GEKN7s1q2CMcsuX7-dxZWyIa-T9yB9APCOZn0SGdOagk2yHzNlO1_ADyx7WKwpyLy-YTxgUU9p3ZRqW6_Hh9A8DRd13q9iaYJyh-TuT-ozc-cs7dQSpka0RXG9FtI_vTxctnSx_D9yDlSF5mcVPBbtI3kR2uc5K71xPSIblD_upxB_FVDjLZ3sLlTV4NDUQaw1PMseubVMbB4YQRavnAp-EEgoQ_bx0o1fMdKKQUgLQmRemdGbJmtBQz7ee5M",
+          "widthPx": 2560,
+          "heightPx": 1440,
+          "authorAttributions": [
+            {
+              "displayName": "manish kumar",
+              "uri": "https://maps.google.com/maps/contrib/110373935012414339564",
+              "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUWbph-twYS-Bon1hVPkF4D0flURQSjv71hQzrcPYVUjz-9-Zxl=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC4t-ygHA&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC4t-ygHA!2e10!4m2!3m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/photos/ATCDNfVcBSblHblMmX56z2Gy4g2PIUo7amCA6Fa-Wz4-0f0JuWUMV6BaQHXKDMSbzUbDSscvICi6FxlueU_W-TNVGPYpqwxK-efT5HFZyWfvtc7biKmNGQ5cUWf6bYVqfM9sIX1cUAqoriixaPlr8ByaKIjQuS1FCQ9B0whVZRDgvx8zwRJ3BmD_XfU27yfAAVkYlmvC_UgDM4l-uA65ZKX95TXclTYZo0ufmd3s1b4fLP4EW_WlVraBY9MsKHBaupItdHEvRecARepyizHWtO37Yn4XpcWEOnGCEyOBdpUCRXnW-D2_v_RLPRC94VDsWaEP3eI9owM3cL22I6qbl8FmC9v4n-B0NKiotAHbh7g7p0R9CPPCl_IhllwGIO1wqhPkC7ZFXRzA-onkCpP4_ii2abx9oytWq0OgpepwAwcHjaeDHpAi",
+          "widthPx": 1968,
+          "heightPx": 4160,
+          "authorAttributions": [
+            {
+              "displayName": "Ranjit Kumar Suryavanshi",
+              "uri": "https://maps.google.com/maps/contrib/114976854281241332764",
+              "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJkOJNIiNRN0XiFMw6Bc_hnBN0j9sA4Jy0tEgPzKNPlGJAZJNk=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICk8crKigE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICk8crKigE!2e10!4m2!3m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/photos/ATCDNfVJJ0JkyV3qq4S2XjI7Z0bzcPGzOzEHUt_Mvpxaz2HQaZ48GTM5t0RDRVvtFW_hKgJiEkCdmSJGHQX2JKA_WuZdQjO7F2Ir7vZl2GT0wGOlDfyuNleF8-_uHH-8auS-vQWVBNZQ_lC-M3nMo9pJ2R60-ue0hEc04UNqxz8UQr9FifeQ1wV67LWKgWevF1vqzB8Pw8QdDPF7EcYCwAn5t6WI5RkcvuUE1VYnwWeKbO0CXtgCkM_rtxrHBKHu0YXJDSkNwNmcT797InUBmU73yvtwLfU-ou8y96wxz7exjYbtdK5_Oa8FTrbLgAtcefhAGJZa_LOMJ5HfG5exMHb98UW-mFN9EIzKG8VUFfmgtx6xvHWD3Cc_rtP0FgnsvzRgNMsHbFYSkiU-rG7Xq60seJXRqn-UbvHTKECzYr4Uoi6WWVc",
+          "widthPx": 4160,
+          "heightPx": 1968,
+          "authorAttributions": [
+            {
+              "displayName": "Ranjit Kumar Suryavanshi",
+              "uri": "https://maps.google.com/maps/contrib/114976854281241332764",
+              "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJkOJNIiNRN0XiFMw6Bc_hnBN0j9sA4Jy0tEgPzKNPlGJAZJNk=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgICk8bL7hAE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICk8bL7hAE!2e10!4m2!3m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        },
+        {
+          "name": "places/ChIJI8Y6-3RY7TkRkUnjexu_gPY/photos/ATCDNfWRl_0T1v1F8jRf4khfLSa726ucM86HHrL9grbHS0BHG0HxemVvMFdupVoPs9EUaK6z-OavI_2xSN0FHQKUIymX45c7YEqWqVEUZroa4HodKYbYO2HgHvp1RXmqXlj_fvlzUHsLmCRtyXyynJJZb-E1FpjAqTsPsG5xtR_h36s28vgUGUU2rxqxZBQDvSwQJzaK0qCnFnB4oTEiRau16iKQsKilv04jYCLxFtzQSjGIW3qUDQ_oZb78dPPZtjF-ZgZYpC38JIuYxlo09jqlejx4Hkyd7siTRG3hS-4fIAtZbNlxIGkKTv13O24444qeoqvfo6uvGGxMyjGPa-I5OgwPUZrzBIZCV4Y5Ml6F1jH-URhjHdZCsxgeXLdV8j7WPeeVEs62DSxdCDC6R41KAw14RMTjL5rLl9Gadjp0TvIP_n75",
+          "widthPx": 508,
+          "heightPx": 940,
+          "authorAttributions": [
+            {
+              "displayName": "Nitu Devi",
+              "uri": "https://maps.google.com/maps/contrib/113682081054050782263",
+              "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKfN_zd7RMWRWGHkx1vFtvjabciekvC4536Q7rxKUNvqIg11Q=s100-p-k-no-mo"
+            }
+          ],
+          "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDy2Lbq7gE&hl=en-US",
+          "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDy2Lbq7gE!2e10!4m2!3m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991"
+        }
+      ],
+      "restroom": true,
+      "accessibilityOptions": {
+        "wheelchairAccessibleParking": true,
+        "wheelchairAccessibleRestroom": true
+      },
+      "addressDescriptor": {
+        "landmarks": [
+          {
+            "name": "places/ChIJPZrREM1XjTkR-g8yyDknYM8",
+            "placeId": "ChIJPZrREM1XjTkR-g8yyDknYM8",
+            "displayName": {
+              "text": "Pali Halt",
+              "languageCode": "en"
+            },
+            "types": [
+              "establishment",
+              "point_of_interest",
+              "train_station",
+              "transit_station"
+            ],
+            "straightLineDistanceMeters": 495.29434,
+            "travelDistanceMeters": 465.53897
+          }
+        ]
+      },
+      "googleMapsLinks": {
+        "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x39ed5874fb3ac623:0xf680bf1b7be34991!3e0?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "placeUri": "https://maps.google.com/?cid=17762407055112751505&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x39ed5874fb3ac623:0xf680bf1b7be34991!12e1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x39ed5874fb3ac623:0xf680bf1b7be34991!9m1!1b1?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA",
+        "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x39ed5874fb3ac623:0xf680bf1b7be34991!10e5?g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAEgAA"
+      },
+      "timeZone": {
+        "id": "Asia/Calcutta"
+      },
+      "postalAddress": {
+        "regionCode": "IN",
+        "languageCode": "en-US",
+        "postalCode": "801103",
+        "administrativeArea": "Bihar",
+        "locality": "Patna",
+        "addressLines": [
+          "Ram Suraj Complex",
+          "jai prakash nagar ram",
+          "Guru Gobind Path"
+        ]
+      },
+      "googleMapsTypeLabel": {
+        "text": "Diagnostic Center",
+        "languageCode": "en-US"
+      }
+    }
+  ]
+}

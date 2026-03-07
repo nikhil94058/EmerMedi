@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from models.server import audio_bp
 from AmazonRekognition.main import image_bp
-
+from Preprocesser.routes import hospital_bp 
 app = Flask(__name__)
 CORS(app)
 
@@ -21,6 +21,6 @@ def health_check():
 
 app.register_blueprint(audio_bp)
 app.register_blueprint(image_bp)
-
+app.register_blueprint(hospital_bp) 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
