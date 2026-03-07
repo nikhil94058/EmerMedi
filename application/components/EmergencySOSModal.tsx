@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { X, Upload, Mic, Image as ImageIcon, AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
 
 interface EmergencySOSModalProps {
@@ -31,13 +31,26 @@ export default function EmergencySOSModal({ isOpen, onClose }: EmergencySOSModal
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Reset all state when modal closes
+  useEffect(() => {
+    if (!isOpen) {
+      // Small delay to allow closing animation
+      const timer = setTimeout(() => {
+        setStep('select');
+        setUploadType(null);
+        setSelectedFile(null);
+        setDiagnosisResult(null);
+        setError(null);
+        setIsUploading(false);
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
+      }, 200);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
   const handleClose = () => {
-    setStep('select');
-    setUploadType(null);
-    setSelectedFile(null);
-    setDiagnosisResult(null);
-    setError(null);
-    setIsUploading(false);
     onClose();
   };
 
@@ -45,6 +58,10 @@ export default function EmergencySOSModal({ isOpen, onClose }: EmergencySOSModal
     setUploadType(type);
     setStep('upload');
     setError(null);
+    setSelectedFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
   };
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -105,9 +122,24 @@ export default function EmergencySOSModal({ isOpen, onClose }: EmergencySOSModal
       setUploadType(null);
       setSelectedFile(null);
       setError(null);
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
     } else if (step === 'result') {
       setStep('upload');
       setDiagnosisResult(null);
+      setError(null);
+    }
+  };
+
+  const handleNewDiagnosis = () => {
+    setStep('select');
+    setUploadType(null);
+    setSelectedFile(null);
+    setDiagnosisResult(null);
+    setError(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
     }
   };
 
@@ -319,12 +351,7 @@ export default function EmergencySOSModal({ isOpen, onClose }: EmergencySOSModal
               {/* Action Buttons */}
               <div className="flex gap-3">
                 <button
-                  onClick={() => {
-                    setStep('select');
-                    setUploadType(null);
-                    setSelectedFile(null);
-                    setDiagnosisResult(null);
-                  }}
+                  onClick={handleNewDiagnosis}
                   className="flex-1 py-3 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 rounded-lg font-medium transition-all text-slate-800 dark:text-white"
                 >
                   New Diagnosis
