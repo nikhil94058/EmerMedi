@@ -1,75 +1,91 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
+import { getSession } from '@/lib/auth';
+import { uploadToS3 } from '@/lib/s3';
+import { getDatabase } from '@/lib/mongodb';
 
 export async function POST(request: NextRequest) {
   try {
+    const session = await getSession();
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const formData = await request.formData();
     const file = formData.get('file') as File;
-    const type = formData.get('type') as string; // 'audio' or 'image'
+    const type = formData.get('type') as string;
 
-    if (!file) {
-      return NextResponse.json({ error: 'No file provided' }, { status: 400 });
+    if (!file || !type || !['audio', 'image'].includes(type)) {
+      return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
     }
 
-    if (!type || !['audio', 'image'].includes(type)) {
-      return NextResponse.json({ error: 'Invalid type. Must be "audio" or "image"' }, { status: 400 });
-    }
+    console.log('[DIAGNOSIS] Starting for user:', session.userId);
 
-    // Prepare form data for ML API
+    const fileBuffer = Buffer.from(await file.arrayBuffer());
+    const fileName = `diagnosis/${session.userId}/${Date.now()}-${file.name}`;
+    const s3Url = await uploadToS3(fileBuffer, fileName, file.type);
+
     const mlFormData = new FormData();
     mlFormData.append('file', file);
 
-    // Select the appropriate ML API endpoint
-    const apiUrl = type === 'audio' 
-      ? process.env.ML_AUDIO_API_URL 
-      : process.env.ML_IMAGE_API_URL;
-
+    const apiUrl = type === 'audio' ? process.env.ML_AUDIO_API_URL : process.env.ML_IMAGE_API_URL;
+    
     if (!apiUrl) {
-      return NextResponse.json({ 
-        error: 'ML API URL not configured. Please set ML_AUDIO_API_URL and ML_IMAGE_API_URL in .env' 
-      }, { status: 500 });
+      return NextResponse.json({ error: 'ML API not configured' }, { status: 500 });
     }
 
-    // Call the ML API
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      body: mlFormData,
-    });
-
+    const response = await fetch(apiUrl, { method: 'POST', body: mlFormData });
+    
     if (!response.ok) {
-      const errorData = await response.json();
-      return NextResponse.json({ 
-        error: 'ML API error', 
-        details: errorData 
-      }, { status: response.status });
+      return NextResponse.json({ error: 'ML API failed' }, { status: 500 });
     }
 
     const result = await response.json();
+    console.log('[DIAGNOSIS] ML result:', JSON.stringify(result).substring(0, 200));
 
-    // Format response based on type
+    let diagnosisResult;
     if (type === 'audio') {
-      return NextResponse.json({
+      diagnosisResult = {
         type: 'audio',
         emotion: result.detected_emotion,
         category: result.emergency_category,
         isEmergency: result.emergency_category === 'Emergency',
         rawData: result
-      });
+      };
     } else {
-      return NextResponse.json({
+      const isEmergency = result.emergency_level === 'critical' || 
+                         result.emergency_level === 'urgent' || 
+                         result.call_ambulance === true;
+      
+      const labels = result.rekognition?.labels || result.detected_labels || [];
+      const reason = result.dispatcher_report || result.reasoning || result.scene_description || 'Analysis complete';
+      
+      diagnosisResult = {
         type: 'image',
-        status: result.status,
-        reason: result.reason,
-        labels: result.detected_labels,
-        isEmergency: result.status === 'emergency',
+        status: result.emergency_level || (isEmergency ? 'emergency' : 'non-emergency'),
+        reason: reason,
+        labels: labels,
+        isEmergency: isEmergency,
+        triage: result,
         rawData: result
-      });
+      };
     }
 
+    const db = await getDatabase();
+    await db.collection('diagnosis_history').insertOne({
+      userId: session.userId,
+      type,
+      result: diagnosisResult,
+      fileUrl: s3Url,
+      fileName: file.name,
+      isEmergency: diagnosisResult.isEmergency,
+      createdAt: new Date(),
+    });
+
+    console.log('[DIAGNOSIS] Saved successfully, isEmergency:', diagnosisResult.isEmergency);
+
+    return NextResponse.json(diagnosisResult);
   } catch (error: any) {
-    console.error('Emergency diagnosis error:', error);
-    return NextResponse.json({ 
-      error: 'Failed to process emergency diagnosis', 
-      details: error.message 
-    }, { status: 500 });
+    console.error('[DIAGNOSIS] Error:', error);
+    return NextResponse.json({ error: 'Failed', details: error.message }, { status: 500 });
   }
 }

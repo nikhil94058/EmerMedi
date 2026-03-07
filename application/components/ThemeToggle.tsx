@@ -1,11 +1,14 @@
 'use client';
 
 import { useTheme } from './ThemeProvider';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   const themes = [
     { value: 'light', label: 'Light', icon: '☀️' },
@@ -13,7 +16,15 @@ export default function ThemeToggle() {
     { value: 'system', label: 'System', icon: '💻' },
   ];
 
-  const isDark = theme === 'dark' || (theme === 'system' && typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  // Render an empty placeholder until after hydration — prevents
+  // every possible server/client DOM mismatch (theme state, browser
+  // extensions injecting nodes, etc.).  The placeholder is the
+  // exact same size as the real button so layout doesn't shift.
+  if (!mounted) {
+    return <div className="relative z-[9999]"><div className="w-9 h-9" /></div>;
+  }
+
+  const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
   return (
     <div className="relative z-[9999]">

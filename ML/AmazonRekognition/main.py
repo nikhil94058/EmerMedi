@@ -11,7 +11,6 @@ load_dotenv()
 
 image_bp = Blueprint("image_bp", __name__)
 
-# ─── Rekognition client ───────────────────────────────────────────────────────
 rekognition = boto3.client(
     "rekognition",
     aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
@@ -19,8 +18,6 @@ rekognition = boto3.client(
     region_name=os.getenv("AWS_REGION", "us-east-1"),
 )
 
-
-# ─── Endpoint ─────────────────────────────────────────────────────────────────
 
 @image_bp.route("/predict-image", methods=["POST"])
 def predict_image():
@@ -33,10 +30,8 @@ def predict_image():
     try:
         raw_bytes = image_file.read()
 
-        # ── Step 0: normalise / compress if needed ────────────────────────────
-        image_bytes, img_pil = _prepare_image(raw_bytes)
+        image_bytes = _prepare_image(raw_bytes)
 
-        # ── Step 1: Rekognition — labels (detailed) ───────────────────────────
         print("👀  Rekognition → labels…")
         rek_labels_resp = rekognition.detect_labels(
             Image={"Bytes": image_bytes},
@@ -54,19 +49,15 @@ def predict_image():
         ]
         print(f"   Labels: {[l['name'] for l in labels]}")
 
-        # ── Step 2: Rekognition — faces ───────────────────────────────────────
         print("👤  Rekognition → faces…")
         faces = _detect_faces(image_bytes)
 
-        # ── Step 3: Rekognition — content moderation ──────────────────────────
         print("🔍  Rekognition → moderation…")
         moderation_labels = _detect_moderation(image_bytes)
 
-        # ── Step 4: Rekognition — text (OCR) ──────────────────────────────────
         print("📝  Rekognition → text…")
         detected_text = _detect_text(image_bytes)
 
-        # ── Step 5: Bundle everything for the LLM ─────────────────────────────
         rekognition_data = {
             "labels":            labels,
             "faces":             faces,
@@ -74,45 +65,35 @@ def predict_image():
             "detected_text":     detected_text,
         }
 
-        # ── Step 6: Multimodal Bedrock LLM triage ─────────────────────────────
         print("🧠  Bedrock LLM multimodal triage…")
         triage = analyze_image_with_llm(
             image_bytes=image_bytes,
             rekognition_data=rekognition_data,
         )
 
-        # ── Step 7: Console summary ───────────────────────────────────────────
         _print_summary(triage)
 
-        # ── Step 8: Build response ────────────────────────────────────────────
         response_payload = {
-            # Core triage decision
             "emergency_level":    triage.get("emergency_level", "none"),
             "urgency_score":      triage.get("urgency_score", 0),
             "call_ambulance":     triage.get("call_ambulance", False),
             "call_police":        triage.get("call_police", False),
             "call_fire_department": triage.get("call_fire_department", False),
             "time_critical":      triage.get("time_critical", False),
-            # Scene
             "scene_type":         triage.get("scene_type", "normal"),
             "scene_description":  triage.get("scene_description", ""),
-            # Patient
             "patient_status":     triage.get("patient_status", {}),
             "detected_injuries":  triage.get("detected_injuries", []),
             "medical_flags":      triage.get("medical_flags", {}),
             "environmental_hazards": triage.get("environmental_hazards", {}),
-            # Actions
             "immediate_actions":  triage.get("immediate_actions", []),
             "do_not_actions":     triage.get("do_not_actions", []),
             "first_aid_steps":    triage.get("first_aid_steps", []),
             "dispatcher_report":  triage.get("dispatcher_report", ""),
-            # Routing
             "hospital_recommendation": triage.get("hospital_recommendation", "none"),
             "eta_urgency":        triage.get("eta_urgency", "non_urgent"),
-            # Meta
             "confidence_score":   triage.get("confidence_score", 0.0),
             "reasoning":          triage.get("reasoning", ""),
-            # Raw Rekognition data for debugging / frontend use
             "rekognition": {
                 "labels":            [l["name"] for l in labels],
                 "labels_detail":     labels,
@@ -131,10 +112,8 @@ def predict_image():
         return jsonify({"error": str(exc)}), 500
 
 
-# ─── Helpers ──────────────────────────────────────────────────────────────────
-
-def _prepare_image(raw_bytes: bytes) -> tuple[bytes, Image.Image]:
-    """Normalize format and compress to ≤ 4.5 MB for Rekognition."""
+def _prepare_image(raw_bytes: bytes) -> bytes:
+    """Normalize format and compress to <= 4.5 MB for Rekognition."""
     img = Image.open(io.BytesIO(raw_bytes))
     if img.mode not in ("RGB", "L"):
         img = img.convert("RGB")
@@ -145,7 +124,7 @@ def _prepare_image(raw_bytes: bytes) -> tuple[bytes, Image.Image]:
         img.save(buf, format="JPEG", quality=82)
         raw_bytes = buf.getvalue()
 
-    return raw_bytes, img
+    return raw_bytes
 
 
 def _detect_faces(image_bytes: bytes) -> list[dict]:

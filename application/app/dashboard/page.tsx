@@ -208,6 +208,9 @@ export default async function DashboardPage() {
                 <Link href="/dashboard/medical-records" className="block w-full py-2.5 sm:py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-medium transition-all hover:scale-[1.02] text-sm sm:text-base text-center text-white">
                   Medical Records
                 </Link>
+                <Link href="/dashboard/diagnosis-history" className="block w-full py-2.5 sm:py-3 bg-orange-600 hover:bg-orange-700 rounded-lg font-medium transition-all hover:scale-[1.02] text-sm sm:text-base text-center text-white">
+                  Diagnosis History
+                </Link>
                 <button className="w-full py-2.5 sm:py-3 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 rounded-lg font-medium transition-all text-sm sm:text-base text-slate-800 dark:text-white border border-black/5 dark:border-transparent">
                   View Map
                 </button>

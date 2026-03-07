@@ -1,32 +1,29 @@
 import boto3
+from botocore.config import Config
 import json
 import os
-import base64
 import io
-import requests
 from PIL import Image
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# ─── Config ──────────────────────────────────────────────────────────────────
-BEDROCK_API_KEY = os.getenv("BEDROCK_API_KEY") or os.getenv("AWS_BEARER_TOKEN_BEDROCK")
 AWS_REGION      = os.getenv("AWS_REGION", "us-east-1")
-# Upgrade to a vision-capable model via env var; Haiku 4.5 is the default fallback
 BEDROCK_MODEL_ID = os.getenv(
     "BEDROCK_MODEL_ID",
-    "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+    "us.amazon.nova-2-lite-v1:0"
 )
-MAX_TOKENS = 2048  # enough for the full JSON schema
+MAX_TOKENS = 2048
 
-# ─── Comprehensive medical triage prompt ─────────────────────────────────────
-TRIAGE_PROMPT_TEMPLATE = """You are a highly specialized AI medical emergency triage system embedded in an emergency-response application. Your analysis may trigger a live 911 call. Be precise, thorough, and conservative (when in doubt, escalate severity).
+TRIAGE_PROMPT_TEMPLATE = """You are a highly specialized AI medical emergency triage system embedded in an emergency-response application. Your analysis may trigger a live 108 call. Be precise, thorough, and conservative (when in doubt, escalate severity).
 
 You have been given:
 1. The actual image for direct visual analysis
 2. Supporting data from AWS Rekognition: {rekognition_summary}
 
-Perform a full emergency assessment and return ONLY a valid JSON object matching this exact schema — no extra text, no markdown fences:
+CRITICAL: Respond with ONLY valid JSON. No explanatory text before or after. No markdown code blocks. Start with {{ and end with }}.
+
+Perform a full emergency assessment and return this exact JSON schema:
 
 {{
   "emergency_level": "<critical|urgent|moderate|low|none>",
@@ -75,29 +72,27 @@ Perform a full emergency assessment and return ONLY a valid JSON object matching
   "immediate_actions": ["<highest priority action>", "<second priority>"],
   "do_not_actions": ["<dangerous action to avoid>"],
   "first_aid_steps": ["<step 1>", "<step 2>"],
-  "dispatcher_report": "<Complete script to read verbatim to the 911 dispatcher>",
+  "dispatcher_report": "<Complete script to read verbatim to the 108 dispatcher>",
   "hospital_recommendation": "<trauma_center|emergency_room|urgent_care|none>",
-  "eta_urgency": "<immediate_911|within_minutes|within_hour|non_urgent>",
+  "eta_urgency": "<immediate_108|within_minutes|within_hour|non_urgent>",
   "confidence_score": <float 0.0-1.0>,
   "reasoning": "<2-3 sentence chain-of-thought explaining the assessment>"
 }}
 
 Urgency score guide:
-- 90-100: Cardiac arrest, severe hemorrhage, multiple victims, airway obstruction → CALL 911 NOW
+- 90-100: Cardiac arrest, severe hemorrhage, multiple victims, airway obstruction → CALL 108 NOW
 - 70-89 : Major trauma, serious accident, severe burns, altered consciousness
 - 50-69 : Significant injury, moderate bleeding, possible fractures, chest pain
 - 30-49 : Minor injury needing medical attention, not immediately life-threatening
 - 10-29 : Minor wounds / sprains → urgent care appropriate
 - 0-9   : Normal scene — no emergency
 
-Return ONLY the JSON object."""
+IMPORTANT: Your entire response must be ONLY the JSON object. Start immediately with {{ and end with }}. No other text."""
 
-
-# ─── Public entry point ───────────────────────────────────────────────────────
 
 def analyze_image_with_llm(image_bytes: bytes, rekognition_data: dict) -> dict:
     """
-    Main function. Sends the raw image + Rekognition context to Bedrock Claude
+    Main function. Sends the raw image + Rekognition context to Bedrock
     and returns a comprehensive triage JSON dict.
     """
     image_bytes, img_format = _normalize_image(image_bytes)
@@ -107,33 +102,38 @@ def analyze_image_with_llm(image_bytes: bytes, rekognition_data: dict) -> dict:
     )
 
     try:
-        if BEDROCK_API_KEY:
-            print(f"   -> [API KEY] Invoking Claude Bedrock (multimodal)…")
-            result = _invoke_via_api_key(image_bytes, img_format, prompt_text)
-        else:
-            print(f"   -> [IAM] Invoking Claude Bedrock (multimodal)…")
-            result = _invoke_via_iam(image_bytes, img_format, prompt_text)
-
-        # Safety: attach raw detected_labels so callers always have them
+        print(f"   -> [IAM] Invoking Amazon Nova Bedrock (region: {AWS_REGION}, model: {BEDROCK_MODEL_ID})…")
+        result = _invoke_via_iam(image_bytes, img_format, prompt_text)
+        
         if "detected_labels" not in result:
             result["detected_labels"] = rekognition_data.get("labels", [])
+        print(f"   ✓ Bedrock analysis successful!")
         return result
+    except Exception as iam_exc:
+        import traceback
+        print(f"   !! IAM invocation failed: {iam_exc}")
+        print(f"   !! Full error: {traceback.format_exc()[:500]}")
 
-    except Exception as exc:
-        print(f"!!! LLM ANALYZER ERROR: {exc}")
-        return _fallback_analysis(rekognition_data)
+    print(f"!!! LLM ANALYZER: Bedrock failed — using rule-based fallback")
+    return _fallback_analysis(rekognition_data)
 
-
-# ─── Bedrock invocation helpers ───────────────────────────────────────────────
 
 def _invoke_via_iam(image_bytes: bytes, img_format: str, prompt_text: str) -> dict:
     """Invoke Bedrock Converse via standard IAM credentials (boto3)."""
-    client = boto3.client(
-        "bedrock-runtime",
-        aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
-        aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
-        region_name=AWS_REGION,
-    )
+    client_kwargs = {
+        "service_name": "bedrock-runtime",
+        "region_name": AWS_REGION,
+        "config": Config(read_timeout=3600, connect_timeout=60),
+    }
+
+    if os.getenv("AWS_ACCESS_KEY_ID"):
+        client_kwargs["aws_access_key_id"] = os.getenv("AWS_ACCESS_KEY_ID")
+    if os.getenv("AWS_SECRET_ACCESS_KEY"):
+        client_kwargs["aws_secret_access_key"] = os.getenv("AWS_SECRET_ACCESS_KEY")
+    if os.getenv("AWS_SESSION_TOKEN"):
+        client_kwargs["aws_session_token"] = os.getenv("AWS_SESSION_TOKEN")
+    
+    client = boto3.client(**client_kwargs)
 
     response = client.converse(
         modelId=BEDROCK_MODEL_ID,
@@ -151,51 +151,23 @@ def _invoke_via_iam(image_bytes: bytes, img_format: str, prompt_text: str) -> di
                 ],
             }
         ],
-        inferenceConfig={"maxTokens": MAX_TOKENS, "temperature": 0.1},
+        system=[{"text": "You are a medical triage AI. Respond only with valid JSON. No markdown, no explanations, just JSON."}],
+        inferenceConfig={
+            "maxTokens": MAX_TOKENS,
+            "temperature": 0.7,
+            "topP": 0.9,
+        },
+        additionalModelRequestFields={
+            "inferenceConfig": {
+                "topK": 50,
+            }
+        },
     )
 
     raw = response["output"]["message"]["content"][0]["text"].strip()
+    print(f"   📄 LLM Response (first 500 chars): {raw[:500]}...")
     return _parse_json_safely(raw)
 
-
-def _invoke_via_api_key(image_bytes: bytes, img_format: str, prompt_text: str) -> dict:
-    """Invoke Bedrock Converse via Bearer / API-key authentication (HTTP)."""
-    url = (
-        f"https://bedrock-runtime.{AWS_REGION}.amazonaws.com"
-        f"/model/{BEDROCK_MODEL_ID}/converse"
-    )
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {BEDROCK_API_KEY}",
-    }
-    b64_image = base64.b64encode(image_bytes).decode("utf-8")
-
-    payload = {
-        "messages": [
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "image": {
-                            "format": img_format,
-                            "source": {"bytes": b64_image},
-                        }
-                    },
-                    {"text": prompt_text},
-                ],
-            }
-        ],
-        "inferenceConfig": {"maxTokens": MAX_TOKENS, "temperature": 0.1},
-    }
-
-    resp = requests.post(url, headers=headers, json=payload, timeout=45)
-    if resp.status_code == 200:
-        raw = resp.json()["output"]["message"]["content"][0]["text"].strip()
-        return _parse_json_safely(raw)
-    raise Exception(f"Bedrock HTTP {resp.status_code}: {resp.text[:300]}")
-
-
-# ─── Image normalisation ──────────────────────────────────────────────────────
 
 def _normalize_image(image_bytes: bytes) -> tuple[bytes, str]:
     """
@@ -217,8 +189,6 @@ def _normalize_image(image_bytes: bytes) -> tuple[bytes, str]:
     bedrock_format = "jpeg" if raw_format == "jpg" else raw_format
     return image_bytes, bedrock_format
 
-
-# ─── Rekognition data formatter ───────────────────────────────────────────────
 
 def _build_rekognition_summary(data: dict) -> str:
     """Build a human-readable summary of all Rekognition findings."""
@@ -258,8 +228,6 @@ def _build_rekognition_summary(data: dict) -> str:
 
     return "\n\n".join(parts) if parts else "No additional Rekognition data available."
 
-
-# ─── Rule-based fallback ─────────────────────────────────────────────────────
 
 _CRITICAL_KEYWORDS = {
     "blood", "bleeding", "hemorrhage", "wound", "laceration",
@@ -319,48 +287,110 @@ def _fallback_analysis(rekognition_data: dict) -> dict:
             "structural_instability", "traffic_hazard", "weapon_present",
         ]},
         "scene_description": "Fallback analysis — LLM unavailable.",
-        "immediate_actions": ["Call 911 if unsure"] if ambulance else ["Monitor the situation"],
+        "immediate_actions": ["Call 108 if unsure"] if ambulance else ["Monitor the situation"],
         "do_not_actions": [],
         "first_aid_steps": [],
         "dispatcher_report": reason,
         "hospital_recommendation": "emergency_room" if ambulance else "none",
-        "eta_urgency": "immediate_911" if ambulance else "non_urgent",
+        "eta_urgency": "immediate_108" if ambulance else "non_urgent",
         "confidence_score": 0.4,
         "reasoning": reason,
         "detected_labels": [l["name"] for l in rekognition_data.get("labels", [])],
     }
 
 
-# ─── JSON parser ──────────────────────────────────────────────────────────────
-
 def _parse_json_safely(text: str) -> dict:
     """Strip markdown fences and parse JSON; degrade gracefully on failure."""
+    original_text = text
     text = text.strip()
+
     if text.startswith("```"):
-        text = text.split("```", 2)[-1].lstrip("json").strip()
-        if text.endswith("```"):
-            text = text[:-3].strip()
+        lines = text.split("\n")
+        lines = [l for l in lines if not l.strip().startswith("```")]
+        text = "\n".join(lines).strip()
+
+    if not text.startswith("{"):
+        start_idx = text.find("{")
+        end_idx = text.rfind("}")
+        if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+            text = text[start_idx:end_idx+1]
+    
     try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        print("   ⚠️  LLM returned non-JSON — attempting degraded parse…")
-        is_emergency = (
-            "emergency" in text.lower() and "non-emergency" not in text.lower()
-        )
+        parsed = json.loads(text)
+        print(f"   ✓ Successfully parsed JSON response")
+        return parsed
+    except json.JSONDecodeError as e:
+        print(f"   ⚠️  JSON parse failed: {e}")
+        print(f"   ⚠️  Attempted to parse: {text[:300]}...")
+
+        text_lower = original_text.lower()
+
+        critical_keywords = ["critical", "severe", "bleeding", "fracture", "injury", "trauma", "wound"]
+        urgent_keywords = ["urgent", "immediate", "ambulance", "108"]
+
+        has_critical = any(kw in text_lower for kw in critical_keywords)
+        has_urgent = any(kw in text_lower for kw in urgent_keywords)
+
+        if has_critical or has_urgent:
+            level = "urgent" if has_urgent or has_critical else "moderate"
+            score = 75 if has_critical else 60
+        else:
+            level = "low"
+            score = 20
+        
         return {
-            "emergency_level": "urgent" if is_emergency else "none",
-            "urgency_score": 70 if is_emergency else 5,
-            "call_ambulance": is_emergency,
-            "reasoning": text[:200],
+            "emergency_level": level,
+            "urgency_score": score,
+            "call_ambulance": has_critical,
+            "call_police": False,
+            "call_fire_department": False,
+            "time_critical": has_critical,
+            "scene_type": "medical_emergency" if has_critical else "other",
+            "patient_status": {
+                "estimated_victims": 1,
+                "consciousness_level": "unknown",
+                "breathing_status": "unknown",
+                "injury_severity": "serious" if has_critical else "moderate"
+            },
+            "detected_injuries": [],
+            "medical_flags": {
+                "active_bleeding": "bleed" in text_lower,
+                "severe_bleeding": False,
+                "burn_injuries": "burn" in text_lower,
+                "suspected_fractures": "fracture" in text_lower,
+                "head_trauma": "head" in text_lower,
+                "spinal_injury_risk": False,
+                "cardiac_event_suspected": False,
+                "stroke_suspected": False,
+                "airway_compromised": False,
+                "shock_indicators": False,
+                "loss_of_consciousness": False
+            },
+            "environmental_hazards": {
+                "fire_present": False,
+                "smoke_present": False,
+                "chemical_hazard": False,
+                "structural_instability": False,
+                "traffic_hazard": False,
+                "weapon_present": False
+            },
+            "scene_description": original_text[:200],
+            "immediate_actions": ["Assess the situation", "Call for medical help if needed"],
+            "do_not_actions": ["Do not move the patient unnecessarily"],
+            "first_aid_steps": ["Check for consciousness", "Check breathing"],
+            "dispatcher_report": f"Medical emergency reported. {original_text[:100]}",
+            "hospital_recommendation": "emergency_room" if has_critical else "urgent_care",
+            "eta_urgency": "within_minutes" if has_critical else "within_hour",
+            "confidence_score": 0.3,
+            "reasoning": f"Fallback parsing due to invalid JSON. Detected keywords suggest {level} priority."
         }
 
-
-# ─── Legacy shim (keeps old callers working) ──────────────────────────────────
 
 def analyze_with_llm(labels: list[str], prompt_template: str) -> dict:
     """
     Backward-compatible wrapper used by any code that still calls the old API.
     Delegates to _fallback_analysis since no image bytes are available.
     """
+    _ = prompt_template
     rekognition_data = {"labels": [{"name": l, "confidence": 80.0} for l in labels]}
     return _fallback_analysis(rekognition_data)
