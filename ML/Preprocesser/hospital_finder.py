@@ -1,9 +1,7 @@
 
 
 
-import json
-from LLM_brain.llm import llm  
-from Preprocesser.preprocess_input_json import preprocess_data # Assuming the class name from previous step
+from LLM_brain.llm import llm
 
 def hospital_finder(triage_json_data: dict):
     """
@@ -13,27 +11,41 @@ def hospital_finder(triage_json_data: dict):
     print("data receiver in hf")
     
     # 2. Define the prompt for hospital selection
-    # Note: Since the LLM doesn't have your GPS, we ask it to find the BEST 
-    # types of facilities based on the specific injuries detected.
+    # IMPORTANT: We pass a candidate list from Google Places (or a static stub).
+    # The model MUST select only from that list so we return real place_id + lat/lng.
     prompt = """
-    You are a Strategic Medical Dispatcher. Based on the emergency incident data, 
-    identify the top 5 most suitable medical facilities or specialized departments.
+    You are a Strategic Medical Dispatcher.
 
-    
+    You are given:
+    - extracted_features: a structured clinical + logistics summary
+    - candidate_hospitals: a list of real nearby hospitals with place_id, address, and lat/lng
+    - origin: the incident coordinates (may be null)
 
-    Return ONLY a JSON object with a 'recommended_hospitals' array. 
-    Each object must follow this backend-friendly schema:
+    TASK:
+    1) Choose the top up to 5 best hospitals from candidate_hospitals for this patient.
+    2) You MUST ONLY pick hospitals that appear in candidate_hospitals.
+       - Do NOT invent hospital names.
+       - facility_name MUST exactly match the candidate's name.
+       - place_id, address, and location MUST be copied from the candidate.
+
+    Return ONLY a JSON object with a 'recommended_hospitals' array (0 to 5 items).
+    Each item must follow this schema:
     {
-      "facility_name": "Name or Facility Type",
-      "category": "Standardized Category (e.g., TRAUMA_CENTER)",
+      "facility_name": "string (exact match from candidate)",
+      "place_id": "string (from candidate)",
+      "address": "string (from candidate)",
+      "location": { "lat": number, "lng": number },
+      "category": "Standardized Category (e.g., TRAUMA_CENTER | CARDIAC_CENTER | GENERAL_HOSPITAL)",
       "suitability_score": 0-100,
       "priority_level": "CRITICAL | HIGH | MEDIUM",
-      "required_capabilities": ["List", "of", "needed", "services", "e.g.", "ICU", "Blood Bank"],
+      "required_capabilities": ["ICU", "Blood Bank"],
       "justification": "Clinical reasoning for this selection",
-      "dispatch_notes": "Logistical notes (e.g., 'Use sirens, bypass Highway 4 due to traffic')",
-      "eta_impact": "How location/traffic affects this choice (e.g., 'Closest but heavy traffic')",
+      "dispatch_notes": "Logistical notes (keep short)",
       "handover_dept": "Which specific hospital department should be alerted"
     }
+
+    CRITICAL:
+    - If candidate_hospitals is empty, return {"recommended_hospitals": []}.
     """
     
     # 3. Call your modular LLM function

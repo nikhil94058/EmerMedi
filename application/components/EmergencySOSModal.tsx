@@ -66,6 +66,21 @@ interface DiagnosisResult {
   rawData?: unknown;
 }
 
+type Coordinates = { latitude: number; longitude: number };
+
+function getCurrentCoordinates(): Promise<Coordinates | null> {
+  if (typeof window === 'undefined') return Promise.resolve(null);
+  if (!('geolocation' in navigator)) return Promise.resolve(null);
+
+  return new Promise((resolve) => {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => resolve({ latitude: pos.coords.latitude, longitude: pos.coords.longitude }),
+      () => resolve(null),
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 30_000 }
+    );
+  });
+}
+
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const LEVEL_CFG: Record<string, {
@@ -311,10 +326,16 @@ function ImageTriageView({ triage }: { triage: ImageTriageResult }) {
       const fetchHospitals = async () => {
         try {
           setIsFetchingHospitals(true);
+          const coords = await getCurrentCoordinates();
           const res = await fetch('/api/emergency/hospitals', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(triage),
+            body: JSON.stringify({
+              ...triage,
+              logistics: {
+                coordinates: coords,
+              },
+            }),
           });
           const data = await res.json();
           setHospitals(data);
@@ -484,6 +505,16 @@ function ImageTriageView({ triage }: { triage: ImageTriageResult }) {
                 <div>
                   <div className="font-bold text-slate-900 dark:text-white capitalize text-sm">{h.facility_name || h.category}</div>
                   <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">{h.justification}</div>
+                  {h.location?.lat && h.location?.lng && (
+                    <a
+                      className="inline-block text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline mt-1"
+                      href={`https://www.google.com/maps/search/?api=1&query=${h.location.lat},${h.location.lng}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Open in Maps
+                    </a>
+                  )}
                 </div>
                 <span className="text-[10px] font-bold tracking-wider uppercase bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-full whitespace-nowrap">
                   {h.priority_level}
