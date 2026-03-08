@@ -13,3 +13,4 @@ gunicorn
 pydub
 audioread
 pytz
+faster-whisper
