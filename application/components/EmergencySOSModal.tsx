@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import { useMemo, useState, useRef, useEffect } from 'react';
 import {
   X, Upload, Mic, Image as ImageIcon,
   AlertCircle, CheckCircle, Loader2,
@@ -67,6 +68,129 @@ interface DiagnosisResult {
 }
 
 type Coordinates = { latitude: number; longitude: number };
+
+const LeafletMapContainer = dynamic(() => import('react-leaflet').then((m) => m.MapContainer), { ssr: false });
+const LeafletTileLayer = dynamic(() => import('react-leaflet').then((m) => m.TileLayer), { ssr: false });
+const LeafletMarker = dynamic(() => import('react-leaflet').then((m) => m.Marker), { ssr: false });
+const LeafletPopup = dynamic(() => import('react-leaflet').then((m) => m.Popup), { ssr: false });
+
+type RecommendedHospital = {
+  facility_name?: string;
+  address?: string;
+  location?: { lat?: number; lng?: number };
+  latitude?: number;
+  longitude?: number;
+  phone?: string;
+  phone_number?: string;
+  formatted_phone_number?: string;
+};
+
+function HospitalsLeafletMap({
+  origin,
+  hospitals,
+}: {
+  origin: Coordinates | null;
+  hospitals: RecommendedHospital[];
+}) {
+  useEffect(() => {
+    void import('leaflet').then((L) => {
+      // Fix default marker icons in Next.js.
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const proto = (L.Icon.Default.prototype as any);
+      if (proto && proto._getIconUrl) {
+        delete proto._getIconUrl;
+      }
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+        iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+      });
+    });
+  }, []);
+
+  const markers = useMemo(() => {
+    const out: Array<{
+      key: string;
+      label: string;
+      lat: number;
+      lng: number;
+      address?: string;
+      phone?: string;
+      kind: 'origin' | 'hospital';
+    }> = [];
+
+    if (origin) {
+      out.push({
+        key: 'origin',
+        label: 'You (Current Location)',
+        lat: origin.latitude,
+        lng: origin.longitude,
+        kind: 'origin',
+      });
+    }
+
+    hospitals.forEach((h, idx) => {
+      const lat = typeof h.location?.lat === 'number' ? h.location.lat : typeof h.latitude === 'number' ? h.latitude : null;
+      const lng = typeof h.location?.lng === 'number' ? h.location.lng : typeof h.longitude === 'number' ? h.longitude : null;
+      if (lat === null || lng === null) return;
+
+      const phone = h.phone || h.formatted_phone_number || h.phone_number;
+      out.push({
+        key: `h-${idx}-${h.facility_name ?? 'hospital'}`,
+        label: h.facility_name ?? `Hospital ${idx + 1}`,
+        lat,
+        lng,
+        address: h.address,
+        phone: phone || undefined,
+        kind: 'hospital',
+      });
+    });
+
+    return out;
+  }, [hospitals, origin]);
+
+  const center: [number, number] = origin
+    ? [origin.latitude, origin.longitude]
+    : markers.length > 0
+      ? [markers[0].lat, markers[0].lng]
+      : [25.611, 85.144];
+
+  return (
+    <div className="h-full w-full">
+      <LeafletMapContainer
+        center={center}
+        zoom={12}
+        scrollWheelZoom
+        className="h-full w-full"
+        whenReady={(e) => {
+          setTimeout(() => e.target.invalidateSize(), 0);
+        }}
+      >
+        <LeafletTileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+
+        {markers.map((m) => (
+          <LeafletMarker key={m.key} position={[m.lat, m.lng]}>
+            <LeafletPopup>
+              <div className="text-sm font-semibold">{m.label}</div>
+              {m.address && <div className="text-xs opacity-80 mt-1">{m.address}</div>}
+              {m.phone && (
+                <a
+                  className="inline-block mt-2 text-sm font-semibold text-blue-700 hover:underline"
+                  href={`tel:${m.phone}`}
+                >
+                  Call {m.phone}
+                </a>
+              )}
+            </LeafletPopup>
+          </LeafletMarker>
+        ))}
+      </LeafletMapContainer>
+    </div>
+  );
+}
 
 function getCurrentCoordinates(): Promise<Coordinates | null> {
   if (typeof window === 'undefined') return Promise.resolve(null);
@@ -320,6 +444,7 @@ function ImageTriageView({ triage }: { triage: ImageTriageResult }) {
   const [copied, setCopied] = useState(false);
   const [hospitals, setHospitals] = useState<any>(null);
   const [isFetchingHospitals, setIsFetchingHospitals] = useState(false);
+  const [originCoords, setOriginCoords] = useState<Coordinates | null>(null);
 
   useEffect(() => {
     if (triage.hospital_recommendation && triage.hospital_recommendation.toLowerCase() !== 'none') {
@@ -327,6 +452,7 @@ function ImageTriageView({ triage }: { triage: ImageTriageResult }) {
         try {
           setIsFetchingHospitals(true);
           const coords = await getCurrentCoordinates();
+          setOriginCoords(coords);
           const res = await fetch('/api/emergency/hospitals', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -500,6 +626,11 @@ function ImageTriageView({ triage }: { triage: ImageTriageResult }) {
         {hospitals?.hospital_list?.recommended_hospitals && (
           <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10 space-y-3">
             <SectionHead label="Recommended Facilities (AI Found)" />
+
+            <div className="h-[260px] rounded-xl overflow-hidden border border-black/10 dark:border-white/10 bg-slate-50 dark:bg-slate-800/60">
+              <HospitalsLeafletMap origin={originCoords} hospitals={hospitals.hospital_list.recommended_hospitals} />
+            </div>
+
             {hospitals.hospital_list.recommended_hospitals.slice(0, 3).map((h: any, i: number) => (
               <div key={i} className="flex justify-between items-start gap-4 p-2.5 bg-blue-50/50 dark:bg-blue-900/10 rounded-lg">
                 <div>

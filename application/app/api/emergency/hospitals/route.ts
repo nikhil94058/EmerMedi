@@ -28,6 +28,43 @@ type GooglePlacesNearbyResponse = {
   results?: GooglePlaceResult[];
 };
 
+type GooglePlaceDetailsResponse = {
+  status?: string;
+  error_message?: string;
+  result?: {
+    formatted_phone_number?: string;
+    international_phone_number?: string;
+  };
+};
+
+async function fetchHospitalPhoneGoogle(placeId: string): Promise<string | null> {
+  const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+  if (!apiKey) return null;
+  if (!placeId || placeId.startsWith('static-')) return null;
+
+  const url = new URL('https://maps.googleapis.com/maps/api/place/details/json');
+  url.searchParams.set('place_id', placeId);
+  url.searchParams.set('fields', 'formatted_phone_number,international_phone_number');
+  url.searchParams.set('key', apiKey);
+
+  const resp = await fetch(url.toString(), { method: 'GET' });
+  const data: unknown = await resp.json();
+  const payload = data as GooglePlaceDetailsResponse;
+
+  if (!resp.ok) {
+    console.error('[HOSPITALS] Google Place Details HTTP error:', resp.status, payload);
+    return null;
+  }
+
+  if (payload.status && payload.status !== 'OK') {
+    // Commonly: REQUEST_DENIED, INVALID_REQUEST, NOT_FOUND
+    console.error('[HOSPITALS] Google Place Details status:', payload.status, payload.error_message);
+    return null;
+  }
+
+  return payload.result?.international_phone_number || payload.result?.formatted_phone_number || null;
+}
+
 function getStaticHospitalsFallback(lat?: number, lng?: number): CandidateHospital[] {
   const baseLat = lat ?? 25.6099;
   const baseLng = lng ?? 85.1447;
@@ -195,6 +232,28 @@ export async function POST(request: NextRequest) {
       }
 
       const result = await response.json();
+
+      // Optional enrichment: add phone numbers for recommended hospitals.
+      // This keeps the API key server-side and makes it easy for the UI to show a tel: link.
+      const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+      const recs = (result as { hospital_list?: { recommended_hospitals?: Array<Record<string, unknown>> } })
+        ?.hospital_list?.recommended_hospitals;
+      if (apiKey && Array.isArray(recs) && recs.length > 0) {
+        await Promise.all(
+          recs.slice(0, 5).map(async (h) => {
+            const placeId = typeof h.place_id === 'string' ? h.place_id : '';
+            if (!placeId) return;
+            if (typeof h.phone === 'string' && h.phone.length > 0) return;
+            if (typeof h.formatted_phone_number === 'string' && h.formatted_phone_number.length > 0) return;
+
+            const phone = await fetchHospitalPhoneGoogle(placeId);
+            if (phone) {
+              h.formatted_phone_number = phone;
+            }
+          })
+        );
+      }
+
       return NextResponse.json(result);
     } catch (fetchError: unknown) {
       clearTimeout(timeoutId);

@@ -1,6 +1,12 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import dynamic from 'next/dynamic';
+import { useEffect, useMemo, useState } from 'react';
+
+const MapContainer = dynamic(() => import('react-leaflet').then((m) => m.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import('react-leaflet').then((m) => m.TileLayer), { ssr: false });
+const Marker = dynamic(() => import('react-leaflet').then((m) => m.Marker), { ssr: false });
+const Popup = dynamic(() => import('react-leaflet').then((m) => m.Popup), { ssr: false });
 
 type Scripts = {
   ambulance_audio_script?: { language?: string; transcript?: string };
@@ -11,6 +17,23 @@ type Scripts = {
 type ScriptKey = 'bystander' | 'ambulance' | 'doctor';
 
 export default function MapPage() {
+  useEffect(() => {
+    // Fix default marker icons in Next.js (asset path issues).
+    // This runs only in the browser.
+    void import('leaflet').then((L) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const proto = (L.Icon.Default.prototype as any);
+      if (proto && proto._getIconUrl) {
+        delete proto._getIconUrl;
+      }
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+        iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+      });
+    });
+  }, []);
+
   const defaultPayload = useMemo(
     () => ({
       patient_info: { name: 'Patient', age: 50, gender: 'Male' },
@@ -108,30 +131,63 @@ export default function MapPage() {
             </div>
           )}
 
-          <div className="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 h-[520px] bg-linear-to-br from-slate-200/60 to-slate-100/60 dark:from-white/10 dark:to-white/5">
-            <div className="absolute top-3 left-3 text-xs font-semibold rounded-lg px-3 py-2 bg-white/80 dark:bg-black/30 border border-black/10 dark:border-white/10">
-              Dummy Map (not real GPS)
+          <div className="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 h-[520px]">
+            <MapContainer
+              center={[25.611, 85.144]}
+              zoom={12}
+              scrollWheelZoom
+              className="h-full w-full"
+              whenReady={(e) => {
+                // Leaflet sometimes needs a size invalidation after mount.
+                setTimeout(() => e.target.invalidateSize(), 0);
+              }}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+
+              <Marker position={[25.613, 85.135]}>
+                <Popup>
+                  Ambulance
+                  <br />
+                  Phone: not available
+                </Popup>
+              </Marker>
+              <Marker position={[25.616, 85.152]}>
+                <Popup>Doctor</Popup>
+              </Marker>
+              <Marker position={[25.604, 85.141]}>
+                <Popup>Bystander</Popup>
+              </Marker>
+              <Marker position={[25.6205, 85.168]}>
+                <Popup>Hospital</Popup>
+              </Marker>
+            </MapContainer>
+
+            <div className="pointer-events-none absolute top-3 left-3 text-xs font-semibold rounded-lg px-3 py-2 bg-white/80 dark:bg-black/30 border border-black/10 dark:border-white/10">
+              Leaflet Map Preview
             </div>
 
-            <div className="absolute top-[18%] left-[14%]">
+            <div className="pointer-events-none absolute top-[18%] left-[14%]">
               <div className="px-3 py-2 rounded-xl bg-emerald-600/90 text-white text-xs font-semibold border border-black/10">
                 Ambulance
               </div>
             </div>
 
-            <div className="absolute top-[30%] left-[58%]">
+            <div className="pointer-events-none absolute top-[30%] left-[58%]">
               <div className="px-3 py-2 rounded-xl bg-violet-600/90 text-white text-xs font-semibold border border-black/10">
                 Doctor
               </div>
             </div>
 
-            <div className="absolute top-[60%] left-[30%]">
+            <div className="pointer-events-none absolute top-[60%] left-[30%]">
               <div className="px-3 py-2 rounded-xl bg-amber-600/90 text-white text-xs font-semibold border border-black/10">
                 Bystander
               </div>
             </div>
 
-            <div className="absolute top-[42%] left-[78%]">
+            <div className="pointer-events-none absolute top-[42%] left-[78%]">
               <div className="px-3 py-2 rounded-xl bg-blue-600/90 text-white text-xs font-semibold border border-black/10">
                 Hospital
               </div>
