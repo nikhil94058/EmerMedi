@@ -2,6 +2,7 @@ import { S3Client, PutObjectCommand, DeleteObjectCommand } from '@aws-sdk/client
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
 const s3Client = new S3Client({
+
   region: process.env.ENVAWS_REGION || 'us-east-1',
   credentials: {
     accessKeyId: process.env.ENVAWS_ACCESS_KEY_ID || '',
@@ -10,6 +11,7 @@ const s3Client = new S3Client({
 });
 
 const BUCKET_NAME = process.env.ENVAWS_S3_BUCKET || 'emermedi-medical-files';
+
 
 export async function uploadToS3(file: Buffer, fileName: string, contentType: string): Promise<string> {
   const key = `${Date.now()}-${fileName}`;
@@ -23,8 +25,9 @@ export async function uploadToS3(file: Buffer, fileName: string, contentType: st
 
   await s3Client.send(command);
   
+
   return `https://${BUCKET_NAME}.s3.${process.env.ENVAWS_REGION || 'us-east-1'}.amazonaws.com/${key}`;
-}
+
 
 export async function deleteFromS3(fileUrl: string): Promise<void> {
   const key = fileUrl.split('/').pop();
