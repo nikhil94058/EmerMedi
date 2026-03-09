@@ -1,5 +1,6 @@
 import json
 import base64
+
 import io
 from faster_whisper import WhisperModel
 from LLM_brain.llm import llm   # fixed import
@@ -48,9 +49,23 @@ def llm_speech(json_input):
         audio_text = get_audio_text(audio_memory_stream)
 
         # 5. Build prompt for LLM
-        prompt = (
-            "Analyse the following transcribed text using the provided medical context."
-        )
+        prompt = """
+        You are a medical triage AI. Analyze the transcribed audio and patient context. 
+        You MUST respond ONLY with a valid JSON object. 
+        
+        The JSON must have the following keys:
+        {
+            "transcript": "The full text you transcribed",
+            "is_emergency": boolean,
+            "emergency_level": "none" | "urgent" | "critical",
+            "emergency_category": "Cardiac" | "Respiratory" | "Neurological" | "Trauma" | "General",
+            "location_detected": "string or null",
+            "detected_emotion": "string",
+            "summary": "Detailed medical summary",
+            "recommended_actions": ["action1", "action2"],
+            "dispatcher_report": "Concise report for ambulance staff"
+        }
+        """
 
         final_input = f"""
 {prompt}
@@ -67,6 +82,7 @@ Transcribed Audio:
 
         # 6. Send to LLM
         response = llm(prompt, final_input)
+        print(response)
         return response
 
     except Exception as e:

@@ -1,3 +1,4 @@
+import base64
 from flask import Blueprint, request, jsonify
 # Import the logic functions from their respective modules
 from Preprocesser.preprocess_input_json import preprocess_data
@@ -143,38 +144,36 @@ def generate_epcr_route():
             "message": str(e)
         }), 500
 
+
 @hospital_bp.route('/audio/analyze', methods=['POST'])
 def analyze_audio_route():
     try:
-        data = request.get_json()
+        # Get the file from Multipart form
+        if 'file' not in request.files:
+            return jsonify({"error": "No file part"}), 400
+        
+        audio_file = request.files['file']
+        
+        # Convert file to base64 string
+        audio_bytes = audio_file.read()
+        base64_audio = base64.b64encode(audio_bytes).decode('utf-8')
+        
+        # Prepare the dictionary that get_audio_sev expects
+        data = {
+            "context": request.form.get("context", ""),
+            "audio_file": base64_audio
+        }
 
-        if not data:
-            return jsonify({"error": "No JSON payload provided"}), 400
-
-        context = data.get("context")
-        audio_file = data.get("audio_file")
-
-        if not audio_file:
-            return jsonify({"error": "audio_file is required"}), 400
-
+        # Now pass this dictionary to your existing function
         result = get_audio_sev(data)
 
         if isinstance(result, dict) and "error" in result:
-            return jsonify({
-                "status": "error",
-                "message": result["error"]
-            }), 500
+            return jsonify({"status": "error", "message": result["error"]}), 500
 
-        return jsonify({
-            "status": "success",
-            "data": result
-        }), 200
+        return jsonify({"status": "success", "data": result}), 200
 
     except Exception as e:
-        return jsonify({
-            "status": "error",
-            "message": str(e)
-        }), 500
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 @hospital_bp.route('/scan-document', methods=['POST'])
 def scan_document_route():
